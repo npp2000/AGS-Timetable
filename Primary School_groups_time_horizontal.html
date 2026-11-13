@@ -1,0 +1,2737 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<title>Accra Grammar School</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style>
+      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
+      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
+      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
+
+      p.back {
+        margin-top: 4ex;
+        margin-bottom: 5ex;
+      }
+
+      table {
+        text-align: center;
+        page-break-inside: avoid;
+      }
+
+      table.odd_table {
+        page-break-before: always;
+      }
+
+      table.even_table {
+        page-break-before: always;
+      }
+
+      table.detailed {
+        margin-left: auto; margin-right: auto;
+        text-align: center;
+        border: 0px;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      caption {
+
+      }
+
+      span.institution {
+        font-weight: bold;
+      }
+
+      span.name {
+
+      }
+
+      span.comment {
+        /*font-style: italic;*/
+      }
+
+      span.legend_title {
+        font-weight: bold;
+      }
+
+      thead {
+
+      }
+
+      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
+
+      tr.foot {
+
+      }
+
+      tbody {
+
+      }
+
+      th {
+
+      }
+
+      td {
+
+      }
+
+      th.daySeparator {
+        background-color: silver;
+      }
+
+      tr.daySeparator {
+        background-color: silver;
+      }
+
+      td.daySeparator {
+        background-color: silver;
+      }
+
+      td.detailed {
+        border: 1px dashed silver;
+        border-bottom: 0;
+        border-top: 0;
+      }
+
+      th.xAxis {
+      /* width: 8em; */
+      }
+
+      th.yAxis {
+        height: 8ex;
+      }
+
+      /* Style the teachers' free periods */
+
+      div.DESCRIPTION {
+        text-align: left;
+        font-size: smaller;
+      }
+    </style>
+<link href="style.css" rel="stylesheet"/></head>
+<body id="top">
+<table border="1" id="table">
+<caption>Accra Grammar School</caption>
+<thead>
+<tr>
+<td rowspan="2"></td>
+<th class="daySeparator"></th>
+<th colspan="10">M</th>
+<th class="daySeparator"></th>
+<th colspan="10">T</th>
+<th class="daySeparator"></th>
+<th colspan="10">W</th>
+<th class="daySeparator"></th>
+<th colspan="10">R</th>
+<th class="daySeparator"></th>
+<th colspan="10">F</th>
+<th class="daySeparator"></th>
+</tr>
+<tr>
+<!-- span -->
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">G1K</th>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G1 K Teacher<br/></td>
+<td class="subject musicg1">Music<br/>G1 K Teacher<br/></td>
+<td class="subject g1k" colspan="2">G1K, G1N, G1Q, G1R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G1 K Teacher<br/></td>
+<td>---</td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject student">Student Agency<br/>G1 K Teacher<br/></td>
+<td class="subject computer">Computer Studies<br/>G1 K Teacher<br/></td>
+<td>-X-</td>
+<td class="subject musicg1">Music<br/>G1 K Teacher<br/></td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td class="subject creative">Creative Arts<br/>G1 K Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td class="subject musicg1">Music<br/>G1 K Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G1 K Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td class="subject creative">Creative Arts<br/>G1 K Teacher<br/></td>
+<td class="subject computer">Computer Studies<br/>G1 K Teacher<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G1N</th>
+<td class="daySeparator"></td>
+<td class="subject creative">Creative Arts<br/>G1 N Teacher<br/></td>
+<td class="subject computer">Computer Studies<br/>G1 N Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td class="subject g1k" colspan="2">G1K, G1N, G1Q, G1R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicg1">Music<br/>G1 N Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G1 N Teacher<br/></td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicg1">Music<br/>G1 N Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G1 N Teacher<br/></td>
+<td>---</td>
+<td class="subject student">Student Agency<br/>G1 N Teacher<br/></td>
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G1 N Teacher<br/></td>
+<td class="subject computer">Computer Studies<br/>G1 N Teacher<br/></td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td class="subject musicg1">Music<br/>G1 N Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G1 N Teacher<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G1Q</th>
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject g1k" colspan="2">G1K, G1N, G1Q, G1R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G1 Q Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G1 Q Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G1 Q Teacher<br/></td>
+<td>---</td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicg1">Music<br/>G1 Q Teacher<br/></td>
+<td class="subject computer">Computer Studies<br/>G1 Q Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject musicg1">Music<br/>G1 Q Teacher<br/></td>
+<td class="subject computer">Computer Studies<br/>G1 Q Teacher<br/></td>
+<td>-X-</td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject creative">Creative Arts<br/>G1 Q Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G1 Q Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicg1">Music<br/>G1 Q Teacher<br/></td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject creative">Creative Arts<br/>G1 Q Teacher<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G1R</th>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td class="subject g1k" colspan="2">G1K, G1N, G1Q, G1R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td class="subject creative">Creative Arts<br/>G1 R Teacher<br/></td>
+<td class="subject musicg1">Music<br/>G1 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg1" colspan="2">Science<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G1 R Teacher<br/></td>
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td class="subject computer">Computer Studies<br/>G1 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G1 R Teacher<br/></td>
+<td class="subject musicg1">Music<br/>G1 R Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td class="subject creative">Creative Arts<br/>G1 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G1 R Teacher<br/></td>
+<td class="subject computer">Computer Studies<br/>G1 R Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject creative">Creative Arts<br/>G1 R Teacher<br/></td>
+<td class="subject musicg1">Music<br/>G1 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td class="subject mathematicsg1" colspan="2">Mathematics<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G2K</th>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G2 K Teacher<br/></td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td class="subject musicg2">Music<br/>G2 K Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject scienceg2" colspan="2">Science<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td class="subject g2k" colspan="2">G2K, G2N, G2Q, G2R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G2 K Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G2 K Teacher<br/></td>
+<td class="subject scienceg2" colspan="2">Science<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G2 K Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G2 K Teacher<br/></td>
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject creative">Creative Arts<br/>G2 K Teacher<br/></td>
+<td class="subject musicg2">Music<br/>G2 K Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td class="subject scienceg2" colspan="2">Science<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G2N</th>
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td class="subject scienceg2" colspan="2">Science<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G2 N Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G2 N Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject creative">Creative Arts<br/>G2 N Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G2 N Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td class="subject g2k" colspan="2">G2K, G2N, G2Q, G2R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg2" colspan="2">Science<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject musicg2">Music<br/>G2 N Teacher<br/></td>
+<td>---</td>
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G2 N Teacher<br/></td>
+<td>---</td>
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G2 N Teacher<br/></td>
+<td class="subject musicg2">Music<br/>G2 N Teacher<br/></td>
+<td class="subject scienceg2" colspan="2">Science<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G2Q</th>
+<td class="daySeparator"></td>
+<td class="subject scienceg2" colspan="2">Science<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G2 Q Teacher<br/></td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject musicg2">Music<br/>G2 Q Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject g2k" colspan="2">G2K, G2N, G2Q, G2R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject creative">Creative Arts<br/>G2 Q Teacher<br/></td>
+<td class="subject musicg2">Music<br/>G2 Q Teacher<br/></td>
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G2 Q Teacher<br/></td>
+<td class="subject scienceg2" colspan="2">Science<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject scienceg2" colspan="2">Science<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G2 Q Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G2 Q Teacher<br/></td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td class="subject creative">Creative Arts<br/>G2 Q Teacher<br/></td>
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G2R</th>
+<td class="daySeparator"></td>
+<td class="subject computer" colspan="2">Computer Studies<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G2 R Teacher<br/></td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td class="subject musicg2">Music<br/>G2 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td class="subject g2k" colspan="2">G2K, G2N, G2Q, G2R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject student">Student Agency<br/>G2 R Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G2 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td class="subject social" colspan="2">Social Studies<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg2" colspan="2">Science<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject musicg2">Music<br/>G2 R Teacher<br/></td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td class="subject scienceg2" colspan="2">Science<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td class="subject creative">Creative Arts<br/>G2 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsg2" colspan="2">Mathematics<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg2" colspan="2">Science<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td class="subject student">Student Agency<br/>G2 R Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G2 R Teacher<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G3K</th>
+<td class="daySeparator"></td>
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicg3">Music<br/>G3 K Teacher<br/></td>
+<td class="subject scienceg3" colspan="2">Science<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td class="subject student">Student Agency<br/>G3 K Teacher<br/></td>
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg3" colspan="2">Science<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td class="subject musicg3">Music<br/>G3 K Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G3 K Teacher<br/></td>
+<td>-X-</td>
+<td class="subject frenchfrench" colspan="2">French<br/>French A Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td>---</td>
+<td class="subject creative">Creative Arts<br/>G3 K Teacher<br/></td>
+<td>-X-</td>
+<td class="subject g3k" colspan="2">G3K, G3N, G3Q, G3R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="subject scienceg3" colspan="2">Science<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G3 K Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G3 K Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td class="subject computer" colspan="2">Computer Studies<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G3N</th>
+<td class="daySeparator"></td>
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject frenchfrench" colspan="2">French<br/>French A Teacher<br/></td>
+<!-- span -->
+<td class="subject social" colspan="2">Social Studies<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg3" colspan="2">Science<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td class="subject creative">Creative Arts<br/>G3 N Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G3 N Teacher<br/></td>
+<td>-X-</td>
+<td class="subject musicg3">Music<br/>G3 N Teacher<br/></td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g3k" colspan="2">G3K, G3N, G3Q, G3R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="subject social" colspan="2">Social Studies<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G3 N Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G3 N Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject scienceg3" colspan="2">Science<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td class="subject musicg3">Music<br/>G3 N Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G3 N Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg3" colspan="2">Science<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td class="subject computer" colspan="2">Computer Studies<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G3Q</th>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject scienceg3" colspan="2">Science<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicg3">Music<br/>G3 Q Teacher<br/></td>
+<td class="subject creative">Creative Arts<br/>G3 Q Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G3 Q Teacher<br/></td>
+<td class="subject scienceg3" colspan="2">Science<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject student">Student Agency<br/>G3 Q Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject computer" colspan="2">Computer Studies<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g3k" colspan="2">G3K, G3N, G3Q, G3R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="subject social" colspan="2">Social Studies<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject student">Student Agency<br/>G3 Q Teacher<br/></td>
+<td>---</td>
+<td>-X-</td>
+<td class="subject scienceg3" colspan="2">Science<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject creative">Creative Arts<br/>G3 Q Teacher<br/></td>
+<td class="subject musicg3">Music<br/>G3 Q Teacher<br/></td>
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject frenchfrench" colspan="2">French<br/>French A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject social" colspan="2">Social Studies<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G3R</th>
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G3 R Teacher<br/></td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td class="subject creative">Creative Arts<br/>G3 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td>---</td>
+<td class="subject creative">Creative Arts<br/>G3 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject musicg3">Music<br/>G3 R Teacher<br/></td>
+<td class="subject frenchfrench" colspan="2">French<br/>French A Teacher<br/></td>
+<!-- span -->
+<td class="subject student">Student Agency<br/>G3 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject scienceg3" colspan="2">Science<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg3" colspan="2">Science<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g3k" colspan="2">G3K, G3N, G3Q, G3R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="subject social" colspan="2">Social Studies<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject computer" colspan="2">Computer Studies<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg3" colspan="2">Science<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative">Creative Arts<br/>G3 R Teacher<br/></td>
+<td class="subject mathematicsg3" colspan="2">Mathematics<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<td class="subject musicg3">Music<br/>G3 R Teacher<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G4K</th>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g4k" colspan="2">G4K, G4N, G4Q, G4R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Arts<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G4 K Teacher<br/></td>
+<td class="subject language" colspan="2">Language Arts<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject frenchfrench" colspan="2">French<br/>French A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td class="subject social" colspan="2">Social Studies<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td class="subject student">Student Agency<br/>G4 K Teacher<br/></td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G4N</th>
+<td class="daySeparator"></td>
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g4k" colspan="2">G4K, G4N, G4Q, G4R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="subject creative" colspan="2">Creative Arts Lab<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td class="subject student">Student Agency<br/>G4 N Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject frenchfrench" colspan="2">French<br/>French A Teacher<br/></td>
+<!-- span -->
+<td class="subject student">Student Agency<br/>G4 N Teacher<br/></td>
+<td>-X-</td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G4Q</th>
+<td class="daySeparator"></td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g4k" colspan="2">G4K, G4N, G4Q, G4R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td class="subject social" colspan="2">Social Studies<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Arts<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G4 Q Teacher<br/></td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject student">Student Agency<br/>G4 Q Teacher<br/></td>
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject frenchfrench" colspan="2">French<br/>French A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G4R</th>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g4k" colspan="2">G4K, G4N, G4Q, G4R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject frenchfrench" colspan="2">French<br/>French A Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td class="subject creative" colspan="2">Creative Arts<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td class="subject student">Student Agency<br/>G4 R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G4 R Teacher<br/></td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td class="subject scienceg4" colspan="2">Science<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg4" colspan="2">Mathematics<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G5K</th>
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Arts<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G5 K Teacher<br/></td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td>-X-</td>
+<td class="subject g5k" colspan="2">G5K, G5N, G5Q, G5R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td class="subject computer">Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G5 K Teacher<br/></td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td>-X-</td>
+<td class="subject geography/environmentg5" colspan="2">Geography/Environment<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject history/global" colspan="2">History/Global Politics  <br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G5N</th>
+<td class="daySeparator"></td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G5 N Teacher<br/></td>
+<td>-X-</td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td class="subject computer" colspan="2">Computer Studies<br/>JH ICT<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g5k" colspan="2">G5K, G5N, G5Q, G5R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td class="subject history/global" colspan="2">History/Global Politics  <br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject geography/environmentg5" colspan="2">Geography/Environment<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject computer">Computer Studies<br/>JH ICT<br/></td>
+<td class="subject creative" colspan="2">Creative Arts<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject student">Student Agency<br/>G5 N Teacher<br/></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G5Q</th>
+<td class="daySeparator"></td>
+<td class="subject computer">Computer Studies<br/>JH ICT<br/></td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td>-X-</td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g5k" colspan="2">G5K, G5N, G5Q, G5R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject history/global" colspan="2">History/Global Politics  <br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject geography/environmentg5" colspan="2">Geography/Environment<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject student">Student Agency<br/>G5 Q Teacher<br/></td>
+<td class="subject language" colspan="2">Language Arts<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>JH ICT<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G5 Q Teacher<br/></td>
+<td class="subject creative" colspan="2">Creative Arts<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G5R</th>
+<td class="daySeparator"></td>
+<td class="subject student">Student Agency<br/>G5 R Teacher<br/></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Arts<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject history/global" colspan="2">History/Global Politics  <br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject geography/environmentg5" colspan="2">Geography/Environment<br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td class="subject computer">Computer Studies<br/>JH ICT<br/></td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g5k" colspan="2">G5K, G5N, G5Q, G5R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td class="subject student">Student Agency<br/>G5 R Teacher<br/></td>
+<td class="subject computer" colspan="2">Computer Studies<br/>JH ICT<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsg5" colspan="2">Mathematics<br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject scienceg5" colspan="2">Science<br/>G5 R Teacher<br/></td>
+<!-- span -->
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G6K</th>
+<td class="daySeparator"></td>
+<td class="subject history/global">History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td class="subject religion/social">Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td class="subject geography/environmentsocial">Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td>-X-</td>
+<td class="subject g6k" colspan="2">G6K, G6N, G6Q, G6R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject computer" colspan="2">Computer Studies<br/>JH ICT<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject frenchfrench" colspan="2">French<br/>French A Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Arts Studio<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject religion/social">Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<td class="subject history/global">History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td>-X-</td>
+<td class="subject geography/environmentsocial">Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td>---</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>JH ICT<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G6N</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td class="subject geography/environmentsocial">Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies Lab<br/>JH ICT<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g6k" colspan="2">G6K, G6N, G6Q, G6R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Arts<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject frenchfrench">French<br/>French A Teacher<br/></td>
+<td class="subject religion/social">Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<td>-X-</td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies Lab<br/>JH ICT<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject geography/environmentsocial">Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td class="subject history/global">History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject history/global">History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td class="subject religion/social">Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<td>-X-</td>
+<td class="subject frenchfrench" colspan="2">French<br/>French A Teacher<br/></td>
+<!-- span -->
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G6Q</th>
+<td class="daySeparator"></td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject geography/environmentsocial">Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g6k" colspan="2">G6K, G6N, G6Q, G6R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject geography/environmentsocial">Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td class="subject history/global">History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject french" colspan="2">French<br/>JH French<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td class="subject computer" colspan="2">Computer Studies Lab<br/>JH ICT<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject history/global">History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td class="subject religion/social">Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<td class="daySeparator"></td>
+<td class="subject computer" colspan="2">Computer Studies Lab<br/>JH ICT<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Arts<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject religion/social">Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G6R</th>
+<td class="daySeparator"></td>
+<td class="subject french" colspan="2">French<br/>JH French<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g6k" colspan="2">G6K, G6N, G6Q, G6R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies Lab<br/>JH ICT<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject religion/social">Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<td class="subject geography/environmentsocial">Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Arts<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td class="subject geography/environmentsocial">Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td class="subject history/global">History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td>-X-</td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science B Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject computer" colspan="2">Computer Studies Lab<br/>JH ICT<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject religion/social">Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td>---</td>
+<td class="subject history/global">History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G7K</th>
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Arts<br/>JH Creative Art <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="daySeparator"></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>Social Sc Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>Social Sc Teacher<br/></td>
+<!-- span -->
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g7k" colspan="2">G7K, G7N, G7R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td class="subject french">French<br/>JH French<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G7N</th>
+<td class="daySeparator"></td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject social" colspan="2">Social Studies<br/>Social Sc Teacher<br/></td>
+<!-- span -->
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject creative" colspan="2">Creative Arts<br/>JH Creative Art <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>Social Sc Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td>-X-</td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="daySeparator"></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g7k" colspan="2">G7K, G7N, G7R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G7R</th>
+<td class="daySeparator"></td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="daySeparator"></td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Arts<br/>JH Creative Art <br/></td>
+<!-- span -->
+<td class="subject social" colspan="2">Social Studies<br/>Social Sc Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>Social Sc Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td>-X-</td>
+<td class="subject mathematicsmath" colspan="2">Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject language" colspan="2">Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+<td class="subject french">French<br/>JH French<br/></td>
+<td>-X-</td>
+<td class="subject g7k" colspan="2">G7K, G7N, G7R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td>-X-</td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G8K</th>
+<td class="daySeparator"></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td>-X-</td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td class="subject french">French<br/>JH French<br/></td>
+<td>-X-</td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Arts<br/>JH Creative Art <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>JH ICT<br/></td>
+<!-- span -->
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g8k" colspan="2">G8K, G8N, G8R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td>-X-</td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G8N</th>
+<td class="daySeparator"></td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>JH ICT<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td>-X-</td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject creative" colspan="2">Creative Arts<br/>JH Creative Art <br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g8k" colspan="2">G8K, G8N, G8R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G8R</th>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="daySeparator"></td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td>-X-</td>
+<td class="subject musicmusic" colspan="2">Music<br/>Music Teacher <br/></td>
+<!-- span -->
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject computer" colspan="2">Computer Studies<br/>JH ICT<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject sciencescience" colspan="2">Science<br/>Science A Teacher<br/></td>
+<!-- span -->
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject g8k" colspan="2">G8K, G8N, G8R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Arts<br/>English B Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Arts<br/>JH Creative Art <br/></td>
+<!-- span -->
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td>-X-</td>
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="daySeparator"></td>
+<td class="subject 2" colspan="2">Mathematics<br/>Math  Tutor 2<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td class="subject local">Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G9K</th>
+<td class="daySeparator"></td>
+<td class="subject local">Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td>-X-</td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject math" colspan="2">Mathematics<br/>JH Math<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject english" colspan="2">Language Arts<br/>JH English Language<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject science" colspan="2">Science<br/>JH Science<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject science" colspan="2">Science<br/>JH Science<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject local">Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject computer">Computer Studies<br/>ICT  A Teacher<br/></td>
+<td>-X-</td>
+<td class="subject english" colspan="2">Language Arts<br/>JH English Language<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject math" colspan="2">Mathematics<br/>JH Math<br/></td>
+<!-- span -->
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Arts<br/>JH Creative Art <br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject english" colspan="2">Language Arts<br/>JH English Language<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject local">Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject math" colspan="2">Mathematics<br/>JH Math<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G9N</th>
+<td class="daySeparator"></td>
+<td class="subject math" colspan="2">Mathematics<br/>JH Math<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject english" colspan="2">Language Arts<br/>JH English Language<br/></td>
+<!-- span -->
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject local">Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td>-X-</td>
+<td class="subject english" colspan="2">Language Arts<br/>JH English Language<br/></td>
+<!-- span -->
+<td class="subject math" colspan="2">Mathematics<br/>JH Math<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td>-X-</td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td class="subject science" colspan="2">Science<br/>JH Science<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject local">Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject science" colspan="2">Science<br/>JH Science<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td class="subject local">Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td>-X-</td>
+<td class="subject computer">Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="daySeparator"></td>
+<td class="subject math" colspan="2">Mathematics<br/>JH Math<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Arts<br/>JH Creative Art <br/></td>
+<!-- span -->
+<td class="subject english" colspan="2">Language Arts<br/>JH English Language<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">G9R</th>
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject science" colspan="2">Science<br/>JH Science<br/></td>
+<!-- span -->
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td>-X-</td>
+<td class="subject math" colspan="2">Mathematics<br/>JH Math<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td>-X-</td>
+<td class="subject math" colspan="2">Mathematics<br/>JH Math<br/></td>
+<!-- span -->
+<td class="subject local">Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td>-X-</td>
+<td class="subject english" colspan="2">Language Arts<br/>JH English Language<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject social" colspan="2">Social Studies<br/>JH Social<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject english" colspan="2">Language Arts<br/>JH English Language<br/></td>
+<!-- span -->
+<td class="subject rmejh">RME<br/>JH Religion<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Arts<br/>JH Creative Art <br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject career">Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject local">Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td>-X-</td>
+<td class="subject computer" colspan="2">Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td class="subject english" colspan="2">Language Arts<br/>JH English Language<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject math" colspan="2">Mathematics<br/>JH Math<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject local">Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject french">French<br/>JH French<br/></td>
+<td>-X-</td>
+<td class="subject science" colspan="2">Science<br/>JH Science<br/></td>
+<!-- span -->
+<td class="subject career">Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject computer">Computer Studies<br/>ICT  A Teacher<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">NUR</th>
+<td class="daySeparator"></td>
+<td class="subject nu" colspan="2">Social Development<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject nu" colspan="2">NUN, NUR<br/>Physical Education<br/>NU N Teacher, NU N Assitant, NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td class="subject nu" colspan="2">Science Inquiry<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject nu" colspan="2">World Discovery<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td class="subject nu" colspan="2">Numeracy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject nu" colspan="2">World Discovery<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject nu" colspan="2">Numeracy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject nu" colspan="2">Science Inquiry<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject nu" colspan="2">Numeracy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Literacy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Literacy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject nu" colspan="2">Numeracy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">NUN</th>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Literacy<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject nu" colspan="2">NUN, NUR<br/>Physical Education<br/>NU N Teacher, NU N Assitant, NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td class="subject nu" colspan="2">Numeracy<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td class="subject nu" colspan="2">World Discovery<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject nu" colspan="2">Numeracy<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject nu" colspan="2">Numeracy<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td class="subject nu" colspan="2">Science Inquiry<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject nu" colspan="2">Numeracy<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject nu" colspan="2">Social Development<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td class="subject nu" colspan="2">Science Inquiry<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject nu" colspan="2">World Discovery<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>NU N Teacher, NU N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">RCR</th>
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject numeracyrc" colspan="2">Numeracy<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td class="subject rc" colspan="2">World Discovery<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject rc" colspan="2">World Discovery<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td class="subject numeracyrc" colspan="2">Numeracy<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject rc" colspan="2">Science Inquiry<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="subject language" colspan="2">Language Literacy<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject numeracyrc" colspan="2">Numeracy<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject rc" colspan="2">RCR, RCN<br/>Physical Education<br/>RC R Assitant, RC N Assitant, RC N Teacher, RC R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject numeracyrc" colspan="2">Numeracy<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Literacy<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject rc" colspan="2">Social Development<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject rc" colspan="2">Science Inquiry<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">RCN</th>
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject language" colspan="2">Language Literacy<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td class="subject rc">Social Development<br/>RC N Assitant, RC N Teacher<br/></td>
+<td>-X-</td>
+<td class="subject numeracyrc" colspan="2">Numeracy<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Literacy<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject numeracyrc" colspan="2">Numeracy<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td class="subject rc">Social Development<br/>RC N Assitant, RC N Teacher<br/></td>
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject numeracyrc" colspan="2">Numeracy<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject language" colspan="2">Language Literacy<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td class="subject rc" colspan="2">World Discovery<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject rc" colspan="2">RCR, RCN<br/>Physical Education<br/>RC R Assitant, RC N Assitant, RC N Teacher, RC R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject rc" colspan="2">World Discovery<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td class="subject rc" colspan="2">Science Inquiry<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject rc" colspan="2">Science Inquiry<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject numeracyrc" colspan="2">Numeracy<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Literacy<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">PKK</th>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Literacy<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">World Discovery<br/>PK K Assitant, PK K Teacher<br/></td>
+<td>---</td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">Science Inquiry<br/>PK K Assitant, PK K Teacher<br/></td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td class="subject pk" colspan="2">PKR, PKN, PKK<br/>Physical Education<br/>PK R Assitant, PK R Teacher, PK K Teacher, PK K Assitant, PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">Student Agency<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td class="subject pk">Science Inquiry<br/>PK K Assitant, PK K Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td class="subject pk">Student Agency<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk">World Discovery<br/>PK K Assitant, PK K Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">Science Inquiry<br/>PK K Assitant, PK K Teacher<br/></td>
+<td>---</td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">World Discovery<br/>PK K Assitant, PK K Teacher<br/></td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">Science Inquiry<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject language" colspan="2">Language Literacy<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td class="subject pk">World Discovery<br/>PK K Assitant, PK K Teacher<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">PKN</th>
+<td class="daySeparator"></td>
+<td class="subject pk">World Discovery<br/>PK N Assitant, PK N Teacher<br/></td>
+<td class="subject pk">Student Agency<br/>PK N Teacher, PK N Assitant<br/></td>
+<td>-X-</td>
+<td class="subject pk">Science Inquiry<br/>PK N Teacher, PK N Assitant<br/></td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>PK N Assitant, PK N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject pk" colspan="2">PKR, PKN, PKK<br/>Physical Education<br/>PK R Assitant, PK R Teacher, PK K Teacher, PK K Assitant, PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">Science Inquiry<br/>PK N Teacher, PK N Assitant<br/></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>PK N Assitant, PK N Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td class="subject pk">World Discovery<br/>PK N Assitant, PK N Teacher<br/></td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Literacy<br/>PK N Assitant, PK N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">World Discovery<br/>PK N Assitant, PK N Teacher<br/></td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+<td class="subject pk">Science Inquiry<br/>PK N Teacher, PK N Assitant<br/></td>
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>PK N Assitant, PK N Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject pk">Student Agency<br/>PK N Teacher, PK N Assitant<br/></td>
+<td class="subject pk">Science Inquiry<br/>PK N Teacher, PK N Assitant<br/></td>
+<td>-X-</td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Literacy<br/>PK N Assitant, PK N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject pk">World Discovery<br/>PK N Assitant, PK N Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>PK N Assitant, PK N Teacher<br/></td>
+<!-- span -->
+<td class="subject language" colspan="2">Language Literacy<br/>PK N Assitant, PK N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">PKR</th>
+<td class="daySeparator"></td>
+<td class="subject pk">Science Inquiry<br/>PK R Assitant, PK R Teacher<br/></td>
+<td>---</td>
+<td>-X-</td>
+<td class="subject pk">Student Agency<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td class="subject pk">World Discovery<br/>PK R Assitant, PK R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject language" colspan="2">Language Literacy<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject pk" colspan="2">PKR, PKN, PKK<br/>Physical Education<br/>PK R Assitant, PK R Teacher, PK K Teacher, PK K Assitant, PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">World Discovery<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td class="subject pk">Science Inquiry<br/>PK R Assitant, PK R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject language" colspan="2">Language Literacy<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td class="subject pk">Student Agency<br/>PK R Assitant, PK R Teacher<br/></td>
+<td>-X-</td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Literacy<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">Science Inquiry<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject numeracypk" colspan="2">Numeracy<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td class="subject pk">World Discovery<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="daySeparator"></td>
+<td class="subject language" colspan="2">Language Literacy<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject pk">Science Inquiry<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>PK R Assitant, PK R Teacher<br/></td>
+<!-- span -->
+<td class="subject pk">World Discovery<br/>PK R Assitant, PK R Teacher<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">KGK</th>
+<td class="daySeparator"></td>
+<td class="subject kg">Student Agency<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg">Science Inquiry<br/>KG K Teacher, KG K Assitant<br/></td>
+<td>-X-</td>
+<td class="subject kg" colspan="2">Language Literacy<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td class="subject kg">World Discovery<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject computer">Computer Studies<br/>KG K Teacher, KG K Assitant<br/></td>
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject kg" colspan="2">Language Literacy<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td>---</td>
+<td class="subject computer">Computer Studies<br/>KG K Teacher, KG K Assitant<br/></td>
+<td>-X-</td>
+<td class="subject kg">World Discovery<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg">World Discovery<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="daySeparator"></td>
+<td class="subject kg" colspan="2">KGK, KGN, KGR<br/>Physical Education<br/>KG R Teacher, KG R Assitant, KG N Assitant, KG K Assitant, KG K Teacher, KG N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject kg">Science Inquiry<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td class="subject kg" colspan="2">Language Literacy<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject kg" colspan="2">Language Literacy<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td class="subject kg">Science Inquiry<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg">Student Agency<br/>KG K Teacher, KG K Assitant<br/></td>
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<td class="subject kg">World Discovery<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg">Science Inquiry<br/>KG K Teacher, KG K Assitant<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">KGN</th>
+<td class="daySeparator"></td>
+<td class="subject computer">Computer Studies<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg">World Discovery<br/>KG N Teacher, KG N Assitant<br/></td>
+<td>-X-</td>
+<td class="subject kg">Student Agency<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg">Science Inquiry<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg" colspan="2">Language Literacy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject kg" colspan="2">Language Literacy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject kg">World Discovery<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td class="subject kg">Student Agency<br/>KG N Teacher, KG N Assitant<br/></td>
+<td>-X-</td>
+<td class="subject computer">Computer Studies<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg">Science Inquiry<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="daySeparator"></td>
+<td class="subject kg" colspan="2">KGK, KGN, KGR<br/>Physical Education<br/>KG R Teacher, KG R Assitant, KG N Assitant, KG K Assitant, KG K Teacher, KG N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td class="subject kg" colspan="2">Language Literacy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject kg" colspan="2">Language Literacy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>---</td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+<td class="subject kg">Science Inquiry<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg">World Discovery<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="daySeparator"></td>
+<td class="subject kg">Science Inquiry<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg">World Discovery<br/>KG N Teacher, KG N Assitant<br/></td>
+<td>-X-</td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">KGR</th>
+<td class="daySeparator"></td>
+<td class="subject kg">Student Agency<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject computer">Computer Studies<br/>KG R Teacher, KG R Assitant<br/></td>
+<td>-X-</td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject kg">World Discovery<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg">Science Inquiry<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="daySeparator"></td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject kg">World Discovery<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg" colspan="2">Language Literacy<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="subject kg">Science Inquiry<br/>KG R Teacher, KG R Assitant<br/></td>
+<td>-X-</td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject kg" colspan="2">KGK, KGN, KGR<br/>Physical Education<br/>KG R Teacher, KG R Assitant, KG N Assitant, KG K Assitant, KG K Teacher, KG N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject creative" colspan="2">Creative Art &amp; Music<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="subject kg" colspan="2">Language Literacy<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td>-X-</td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject kg">World Discovery<br/>KG R Teacher, KG R Assitant<br/></td>
+<td>---</td>
+<td>-X-</td>
+<td class="subject kg">Science Inquiry<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg" colspan="2">Language Literacy<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="subject computer">Computer Studies<br/>KG R Teacher, KG R Assitant<br/></td>
+<td>-X-</td>
+<td class="subject kg" colspan="2">Numeracy<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="daySeparator"></td>
+<td class="subject kg">Science Inquiry<br/>KG R Teacher, KG R Assitant<br/></td>
+<td>---</td>
+<td>-X-</td>
+<td class="subject kg">Student Agency<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg" colspan="2">Language Literacy<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="subject kg">World Discovery<br/>KG R Teacher, KG R Assitant<br/></td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr class="foot"><td></td><td></td><td class="subject 0" colspan="54">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td><td></td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+</body>
+</html>

@@ -1,0 +1,2913 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<title>Accra Grammar School</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style>
+      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
+      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
+      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
+
+      p.back {
+        margin-top: 4ex;
+        margin-bottom: 5ex;
+      }
+
+      table {
+        text-align: center;
+        page-break-inside: avoid;
+      }
+
+      table.odd_table {
+        page-break-before: always;
+      }
+
+      table.even_table {
+        page-break-before: always;
+      }
+
+      table.detailed {
+        margin-left: auto; margin-right: auto;
+        text-align: center;
+        border: 0px;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      caption {
+
+      }
+
+      span.institution {
+        font-weight: bold;
+      }
+
+      span.name {
+
+      }
+
+      span.comment {
+        /*font-style: italic;*/
+      }
+
+      span.legend_title {
+        font-weight: bold;
+      }
+
+      thead {
+
+      }
+
+      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
+
+      tr.foot {
+
+      }
+
+      tbody {
+
+      }
+
+      th {
+
+      }
+
+      td {
+
+      }
+
+      th.daySeparator {
+        background-color: silver;
+      }
+
+      tr.daySeparator {
+        background-color: silver;
+      }
+
+      td.daySeparator {
+        background-color: silver;
+      }
+
+      td.detailed {
+        border: 1px dashed silver;
+        border-bottom: 0;
+        border-top: 0;
+      }
+
+      th.xAxis {
+      /* width: 8em; */
+      }
+
+      th.yAxis {
+        height: 8ex;
+      }
+
+      /* Style the teachers' free periods */
+
+      div.DESCRIPTION {
+        text-align: left;
+        font-size: smaller;
+      }
+    </style>
+<link href="style.css" rel="stylesheet"/></head>
+<body id="top">
+<table border="1">
+<caption>Accra Grammar School</caption>
+<thead>
+<tr>
+<td rowspan="2"></td>
+<th class="daySeparator"></th>
+<th colspan="10">M</th>
+<th class="daySeparator"></th>
+<th colspan="10">T</th>
+<th class="daySeparator"></th>
+<th colspan="10">W</th>
+<th class="daySeparator"></th>
+<th colspan="10">R</th>
+<th class="daySeparator"></th>
+<th colspan="10">F</th>
+<th class="daySeparator"></th>
+</tr>
+<tr>
+<!-- span -->
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">B201</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">B203</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">B202</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">B204</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C101</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C102</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C103</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C104</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C105</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C106</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C108</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C109</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C110</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C111</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C112</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C201</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C203</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">C204</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">D101</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">D201</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">D203</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">D202 - Library</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E101</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E102</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E103</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E104</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E105</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E106</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E107</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E108</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E201</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E202</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E203</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E204</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E205</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E206</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E207</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E208</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E301</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E302</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E303</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E304</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E305</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E306</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E307</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">E308</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td class="daySeparator"></td>
+</tr>
+<tr class="foot"><td></td><td></td><td class="subject 0" colspan="54">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td><td></td></tr>
+</tbody>
+</table>
+</body>
+</html>

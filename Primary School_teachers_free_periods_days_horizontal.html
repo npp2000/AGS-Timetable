@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<title>Accra Grammar School</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style>
+      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
+      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
+      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
+
+      p.back {
+        margin-top: 4ex;
+        margin-bottom: 5ex;
+      }
+
+      table {
+        text-align: center;
+        page-break-inside: avoid;
+      }
+
+      table.odd_table {
+        page-break-before: always;
+      }
+
+      table.even_table {
+        page-break-before: always;
+      }
+
+      table.detailed {
+        margin-left: auto; margin-right: auto;
+        text-align: center;
+        border: 0px;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      caption {
+
+      }
+
+      span.institution {
+        font-weight: bold;
+      }
+
+      span.name {
+
+      }
+
+      span.comment {
+        /*font-style: italic;*/
+      }
+
+      span.legend_title {
+        font-weight: bold;
+      }
+
+      thead {
+
+      }
+
+      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
+
+      tr.foot {
+
+      }
+
+      tbody {
+
+      }
+
+      th {
+
+      }
+
+      td {
+
+      }
+
+      th.daySeparator {
+        background-color: silver;
+      }
+
+      tr.daySeparator {
+        background-color: silver;
+      }
+
+      td.daySeparator {
+        background-color: silver;
+      }
+
+      td.detailed {
+        border: 1px dashed silver;
+        border-bottom: 0;
+        border-top: 0;
+      }
+
+      th.xAxis {
+      /* width: 8em; */
+      }
+
+      th.yAxis {
+        height: 8ex;
+      }
+
+      /* Style the teachers' free periods */
+
+      div.DESCRIPTION {
+        text-align: left;
+        font-size: smaller;
+      }
+    </style>
+<link href="style.css" rel="stylesheet"/></head>
+<body id="top">
+<table>
+<tr align="left" valign="top">
+<th>Institution name:</th>
+<td class="subject accra">Accra Grammar School</td>
+</tr>
+</table>
+<table>
+<tr align="left" valign="top">
+<th>Comments:</th>
+<td class="subject timetables">Timetables</td>
+</tr>
+</table>
+<div class="TEACHER_HAS_SINGLE_GAP">Teacher has a single gap</div>
+<div class="TEACHER_HAS_BORDER_GAP">Teacher has a border gap</div>
+<div class="TEACHER_HAS_BIG_GAP">Teacher has a big gap</div>
+<div class="TEACHER_MUST_COME_EARLIER">Teacher must come earlier</div>
+<div class="TEACHER_MUST_COME_MUCH_EARLIER">Teacher must come much earlier</div>
+<div class="TEACHER_MUST_STAY_LONGER">Teacher must stay longer</div>
+<div class="TEACHER_MUST_STAY_MUCH_LONGER">Teacher must stay much longer</div>
+<div class="TEACHER_HAS_A_FREE_DAY">Teacher has a free day</div>
+<div class="TEACHER_IS_NOT_AVAILABLE">Teacher is not available</div>
+<p> </p>
+<table border="1" id="table">
+<caption>Accra Grammar School</caption>
+<thead>
+<tr><td rowspan="2"></td><th colspan="5">Teachers' Free Periods</th></tr>
+<tr>
+<!-- span -->
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject english"><div class="DESCRIPTION">Must come earlier:</div>G5 N Teacher<br/>JH Home<br/>JH Pretech<br/>JH Twi<br/><div class="DESCRIPTION">Must come much earlier:</div>English A Teacher<br/>G4 N Teacher<br/>G5 K Teacher<br/>G5 Q Teacher<br/>JH English Language<br/>JH Science<br/>PE Instructor<br/>Science A Teacher<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Must come earlier:</div>G3 R Teacher<br/>VP JHS<br/><div class="DESCRIPTION">Must come much earlier:</div>Creative Arts Teacher<br/>French A Teacher<br/>ICT  A Teacher<br/>JH Creative Art <br/>JH English Language<br/>JH Math<br/>JH Science<br/>PE Instructor<br/>Science A Teacher<br/>Social Sc Teacher<br/></td>
+<td class="subject english"><div class="DESCRIPTION">Must come earlier:</div>G3 K Teacher<br/><div class="DESCRIPTION">Must come much earlier:</div>English B Teacher<br/>G4 Q Teacher<br/>G5 R Teacher<br/>ICT  A Teacher<br/>JH English Language<br/>JH Home<br/>JH Pretech<br/>PE Instructor<br/>Science B Teacher<br/>VP JHS<br/><div class="DESCRIPTION">Free day:</div>JH Math<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Must come earlier:</div>JH Home<br/>VP JHS<br/><div class="DESCRIPTION">Must come much earlier:</div>English A Teacher<br/>G4 K Teacher<br/>ICT  A Teacher<br/>JH Creative Art <br/>JH English Language<br/>JH Math<br/>PE Instructor<br/>Science A Teacher<br/>Social Sc Teacher<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Must come earlier:</div>G2 Q Teacher<br/>JH Pretech<br/>JH Twi<br/><div class="DESCRIPTION">Must come much earlier:</div>English A Teacher<br/>G3 Q Teacher<br/>ICT  A Teacher<br/>JH Creative Art <br/>JH Science<br/>JH Social<br/>Math Tutor I<br/>NU N Assitant<br/>NU N Teacher<br/><div class="DESCRIPTION">Free day:</div>PE Instructor<br/>Science B Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>G5 R Teacher<br/>JH ICT<br/>PK R Assitant<br/>PK R Teacher<br/><div class="DESCRIPTION">Must stay longer:</div>VP JHS<br/><div class="DESCRIPTION">Must come much earlier:</div>English A Teacher<br/>G4 N Teacher<br/>G5 K Teacher<br/>G5 Q Teacher<br/>JH English Language<br/>JH Science<br/>PE Instructor<br/>Science A Teacher<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>JH Twi<br/><div class="DESCRIPTION">Must come much earlier:</div>Creative Arts Teacher<br/>French A Teacher<br/>ICT  A Teacher<br/>JH Creative Art <br/>JH English Language<br/>JH Math<br/>JH Science<br/>PE Instructor<br/>Science A Teacher<br/>Social Sc Teacher<br/></td>
+<td class="subject english"><div class="DESCRIPTION">Must come much earlier:</div>English B Teacher<br/>G4 Q Teacher<br/>G5 R Teacher<br/>ICT  A Teacher<br/>JH English Language<br/>JH Home<br/>JH Pretech<br/>PE Instructor<br/>Science B Teacher<br/>VP JHS<br/><div class="DESCRIPTION">Free day:</div>JH Math<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>G2 N Teacher<br/>G2 R Teacher<br/>G3 Q Teacher<br/>JH Pretech<br/>JH Twi<br/>KG R Assitant<br/>KG R Teacher<br/><div class="DESCRIPTION">Must come much earlier:</div>English A Teacher<br/>G4 K Teacher<br/>ICT  A Teacher<br/>JH Creative Art <br/>JH English Language<br/>JH Math<br/>PE Instructor<br/>Science A Teacher<br/>Social Sc Teacher<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>G5 N Teacher<br/>KG R Assitant<br/>KG R Teacher<br/>VP JHS<br/><div class="DESCRIPTION">Must come much earlier:</div>English A Teacher<br/>G3 Q Teacher<br/>ICT  A Teacher<br/>JH Creative Art <br/>JH Science<br/>JH Social<br/>Math Tutor I<br/>NU N Assitant<br/>NU N Teacher<br/><div class="DESCRIPTION">Free day:</div>PE Instructor<br/>Science B Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>JH Social<br/>RC N Assitant<br/>RC N Teacher<br/>RC R Assitant<br/>RC R Teacher<br/><div class="DESCRIPTION">Big gap:</div>G3 N Teacher<br/>G4 K Teacher<br/>G4 Q Teacher<br/>G5 R Teacher<br/>JH Math<br/>Math  Tutor 2<br/>Science B Teacher<br/><div class="DESCRIPTION">Must come earlier:</div>JH Science<br/><div class="DESCRIPTION">Must stay much longer:</div>G4 R Teacher<br/>JH Creative Art <br/>VP JHS<br/><div class="DESCRIPTION">Must come much earlier:</div>G4 N Teacher<br/>G5 K Teacher<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>G4 N Teacher<br/>JH ICT<br/>JH Social<br/>RC N Assitant<br/>RC N Teacher<br/><div class="DESCRIPTION">Big gap:</div>English A Teacher<br/>G4 Q Teacher<br/>G5 R Teacher<br/>Math  Tutor 2<br/>VP JHS<br/><div class="DESCRIPTION">Must stay much longer:</div>JH Home<br/><div class="DESCRIPTION">Must come much earlier:</div>JH Science<br/>PE Instructor<br/>Science A Teacher<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>Math Tutor I<br/>NU R Assitant<br/>NU R Teacher<br/>PK R Assitant<br/>PK R Teacher<br/>RC N Assitant<br/>RC N Teacher<br/><div class="DESCRIPTION">Big gap:</div>G3 K Teacher<br/>G3 N Teacher<br/>G3 Q Teacher<br/>G3 R Teacher<br/>G4 N Teacher<br/>G4 R Teacher<br/>G5 Q Teacher<br/>JH Creative Art <br/>JH Science<br/>RC R Assitant<br/>RC R Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>Creative Arts Teacher<br/><div class="DESCRIPTION">Must come much earlier:</div>English B Teacher<br/>JH Home<br/>VP JHS<br/><div class="DESCRIPTION">Free day:</div>JH Math<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>G2 R Teacher<br/>G4 Q Teacher<br/>G5 R Teacher<br/>JH ICT<br/>KG N Assitant<br/>KG N Teacher<br/><div class="DESCRIPTION">Big gap:</div>English B Teacher<br/>VP JHS<br/><div class="DESCRIPTION">Must come earlier:</div>English A Teacher<br/>JH Math<br/><div class="DESCRIPTION">Must stay much longer:</div>G5 N Teacher<br/>JH Science<br/><div class="DESCRIPTION">Must come much earlier:</div>JH English Language<br/>PE Instructor<br/>Science A Teacher<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>G5 Q Teacher<br/>NU R Assitant<br/>NU R Teacher<br/>VP JHS<br/><div class="DESCRIPTION">Big gap:</div>Creative Arts Teacher<br/>G4 K Teacher<br/>G5 K Teacher<br/>JH English Language<br/>JH Home<br/>JH ICT<br/>JH Math<br/><div class="DESCRIPTION">Must come earlier:</div>English A Teacher<br/><div class="DESCRIPTION">Free day:</div>PE Instructor<br/>Science B Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject creative"><div class="DESCRIPTION">Single gap:</div>Ga Teacher<br/>JH Twi<br/>PK K Assitant<br/>PK K Teacher<br/><div class="DESCRIPTION">Border gap:</div>G3 N Teacher<br/>G4 K Teacher<br/>G4 Q Teacher<br/>G5 R Teacher<br/>JH Home<br/>JH Math<br/>Math  Tutor 2<br/>Science B Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>G4 R Teacher<br/>JH Creative Art <br/>VP JHS<br/><div class="DESCRIPTION">Must come much earlier:</div>G4 N Teacher<br/>G5 K Teacher<br/></td>
+<td class="subject english"><div class="DESCRIPTION">Single gap:</div>G1 K Teacher<br/><div class="DESCRIPTION">Border gap:</div>English A Teacher<br/>G3 R Teacher<br/>G4 Q Teacher<br/>G5 R Teacher<br/>JH Pretech<br/>Math  Tutor 2<br/>VP JHS<br/><div class="DESCRIPTION">Must come earlier:</div>JH Science<br/>PE Instructor<br/>Science A Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>JH Home<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Single gap:</div>G1 Q Teacher<br/><div class="DESCRIPTION">Border gap:</div>G3 K Teacher<br/>G3 N Teacher<br/>G3 Q Teacher<br/>G3 R Teacher<br/>G5 Q Teacher<br/>JH Creative Art <br/>JH Science<br/>RC R Assitant<br/>RC R Teacher<br/><div class="DESCRIPTION">Big gap:</div>G4 N Teacher<br/>G4 R Teacher<br/><div class="DESCRIPTION">Must come earlier:</div>English B Teacher<br/>JH Home<br/>VP JHS<br/><div class="DESCRIPTION">Must stay much longer:</div>Creative Arts Teacher<br/><div class="DESCRIPTION">Free day:</div>JH Math<br/></td>
+<td class="subject english"><div class="DESCRIPTION">Single gap:</div>G2 N Teacher<br/>Ga Teacher<br/>PK K Assitant<br/>PK K Teacher<br/><div class="DESCRIPTION">Border gap:</div>English B Teacher<br/>French A Teacher<br/>JH Pretech<br/>JH Religion<br/>JH Twi<br/>VP JHS<br/><div class="DESCRIPTION">Must come earlier:</div>JH English Language<br/>Science A Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>G5 N Teacher<br/>JH Science<br/><div class="DESCRIPTION">Must come much earlier:</div>PE Instructor<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Single gap:</div>JH Pretech<br/>JH Twi<br/><div class="DESCRIPTION">Border gap:</div>Creative Arts Teacher<br/>G4 K Teacher<br/>G5 K Teacher<br/>JH English Language<br/>JH Home<br/>JH ICT<br/>JH Math<br/>Social Sc Teacher<br/><div class="DESCRIPTION">Free day:</div>PE Instructor<br/>Science B Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject creative"><div class="DESCRIPTION">Single gap:</div>JH Pretech<br/><div class="DESCRIPTION">Border gap:</div>G1 K Teacher<br/>G1 N Teacher<br/>G1 Q Teacher<br/>G1 R Teacher<br/>JH English Language<br/>JH Home<br/>JH ICT<br/>NU N Assitant<br/>NU N Teacher<br/><div class="DESCRIPTION">Must stay longer:</div>Math Tutor I<br/><div class="DESCRIPTION">Must stay much longer:</div>G4 R Teacher<br/>JH Creative Art <br/>VP JHS<br/><div class="DESCRIPTION">Must come much earlier:</div>G4 N Teacher<br/>G5 K Teacher<br/></td>
+<td class="subject english"><div class="DESCRIPTION">Single gap:</div>JH French<br/>JH Twi<br/>KG K Assitant<br/>KG K Teacher<br/><div class="DESCRIPTION">Border gap:</div>G2 K Teacher<br/>G2 N Teacher<br/>G2 Q Teacher<br/>G2 R Teacher<br/>G3 R Teacher<br/>G4 R Teacher<br/>JH English Language<br/><div class="DESCRIPTION">Big gap:</div>JH Pretech<br/><div class="DESCRIPTION">Must stay longer:</div>G5 N Teacher<br/>G5 Q Teacher<br/>JH Religion<br/><div class="DESCRIPTION">Must stay much longer:</div>JH Home<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Single gap:</div>G1 N Teacher<br/>JH French<br/>JH Twi<br/><div class="DESCRIPTION">Border gap:</div>G4 N Teacher<br/>G4 Q Teacher<br/>G4 R Teacher<br/>G5 K Teacher<br/>JH English Language<br/>JH Pretech<br/>PE Instructor<br/>Social Sc Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>Creative Arts Teacher<br/><div class="DESCRIPTION">Free day:</div>JH Math<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Single gap:</div>G1 R Teacher<br/>JH Home<br/><div class="DESCRIPTION">Border gap:</div>French A Teacher<br/>G5 R Teacher<br/>JH Creative Art <br/>JH Pretech<br/>JH Religion<br/>JH Social<br/>JH Twi<br/><div class="DESCRIPTION">Must stay much longer:</div>G5 N Teacher<br/>JH Science<br/><div class="DESCRIPTION">Must come much earlier:</div>PE Instructor<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Single gap:</div>ICT  A Teacher<br/><div class="DESCRIPTION">Border gap:</div>Social Sc Teacher<br/><div class="DESCRIPTION">Must stay longer:</div>English B Teacher<br/>G4 Q Teacher<br/>G5 Q Teacher<br/>G5 R Teacher<br/>JH Creative Art <br/>JH Science<br/>JH Social<br/>VP JHS<br/><div class="DESCRIPTION">Free day:</div>PE Instructor<br/>Science B Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>G2 K Teacher<br/>PK N Assitant<br/>PK N Teacher<br/>RC R Assitant<br/>RC R Teacher<br/><div class="DESCRIPTION">Big gap:</div>G1 K Teacher<br/>G1 N Teacher<br/>G1 Q Teacher<br/>G1 R Teacher<br/>JH English Language<br/>JH ICT<br/>NU N Assitant<br/>NU N Teacher<br/><div class="DESCRIPTION">Must stay longer:</div>JH Science<br/>JH Social<br/><div class="DESCRIPTION">Must stay much longer:</div>G4 R Teacher<br/>JH Creative Art <br/>Math Tutor I<br/>VP JHS<br/><div class="DESCRIPTION">Must come much earlier:</div>G4 N Teacher<br/>G5 K Teacher<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>JH Social<br/>PK N Assitant<br/>PK N Teacher<br/><div class="DESCRIPTION">Big gap:</div>G2 K Teacher<br/>G2 N Teacher<br/>G2 Q Teacher<br/>G2 R Teacher<br/>G4 R Teacher<br/>JH English Language<br/>JH Pretech<br/><div class="DESCRIPTION">Must stay longer:</div>G5 K Teacher<br/>VP JHS<br/><div class="DESCRIPTION">Must stay much longer:</div>G5 N Teacher<br/>G5 Q Teacher<br/>JH Home<br/>JH Religion<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>G2 Q Teacher<br/>G4 K Teacher<br/>KG K Assitant<br/>KG K Teacher<br/>Math Tutor I<br/>NU R Assitant<br/>NU R Teacher<br/>RC N Assitant<br/>RC N Teacher<br/>VP JHS<br/><div class="DESCRIPTION">Big gap:</div>G4 Q Teacher<br/>G5 K Teacher<br/>JH English Language<br/>JH Pretech<br/>PE Instructor<br/>Social Sc Teacher<br/><div class="DESCRIPTION">Must stay longer:</div>JH Home<br/><div class="DESCRIPTION">Must stay much longer:</div>Creative Arts Teacher<br/><div class="DESCRIPTION">Free day:</div>JH Math<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>English A Teacher<br/>G5 K Teacher<br/>JH Math<br/>KG N Assitant<br/>KG N Teacher<br/>PK R Assitant<br/>PK R Teacher<br/><div class="DESCRIPTION">Big gap:</div>G5 R Teacher<br/>JH Creative Art <br/>JH Social<br/><div class="DESCRIPTION">Must stay longer:</div>G5 Q Teacher<br/>VP JHS<br/><div class="DESCRIPTION">Must stay much longer:</div>G5 N Teacher<br/>JH Science<br/><div class="DESCRIPTION">Must come much earlier:</div>PE Instructor<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Must stay longer:</div>English A Teacher<br/>G4 K Teacher<br/>NU R Assitant<br/>NU R Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>English B Teacher<br/>G4 Q Teacher<br/>G5 Q Teacher<br/>G5 R Teacher<br/>JH Creative Art <br/>JH Science<br/>JH Social<br/>VP JHS<br/><div class="DESCRIPTION">Free day:</div>PE Instructor<br/>Science B Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>G2 K Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>English B Teacher<br/>G4 K Teacher<br/>G4 R Teacher<br/>G5 N Teacher<br/>JH Creative Art <br/>JH Pretech<br/>JH Religion<br/>JH Science<br/>JH Social<br/>Math Tutor I<br/>Science A Teacher<br/>Science B Teacher<br/>VP JHS<br/>Social Sc Teacher<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>JH Pretech<br/><div class="DESCRIPTION">Must stay much longer:</div>Creative Arts Teacher<br/>G3 K Teacher<br/>G4 K Teacher<br/>G5 K Teacher<br/>G5 N Teacher<br/>G5 Q Teacher<br/>G5 R Teacher<br/>JH Creative Art <br/>JH Home<br/>JH Math<br/>JH Religion<br/>JH Science<br/>VP JHS<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>JH French<br/>VP JHS<br/><div class="DESCRIPTION">Must stay much longer:</div>Creative Arts Teacher<br/>English A Teacher<br/>English B Teacher<br/>G4 N Teacher<br/>ICT  A Teacher<br/>JH Home<br/>JH Science<br/>JH Social<br/>Math  Tutor 2<br/>Science B Teacher<br/><div class="DESCRIPTION">Free day:</div>JH Math<br/></td>
+<td class="subject border"><div class="DESCRIPTION">Border gap:</div>JH Religion<br/>PK N Assitant<br/>PK N Teacher<br/>PK R Assitant<br/>PK R Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>Creative Arts Teacher<br/>English B Teacher<br/>G5 N Teacher<br/>G5 Q Teacher<br/>JH English Language<br/>JH French<br/>JH Pretech<br/>JH Science<br/>Math  Tutor 2<br/>Music Teacher <br/>Science A Teacher<br/>VP JHS<br/></td>
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<td class="subject creative"><div class="DESCRIPTION">Must stay longer:</div>PK K Assitant<br/>PK K Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>English B Teacher<br/>G4 K Teacher<br/>G4 R Teacher<br/>G5 N Teacher<br/>JH Creative Art <br/>JH Pretech<br/>JH Religion<br/>JH Science<br/>JH Social<br/>Math Tutor I<br/>Science A Teacher<br/>Science B Teacher<br/>VP JHS<br/>Social Sc Teacher<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Must stay longer:</div>G3 N Teacher<br/>Ga Teacher<br/>JH Twi<br/>PK N Assitant<br/>PK N Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>Creative Arts Teacher<br/>G3 K Teacher<br/>G4 K Teacher<br/>G5 K Teacher<br/>G5 N Teacher<br/>G5 Q Teacher<br/>G5 R Teacher<br/>JH Creative Art <br/>JH Home<br/>JH Math<br/>JH Religion<br/>JH Science<br/>VP JHS<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Must stay longer:</div>G4 Q Teacher<br/>JH Pretech<br/>JH Twi<br/><div class="DESCRIPTION">Must stay much longer:</div>Creative Arts Teacher<br/>English A Teacher<br/>English B Teacher<br/>G4 N Teacher<br/>ICT  A Teacher<br/>JH Home<br/>JH Science<br/>JH Social<br/>Math  Tutor 2<br/>Science B Teacher<br/><div class="DESCRIPTION">Free day:</div>JH Math<br/></td>
+<td class="subject creative"><div class="DESCRIPTION">Must stay longer:</div>G4 R Teacher<br/>ICT  A Teacher<br/>PK K Assitant<br/>PK K Teacher<br/><div class="DESCRIPTION">Must stay much longer:</div>Creative Arts Teacher<br/>English B Teacher<br/>G5 N Teacher<br/>G5 Q Teacher<br/>JH English Language<br/>JH French<br/>JH Pretech<br/>JH Science<br/>Math  Tutor 2<br/>Music Teacher <br/>Science A Teacher<br/>VP JHS<br/></td>
+<td>---</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+</body>
+</html>

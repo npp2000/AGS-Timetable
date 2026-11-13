@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<title>Accra Grammar School</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style>
+      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
+      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
+      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
+
+      p.back {
+        margin-top: 4ex;
+        margin-bottom: 5ex;
+      }
+
+      table {
+        text-align: center;
+        page-break-inside: avoid;
+      }
+
+      table.odd_table {
+        page-break-before: always;
+      }
+
+      table.even_table {
+        page-break-before: always;
+      }
+
+      table.detailed {
+        margin-left: auto; margin-right: auto;
+        text-align: center;
+        border: 0px;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      caption {
+
+      }
+
+      span.institution {
+        font-weight: bold;
+      }
+
+      span.name {
+
+      }
+
+      span.comment {
+        /*font-style: italic;*/
+      }
+
+      span.legend_title {
+        font-weight: bold;
+      }
+
+      thead {
+
+      }
+
+      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
+
+      tr.foot {
+
+      }
+
+      tbody {
+
+      }
+
+      th {
+
+      }
+
+      td {
+
+      }
+
+      th.daySeparator {
+        background-color: silver;
+      }
+
+      tr.daySeparator {
+        background-color: silver;
+      }
+
+      td.daySeparator {
+        background-color: silver;
+      }
+
+      td.detailed {
+        border: 1px dashed silver;
+        border-bottom: 0;
+        border-top: 0;
+      }
+
+      th.xAxis {
+      /* width: 8em; */
+      }
+
+      th.yAxis {
+        height: 8ex;
+      }
+
+      /* Style the teachers' free periods */
+
+      div.DESCRIPTION {
+        text-align: left;
+        font-size: smaller;
+      }
+    </style>
+<link href="style.css" rel="stylesheet"/></head>
+<body id="top">
+<table border="1">
+<caption>Accra Grammar School</caption>
+<thead>
+<tr>
+<td colspan="2"></td>
+<th class="xAxis">Building B</th>
+<th class="xAxis">Building C</th>
+<th class="xAxis">Building D</th>
+<th class="xAxis">Building E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th rowspan="10">M<br/></th>
+<th class="yAxis">P1</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P2</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">Break</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P3</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P4</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P5</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P6</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">Lunch</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P7</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P8</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<td class="daySeparator" colspan="6"></td>
+</tr>
+<tr>
+<th rowspan="10">T<br/></th>
+<th class="yAxis">P1</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P2</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">Break</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P3</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P4</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P5</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P6</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">Lunch</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P7</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P8</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<td class="daySeparator" colspan="6"></td>
+</tr>
+<tr>
+<th rowspan="10">W<br/></th>
+<th class="yAxis">P1</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P2</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">Break</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P3</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P4</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P5</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P6</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">Lunch</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P7</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P8</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<td class="daySeparator" colspan="6"></td>
+</tr>
+<tr>
+<th rowspan="10">R<br/></th>
+<th class="yAxis">P1</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P2</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">Break</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P3</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P4</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P5</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P6</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">Lunch</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P7</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P8</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<td class="daySeparator" colspan="6"></td>
+</tr>
+<tr>
+<th rowspan="10">F<br/></th>
+<th class="yAxis">P1</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P2</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">Break</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P3</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P4</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P5</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P6</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">Lunch</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P7</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr>
+<!-- span -->
+<th class="yAxis">P8</th>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+<td><table class="detailed"><tr></tr></table></td>
+</tr>
+<tr class="foot"><td colspan="2"></td><td class="subject 0" colspan="4">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+</body>
+</html>

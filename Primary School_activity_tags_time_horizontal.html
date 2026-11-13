@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<title>Accra Grammar School</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style>
+      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
+      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
+      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
+
+      p.back {
+        margin-top: 4ex;
+        margin-bottom: 5ex;
+      }
+
+      table {
+        text-align: center;
+        page-break-inside: avoid;
+      }
+
+      table.odd_table {
+        page-break-before: always;
+      }
+
+      table.even_table {
+        page-break-before: always;
+      }
+
+      table.detailed {
+        margin-left: auto; margin-right: auto;
+        text-align: center;
+        border: 0px;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      caption {
+
+      }
+
+      span.institution {
+        font-weight: bold;
+      }
+
+      span.name {
+
+      }
+
+      span.comment {
+        /*font-style: italic;*/
+      }
+
+      span.legend_title {
+        font-weight: bold;
+      }
+
+      thead {
+
+      }
+
+      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
+
+      tr.foot {
+
+      }
+
+      tbody {
+
+      }
+
+      th {
+
+      }
+
+      td {
+
+      }
+
+      th.daySeparator {
+        background-color: silver;
+      }
+
+      tr.daySeparator {
+        background-color: silver;
+      }
+
+      td.daySeparator {
+        background-color: silver;
+      }
+
+      td.detailed {
+        border: 1px dashed silver;
+        border-bottom: 0;
+        border-top: 0;
+      }
+
+      th.xAxis {
+      /* width: 8em; */
+      }
+
+      th.yAxis {
+        height: 8ex;
+      }
+
+      /* Style the teachers' free periods */
+
+      div.DESCRIPTION {
+        text-align: left;
+        font-size: smaller;
+      }
+    </style>
+<link href="style.css" rel="stylesheet"/></head>
+<body id="top">
+<table border="1" id="table">
+<caption>Accra Grammar School</caption>
+<thead>
+<tr>
+<td rowspan="2"></td>
+<th class="daySeparator"></th>
+<th colspan="10">M</th>
+<th class="daySeparator"></th>
+<th colspan="10">T</th>
+<th class="daySeparator"></th>
+<th colspan="10">W</th>
+<th class="daySeparator"></th>
+<th colspan="10">R</th>
+<th class="daySeparator"></th>
+<th colspan="10">F</th>
+<th class="daySeparator"></th>
+</tr>
+<tr>
+<!-- span -->
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+<th class="xAxis">P1</th>
+<th class="xAxis">P2</th>
+<th class="xAxis">Break</th>
+<th class="xAxis">P3</th>
+<th class="xAxis">P4</th>
+<th class="xAxis">P5</th>
+<th class="xAxis">P6</th>
+<th class="xAxis">Lunch</th>
+<th class="xAxis">P7</th>
+<th class="xAxis">P8</th>
+<th class="daySeparator"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">Lab</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6n">G6N</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6n">G6N</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td class="subject creative"><table class="detailed"><tr><td class="detailed subject creative">Creative Arts Lab</td></tr><tr><td class="detailed subject g4n">G4N</td></tr><tr><td class="detailed subject creative">Creative Arts Teacher</td></tr></table></td>
+<td class="subject creative"><table class="detailed"><tr><td class="detailed subject creative">Creative Arts Lab</td></tr><tr><td class="detailed subject g4n">G4N</td></tr><tr><td class="detailed subject creative">Creative Arts Teacher</td></tr></table></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6r">G6R</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6r">G6R</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6q">G6Q</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6q">G6Q</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td>---</td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6n">G6N</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6n">G6N</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td class="daySeparator"></td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6q">G6Q</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6q">G6Q</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6r">G6R</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td class="subject computer"><table class="detailed"><tr><td class="detailed subject computer">Computer Studies Lab</td></tr><tr><td class="detailed subject g6r">G6R</td></tr><tr><td class="detailed subject ict">JH ICT</td></tr></table></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">Studio</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="subject creative"><table class="detailed"><tr><td class="detailed subject creative">Creative Arts Studio</td></tr><tr><td class="detailed subject g6k">G6K</td></tr><tr><td class="detailed subject creative">Creative Arts Teacher</td></tr></table></td>
+<td class="subject creative"><table class="detailed"><tr><td class="detailed subject creative">Creative Arts Studio</td></tr><tr><td class="detailed subject g6k">G6K</td></tr><tr><td class="detailed subject creative">Creative Arts Teacher</td></tr></table></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+</tr>
+<tr>
+<th class="yAxis">Field</th>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="daySeparator"></td>
+</tr>
+<tr class="foot"><td></td><td></td><td class="subject 0" colspan="54">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td><td></td></tr>
+</tbody>
+</table>
+</body>
+</html>

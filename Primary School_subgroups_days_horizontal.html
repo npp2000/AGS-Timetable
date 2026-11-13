@@ -1,0 +1,4748 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<title>Accra Grammar School</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style>
+     /* Box Sizing */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+html {
+  font: 14px/1.5 system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body,
+form,
+input,
+textarea,
+option {
+  font: inherit;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+p, ul, ol {
+  margin-bottom: 1.5em;
+}
+
+/* Layout */
+body {
+  padding: 2em;
+  background: rgb(214,109,117);
+  background: linear-gradient(87deg, rgba(214,109,117,1) 0%, rgba(226,149,135,1) 100%);; 
+}
+
+.panel {
+  padding: 2em;
+}
+
+/* Tree */
+.tree {
+  --border-size: 4px;
+  --border-color: #DDD;
+  
+  --spacing-line-vertical: 0.2em;
+  
+  --radius: 8px;
+
+  &, ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li, summary {
+    line-height: 1.2;
+    display: flex;
+    flex: 1 1 auto;
+  }
+ 
+  li {
+    padding: var(--spacing-line-vertical) 0;
+  }
+  
+  ul {
+    padding-top: var(--spacing-line-vertical);
+    padding-left: 0;
+    
+    li {
+      border-left: var(--border-size) solid var(--border-color);
+      display: flex;
+      align-items: center;
+      margin-left: 0.25em;
+      
+      &:last-child {
+        border-color: transparent;
+      }
+      
+      &:before {
+        content: "";
+        order: -2;
+        display: block;
+        align-self: flex-start;
+        flex: 0 0 1.4em;
+        width: 1.4em;
+        height: 1.1em;
+        border: solid var(--border-color);
+        border-width: 0 0 var(--border-size) var(--border-size);
+        position: relative;
+        top: -0.5em;
+        left: calc( var(--border-size) * -0.91 );
+      }
+    }
+    
+    li:last-child:before {
+        border-bottom-left-radius: 0.5em;
+    }
+  }
+  
+  summary {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px dotted #000;
+    }
+  }
+  
+  li:not(:has(summary))::after,
+  summary::before {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: -1;
+    flex: 0 0 1.4em;
+    width: 1.4em;
+    height: 1.4em;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: 50%;
+    background: #ddd;
+    margin-right: 0.4em;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -0.3em;
+  }
+
+  summary::before {
+    content: "";
+    background-color: #696;
+	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 448 512'%3E%3Cpath d='M240 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H176V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H240V80z' /%3E%3C/svg%3E");
+    z-index: 1;
+    color: #fff;
+    line-height: calc(2 * var(--radius) - 2px);
+    text-align: center;
+  }
+
+  details {
+    flex: 1 1 auto;
+  }
+  
+  details[open] > summary::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 448 512'%3E%3Cpath d='M416 256c0 17.7-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z' /%3E%3C/svg%3E");
+  }
+  
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+#table1 {
+  border-collapse: separate;
+  border-spacing: 15px;
+  table-layout: fixed;
+  width: 100%;  
+}
+    </style>
+<link href="style.css" rel="stylesheet"/></head>
+<body id="top">
+<table>
+<tr align="left" valign="top">
+<th><a href="Primary School_index.html" style="font-weight: bold;">Accra Grammar School</a></th>
+<td class="subject days" data-label="Comments:"><h3>Days on horizontal axis</h3></td>
+</tr>
+</table>
+
+<table id="table1">
+ 
+  <tr>
+    <td>
+	<section class="panel">
+  <ul class="tree">
+    <li>
+      <details close>
+        <summary>Year Grade 1</summary>
+        <ul>
+          <li>
+            <a href="#table_3">Grade 1 Kings</a>
+</li>
+<li>
+            <a href="#table_5">Grade 1 Nobles</a>
+</li>
+<li>
+              <a href="#table_7">Grade 1 Queens</a>
+</li>
+<li>
+              <a href="#table_9">Grade 1 Royals</a>
+</li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</section>
+</td>
+    <td>
+    <section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Year Grade 2</summary>
+        <ul>
+     <li>
+              <a href="#table_12">Grade 2 Kings</a>
+</li>
+<li>
+              <a href="#table_14">Grade 2 Nobles</a>
+</li>
+<li>
+              <a href="#table_16">Grade 2 Queens</a>
+</li>
+<li>
+              <a href="#table_18">Grade 2 Royals</a>
+</li>
+	 
+	 </ul>
+      </details>
+    </li>
+  </ul>
+</section>
+
+	</td>
+    <td>    <section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Year Grade 3</summary>
+        <ul>
+     <li>
+      <a href="#table_21">Grade 3 Kings</a>
+</li>
+<li>
+              <a href="#table_23">Grade 3 Nobles</a>
+</li>
+<li>
+              <a href="#table_25">Grade 3 Queens</a>
+</li>
+<li>
+              <a href="#table_27">Grade 3 Royals`</a>
+</li>
+	 
+	 
+	 </ul>
+      </details>
+    </li>
+  </ul>
+</section>
+</td>
+    <td>    <section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Year Grade 4</summary>
+        <ul>
+<li>
+              <a href="#table_30">Grade 4 Kings</a>
+</li>
+<li>
+              <a href="#table_32">Grade 4 Nobles</a>
+</li>
+<li>
+              <a href="#table_34">Grade 4 Queens</a>
+</li>
+<li>
+              <a href="#table_36">Grade 4 Royals</a>
+</li>
+	 
+	 
+	 </ul>
+      </details>
+    </li>
+  </ul>
+</section>
+</td>
+    <td>    <section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Year Grade 5</summary>
+        <ul>
+<li>
+              <a href="#table_39">Grade 5 Kings</a>
+</li>
+<li>
+              <a href="#table_41">Grade 5 Nobles</a>
+</li>
+<li>
+              <a href="#table_43">Grade 5 Queens</a>
+</li>
+<li>
+              <a href="#table_45">Grade 5 Royals</a>
+</li>
+	 
+	 </ul>
+      </details>
+    </li>
+  </ul>
+</section>
+</td>
+    <td>
+    <section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Year Grade 6</summary>
+        <ul>
+<li>
+              <a href="#table_48">Grade 6 Kings</a>
+</li>
+<li>
+              <a href="#table_50">Grade 6 Nobles</a>
+</li>
+<li>
+              <a href="#table_52">Grade 6 Queens</a>
+</li>
+<li>
+              <a href="#table_54">Grade 6 Royals</a>
+</li>
+	 
+	 
+	 </ul>
+      </details>
+    </li>
+  </ul>
+</section>
+</td>
+  </tr>
+</table>
+
+<p></p>
+<table id="table1">
+  <tr>
+    <td>  
+	<section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Year Grade 7</summary>
+        <ul>
+<li>
+              <a href="#table_57">Grade 7 Kings</a>
+</li>
+<li>
+              <a href="#table_59">Grade 7 Nobles</a>
+</li>
+<li>
+              <a href="#table_61">Grade 7 Royals</a>
+</li>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section>
+</td>
+    <td><section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Year Grade 8</summary>
+        <ul>
+<li>
+              <a href="#table_64">Grade 8 Kings</a>
+</li>
+<li>
+              <a href="#table_66">Grade 8 Nobles</a>
+</li>
+<li>
+              <a href="#table_68">Grade 8 Royals</a>
+</li>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section>
+   </td>
+    <td>
+	<section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Year Grade 9</summary>
+        <ul>
+<li>
+              <a href="#table_71">Grade 9 Kings</a>
+</li>
+<li>
+              <a href="#table_73">Grade 9 Nobles</a>
+</li>
+<li>
+             <a href="#table_75">Grade 9 Royals</a>
+</li>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section></td>
+    <td><section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>---- ----- -</summary>
+        <ul>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section></td>
+    <td><section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>---- ----- -</summary>
+        <ul>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section></td>
+    <td>
+	<section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>---- ----- -</summary>
+        <ul>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section></td>
+  </tr>
+</table>
+
+<p></p>
+<table id="table1">
+  <tr>
+    <td><section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Nursery</summary>
+        <ul>
+<li>
+         <a href="#table_78">Nursery Royals</a>
+</li>
+<li>
+         <a href="#table_80">Nursery Nobles</a>
+</li>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section>
+   </td>
+    <td><section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Reception</summary>
+        <ul>
+<li>
+              <a href="#table_83">Reception Royals</a>
+</li>
+<li>
+              <a href="#table_85">Reception Nobles</a>
+</li>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section>
+   </td>
+    <td><section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Pre-Kindergarten</summary>
+        <ul>
+<li>
+              <a href="#table_88">Pre-K Kings</a>
+</li>
+<li>
+              <a href="#table_90">Pre-K Nobles</a>
+</li>
+<li>
+            <a href="#table_92">Pre-K Royals</a>
+</li>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section></td>
+    <td><section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>Kindergarten</summary>
+        <ul>
+<li>
+              <a href="#table_95">KG Kings</a>
+</li>
+<li>
+              <a href="#table_97">KG Nobles</a>
+</li>
+<li>
+              <a href="#table_99">KG Royals</a>
+</li>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section></td>
+    <td><section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>---- ----- -</summary>
+        <ul>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section></td>
+    <td><section class="panel">
+	<ul class="tree">
+	<li>
+		<details close>
+        <summary>---- ----- -</summary>
+        <ul>
+
+	 </ul>
+      </details>
+    </li>
+   </ul>
+   </section></td>
+  </tr>
+</table>
+<p> </p>
+<table border="1" class="odd_table" id="table_3">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1K Automatic Subgroup</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g1klanguage" rowspan="2">G1K<br/>Language Arts<br/>G1 K Teacher<br/></td>
+<td class="subject g1klanguage" rowspan="2">G1K<br/>Language Arts<br/>G1 K Teacher<br/></td>
+<td class="subject g1kstudent">G1K<br/>Student Agency<br/>G1 K Teacher<br/></td>
+<td class="subject g1ksocial" rowspan="2">G1K<br/>Social Studies<br/>G1 K Teacher<br/></td>
+<td class="subject g1ksocial" rowspan="2">G1K<br/>Social Studies<br/>G1 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g1kcomputer">G1K<br/>Computer Studies<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g1kcreative">G1K<br/>Creative Arts<br/>G1 K Teacher<br/></td>
+<td class="subject g1kstudent">G1K<br/>Student Agency<br/>G1 K Teacher<br/></td>
+<td class="subject g1kmusicg1">G1K<br/>Music<br/>G1 K Teacher<br/></td>
+<td class="subject g1kscienceg1" rowspan="2">G1K<br/>Science<br/>G1 K Teacher<br/></td>
+<td class="subject g1kscienceg1" rowspan="2">G1K<br/>Science<br/>G1 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g1kmusicg1">G1K<br/>Music<br/>G1 K Teacher<br/></td>
+<td>---</td>
+<td class="subject g1ksocial" rowspan="2">G1K<br/>Social Studies<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g1k" rowspan="2">G1K, G1N, G1Q, G1R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g1kscienceg1" rowspan="2">G1K<br/>Science<br/>G1 K Teacher<br/></td>
+<!-- span -->
+<td class="subject g1kmusicg1">G1K<br/>Music<br/>G1 K Teacher<br/></td>
+<td class="subject g1kcreative">G1K<br/>Creative Arts<br/>G1 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g1kcreative">G1K<br/>Creative Arts<br/>G1 K Teacher<br/></td>
+<td class="subject g1kcreative">G1K<br/>Creative Arts<br/>G1 K Teacher<br/></td>
+<td class="subject g1kcomputer">G1K<br/>Computer Studies<br/>G1 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g1kmathematicsg1" rowspan="2">G1K<br/>Mathematics<br/>G1 K Teacher<br/></td>
+<td class="subject g1kmathematicsg1" rowspan="2">G1K<br/>Mathematics<br/>G1 K Teacher<br/></td>
+<td class="subject g1kmathematicsg1" rowspan="2">G1K<br/>Mathematics<br/>G1 K Teacher<br/></td>
+<td class="subject g1klanguage" rowspan="2">G1K<br/>Language Arts<br/>G1 K Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_5">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1N Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g1ncreative">G1N<br/>Creative Arts<br/>G1 N Teacher<br/></td>
+<td class="subject g1nmathematicsg1" rowspan="2">G1N<br/>Mathematics<br/>G1 N Teacher<br/></td>
+<td class="subject g1nlanguage" rowspan="2">G1N<br/>Language Arts<br/>G1 N Teacher<br/></td>
+<td class="subject g1nscienceg1" rowspan="2">G1N<br/>Science<br/>G1 N Teacher<br/></td>
+<td class="subject g1nmathematicsg1" rowspan="2">G1N<br/>Mathematics<br/>G1 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject g1ncomputer">G1N<br/>Computer Studies<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g1nlanguage" rowspan="2">G1N<br/>Language Arts<br/>G1 N Teacher<br/></td>
+<td class="subject g1nmusicg1">G1N<br/>Music<br/>G1 N Teacher<br/></td>
+<td class="subject g1nmusicg1">G1N<br/>Music<br/>G1 N Teacher<br/></td>
+<td class="subject g1nstudent">G1N<br/>Student Agency<br/>G1 N Teacher<br/></td>
+<td class="subject g1nscienceg1" rowspan="2">G1N<br/>Science<br/>G1 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<td class="subject g1ncreative">G1N<br/>Creative Arts<br/>G1 N Teacher<br/></td>
+<td class="subject g1ncreative">G1N<br/>Creative Arts<br/>G1 N Teacher<br/></td>
+<td class="subject g1ncomputer">G1N<br/>Computer Studies<br/>G1 N Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g1k" rowspan="2">G1K, G1N, G1Q, G1R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g1nlanguage" rowspan="2">G1N<br/>Language Arts<br/>G1 N Teacher<br/></td>
+<td>---</td>
+<td class="subject g1nsocial" rowspan="2">G1N<br/>Social Studies<br/>G1 N Teacher<br/></td>
+<td class="subject g1nmusicg1">G1N<br/>Music<br/>G1 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g1nstudent">G1N<br/>Student Agency<br/>G1 N Teacher<br/></td>
+<!-- span -->
+<td class="subject g1ncreative">G1N<br/>Creative Arts<br/>G1 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g1nsocial" rowspan="2">G1N<br/>Social Studies<br/>G1 N Teacher<br/></td>
+<td class="subject g1nscienceg1" rowspan="2">G1N<br/>Science<br/>G1 N Teacher<br/></td>
+<td class="subject g1nsocial" rowspan="2">G1N<br/>Social Studies<br/>G1 N Teacher<br/></td>
+<td class="subject g1nmathematicsg1" rowspan="2">G1N<br/>Mathematics<br/>G1 N Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_7">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1Q Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g1qsocial" rowspan="2">G1Q<br/>Social Studies<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qsocial" rowspan="2">G1Q<br/>Social Studies<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qsocial" rowspan="2">G1Q<br/>Social Studies<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qmusicg1">G1Q<br/>Music<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qlanguage" rowspan="2">G1Q<br/>Language Arts<br/>G1 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g1qcomputer">G1Q<br/>Computer Studies<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g1qlanguage" rowspan="2">G1Q<br/>Language Arts<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qmathematicsg1" rowspan="2">G1Q<br/>Mathematics<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qcreative">G1Q<br/>Creative Arts<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qscienceg1" rowspan="2">G1Q<br/>Science<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qmusicg1">G1Q<br/>Music<br/>G1 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<td>---</td>
+<!-- span -->
+<td class="subject g1qmathematicsg1" rowspan="2">G1Q<br/>Mathematics<br/>G1 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g1k" rowspan="2">G1K, G1N, G1Q, G1R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g1qlanguage" rowspan="2">G1Q<br/>Language Arts<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qscienceg1" rowspan="2">G1Q<br/>Science<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qcreative">G1Q<br/>Creative Arts<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g1qstudent">G1Q<br/>Student Agency<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qcreative">G1Q<br/>Creative Arts<br/>G1 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g1qcreative">G1Q<br/>Creative Arts<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qscienceg1" rowspan="2">G1Q<br/>Science<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qmusicg1">G1Q<br/>Music<br/>G1 Q Teacher<br/></td>
+<td class="subject g1qmathematicsg1" rowspan="2">G1Q<br/>Mathematics<br/>G1 Q Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<td class="subject g1qstudent">G1Q<br/>Student Agency<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject g1qcomputer">G1Q<br/>Computer Studies<br/>G1 Q Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_9">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1R Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g1rlanguage" rowspan="2">G1R<br/>Language Arts<br/>G1 R Teacher<br/></td>
+<td class="subject g1rsocial" rowspan="2">G1R<br/>Social Studies<br/>G1 R Teacher<br/></td>
+<td class="subject g1rscienceg1" rowspan="2">G1R<br/>Science<br/>G1 R Teacher<br/></td>
+<td class="subject g1rsocial" rowspan="2">G1R<br/>Social Studies<br/>G1 R Teacher<br/></td>
+<td class="subject g1rcreative">G1R<br/>Creative Arts<br/>G1 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g1rmusicg1">G1R<br/>Music<br/>G1 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g1rscienceg1" rowspan="2">G1R<br/>Science<br/>G1 R Teacher<br/></td>
+<td class="subject g1rlanguage" rowspan="2">G1R<br/>Language Arts<br/>G1 R Teacher<br/></td>
+<td class="subject g1rstudent">G1R<br/>Student Agency<br/>G1 R Teacher<br/></td>
+<td class="subject g1rlanguage" rowspan="2">G1R<br/>Language Arts<br/>G1 R Teacher<br/></td>
+<td class="subject g1rsocial" rowspan="2">G1R<br/>Social Studies<br/>G1 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g1rmathematicsg1" rowspan="2">G1R<br/>Mathematics<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g1k" rowspan="2">G1K, G1N, G1Q, G1R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g1rcreative">G1R<br/>Creative Arts<br/>G1 R Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td class="subject g1rmathematicsg1" rowspan="2">G1R<br/>Mathematics<br/>G1 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<td class="subject g1rmusicg1">G1R<br/>Music<br/>G1 R Teacher<br/></td>
+<td class="subject g1rcomputer">G1R<br/>Computer Studies<br/>G1 R Teacher<br/></td>
+<td class="subject g1rcreative">G1R<br/>Creative Arts<br/>G1 R Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g1rmathematicsg1" rowspan="2">G1R<br/>Mathematics<br/>G1 R Teacher<br/></td>
+<td class="subject g1rscienceg1" rowspan="2">G1R<br/>Science<br/>G1 R Teacher<br/></td>
+<td class="subject g1rcreative">G1R<br/>Creative Arts<br/>G1 R Teacher<br/></td>
+<td class="subject g1rstudent">G1R<br/>Student Agency<br/>G1 R Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g1rmusicg1">G1R<br/>Music<br/>G1 R Teacher<br/></td>
+<td class="subject g1rcomputer">G1R<br/>Computer Studies<br/>G1 R Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_12">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2K Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g2klanguage" rowspan="2">G2K<br/>Language Arts<br/>G2 K Teacher<br/></td>
+<td class="subject g2kscienceg2" rowspan="2">G2K<br/>Science<br/>G2 K Teacher<br/></td>
+<td class="subject g2klanguage" rowspan="2">G2K<br/>Language Arts<br/>G2 K Teacher<br/></td>
+<td class="subject g2ksocial" rowspan="2">G2K<br/>Social Studies<br/>G2 K Teacher<br/></td>
+<td class="subject g2kcreative">G2K<br/>Creative Arts<br/>G2 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g2kmusicg2">G2K<br/>Music<br/>G2 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g2kcreative">G2K<br/>Creative Arts<br/>G2 K Teacher<br/></td>
+<td class="subject g2ksocial" rowspan="2">G2K<br/>Social Studies<br/>G2 K Teacher<br/></td>
+<td class="subject g2kcreative">G2K<br/>Creative Arts<br/>G2 K Teacher<br/></td>
+<td class="subject g2kstudent">G2K<br/>Student Agency<br/>G2 K Teacher<br/></td>
+<td class="subject g2kmathematicsg2" rowspan="2">G2K<br/>Mathematics<br/>G2 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g2ksocial" rowspan="2">G2K<br/>Social Studies<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<td class="subject g2kstudent">G2K<br/>Student Agency<br/>G2 K Teacher<br/></td>
+<td class="subject g2kcreative">G2K<br/>Creative Arts<br/>G2 K Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<td class="subject g2k" rowspan="2">G2K, G2N, G2Q, G2R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g2kscienceg2" rowspan="2">G2K<br/>Science<br/>G2 K Teacher<br/></td>
+<td class="subject g2kmathematicsg2" rowspan="2">G2K<br/>Mathematics<br/>G2 K Teacher<br/></td>
+<td class="subject g2kscienceg2" rowspan="2">G2K<br/>Science<br/>G2 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td>---</td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td>---</td>
+<td class="subject g2kcomputer" rowspan="2">G2K<br/>Computer Studies<br/>G2 K Teacher<br/></td>
+<td class="subject g2kmathematicsg2" rowspan="2">G2K<br/>Mathematics<br/>G2 K Teacher<br/></td>
+<td class="subject g2klanguage" rowspan="2">G2K<br/>Language Arts<br/>G2 K Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<td class="subject g2kmusicg2">G2K<br/>Music<br/>G2 K Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_14">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2N Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g2nsocial" rowspan="2">G2N<br/>Social Studies<br/>G2 N Teacher<br/></td>
+<td class="subject g2ncreative">G2N<br/>Creative Arts<br/>G2 N Teacher<br/></td>
+<td class="subject g2nlanguage" rowspan="2">G2N<br/>Language Arts<br/>G2 N Teacher<br/></td>
+<td class="subject g2nmusicg2">G2N<br/>Music<br/>G2 N Teacher<br/></td>
+<td class="subject g2nlanguage" rowspan="2">G2N<br/>Language Arts<br/>G2 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<td class="subject g2nstudent">G2N<br/>Student Agency<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g2nlanguage" rowspan="2">G2N<br/>Language Arts<br/>G2 N Teacher<br/></td>
+<td class="subject g2nmathematicsg2" rowspan="2">G2N<br/>Mathematics<br/>G2 N Teacher<br/></td>
+<td class="subject g2ncomputer" rowspan="2">G2N<br/>Computer Studies<br/>G2 N Teacher<br/></td>
+<td class="subject g2ncreative">G2N<br/>Creative Arts<br/>G2 N Teacher<br/></td>
+<td class="subject g2ncreative">G2N<br/>Creative Arts<br/>G2 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>---</td>
+<td class="subject g2nmusicg2">G2N<br/>Music<br/>G2 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g2nscienceg2" rowspan="2">G2N<br/>Science<br/>G2 N Teacher<br/></td>
+<td class="subject g2k" rowspan="2">G2K, G2N, G2Q, G2R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g2nmathematicsg2" rowspan="2">G2N<br/>Mathematics<br/>G2 N Teacher<br/></td>
+<td class="subject g2nmathematicsg2" rowspan="2">G2N<br/>Mathematics<br/>G2 N Teacher<br/></td>
+<td class="subject g2nscienceg2" rowspan="2">G2N<br/>Science<br/>G2 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g2ncreative">G2N<br/>Creative Arts<br/>G2 N Teacher<br/></td>
+<td class="subject g2nscienceg2" rowspan="2">G2N<br/>Science<br/>G2 N Teacher<br/></td>
+<td class="subject g2nsocial" rowspan="2">G2N<br/>Social Studies<br/>G2 N Teacher<br/></td>
+<td class="subject g2nsocial" rowspan="2">G2N<br/>Social Studies<br/>G2 N Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<td class="subject g2nstudent">G2N<br/>Student Agency<br/>G2 N Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_16">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2Q Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g2qscienceg2" rowspan="2">G2Q<br/>Science<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qmathematicsg2" rowspan="2">G2Q<br/>Mathematics<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qcreative">G2Q<br/>Creative Arts<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qmathematicsg2" rowspan="2">G2Q<br/>Mathematics<br/>G2 Q Teacher<br/></td>
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g2qmusicg2">G2Q<br/>Music<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject g2qcreative">G2Q<br/>Creative Arts<br/>G2 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g2qcreative">G2Q<br/>Creative Arts<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qsocial" rowspan="2">G2Q<br/>Social Studies<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qstudent">G2Q<br/>Student Agency<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qcomputer" rowspan="2">G2Q<br/>Computer Studies<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qsocial" rowspan="2">G2Q<br/>Social Studies<br/>G2 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g2qsocial" rowspan="2">G2Q<br/>Social Studies<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject g2qscienceg2" rowspan="2">G2Q<br/>Science<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<td class="subject g2k" rowspan="2">G2K, G2N, G2Q, G2R<br/>Physical Education<br/>PE Instructor<br/></td>
+<!-- span -->
+<td class="subject g2qscienceg2" rowspan="2">G2Q<br/>Science<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qmathematicsg2" rowspan="2">G2Q<br/>Mathematics<br/>G2 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject g2qmusicg2">G2Q<br/>Music<br/>G2 Q Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g2qlanguage" rowspan="2">G2Q<br/>Language Arts<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qlanguage" rowspan="2">G2Q<br/>Language Arts<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qlanguage" rowspan="2">G2Q<br/>Language Arts<br/>G2 Q Teacher<br/></td>
+<td class="subject g2qcreative">G2Q<br/>Creative Arts<br/>G2 Q Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g2qstudent">G2Q<br/>Student Agency<br/>G2 Q Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_18">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2R Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g2rcomputer" rowspan="2">G2R<br/>Computer Studies<br/>G2 R Teacher<br/></td>
+<td class="subject g2rsocial" rowspan="2">G2R<br/>Social Studies<br/>G2 R Teacher<br/></td>
+<td class="subject g2rstudent">G2R<br/>Student Agency<br/>G2 R Teacher<br/></td>
+<td class="subject g2rmusicg2">G2R<br/>Music<br/>G2 R Teacher<br/></td>
+<td class="subject g2rmathematicsg2" rowspan="2">G2R<br/>Mathematics<br/>G2 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g2rcreative">G2R<br/>Creative Arts<br/>G2 R Teacher<br/></td>
+<td>---</td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g2rcreative">G2R<br/>Creative Arts<br/>G2 R Teacher<br/></td>
+<td class="subject g2rlanguage" rowspan="2">G2R<br/>Language Arts<br/>G2 R Teacher<br/></td>
+<td class="subject g2rlanguage" rowspan="2">G2R<br/>Language Arts<br/>G2 R Teacher<br/></td>
+<td>---</td>
+<td class="subject g2rscienceg2" rowspan="2">G2R<br/>Science<br/>G2 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g2rlanguage" rowspan="2">G2R<br/>Language Arts<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject g2rscienceg2" rowspan="2">G2R<br/>Science<br/>G2 R Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<td class="subject g2k" rowspan="2">G2K, G2N, G2Q, G2R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g2rsocial" rowspan="2">G2R<br/>Social Studies<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<td class="subject g2rstudent">G2R<br/>Student Agency<br/>G2 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject g2rmusicg2">G2R<br/>Music<br/>G2 R Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject g2rcreative">G2R<br/>Creative Arts<br/>G2 R Teacher<br/></td>
+<td class="subject g2rcreative">G2R<br/>Creative Arts<br/>G2 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g2rmathematicsg2" rowspan="2">G2R<br/>Mathematics<br/>G2 R Teacher<br/></td>
+<td class="subject g2rmathematicsg2" rowspan="2">G2R<br/>Mathematics<br/>G2 R Teacher<br/></td>
+<td class="subject g2rscienceg2" rowspan="2">G2R<br/>Science<br/>G2 R Teacher<br/></td>
+<td class="subject g2rsocial" rowspan="2">G2R<br/>Social Studies<br/>G2 R Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_21">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3K Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g3kmathematicsg3" rowspan="2">G3K<br/>Mathematics<br/>G3 K Teacher<br/></td>
+<td class="subject g3kmathematicsg3" rowspan="2">G3K<br/>Mathematics<br/>G3 K Teacher<br/></td>
+<td>---</td>
+<td class="subject g3klanguage" rowspan="2">G3K<br/>Language Arts<br/>G3 K Teacher<br/></td>
+<td class="subject g3ksocial" rowspan="2">G3K<br/>Social Studies<br/>G3 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g3kcreative">G3K<br/>Creative Arts<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g3kmusicg3">G3K<br/>Music<br/>G3 K Teacher<br/></td>
+<td class="subject g3kscienceg3" rowspan="2">G3K<br/>Science<br/>G3 K Teacher<br/></td>
+<td class="subject g3k" rowspan="2">G3K, G3N, G3Q, G3R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g3ksocial" rowspan="2">G3K<br/>Social Studies<br/>G3 K Teacher<br/></td>
+<td class="subject g3klanguage" rowspan="2">G3K<br/>Language Arts<br/>G3 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g3kscienceg3" rowspan="2">G3K<br/>Science<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<td class="subject g3kmusicg3">G3K<br/>Music<br/>G3 K Teacher<br/></td>
+<td class="subject g3kscienceg3" rowspan="2">G3K<br/>Science<br/>G3 K Teacher<br/></td>
+<td class="subject g3kmathematicsg3" rowspan="2">G3K<br/>Mathematics<br/>G3 K Teacher<br/></td>
+<td class="subject g3kcomputer" rowspan="2">G3K<br/>Computer Studies<br/>G3 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject g3kstudent">G3K<br/>Student Agency<br/>G3 K Teacher<br/></td>
+<td class="subject g3kcreative">G3K<br/>Creative Arts<br/>G3 K Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g3ksocial" rowspan="2">G3K<br/>Social Studies<br/>G3 K Teacher<br/></td>
+<td class="subject g3kfrenchfrench" rowspan="2">G3K<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g3klanguage" rowspan="2">G3K<br/>Language Arts<br/>G3 K Teacher<br/></td>
+<td class="subject g3kstudent">G3K<br/>Student Agency<br/>G3 K Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g3kcreative">G3K<br/>Creative Arts<br/>G3 K Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_23">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3N Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g3nmathematicsg3" rowspan="2">G3N<br/>Mathematics<br/>G3 N Teacher<br/></td>
+<td class="subject g3nsocial" rowspan="2">G3N<br/>Social Studies<br/>G3 N Teacher<br/></td>
+<td class="subject g3nlanguage" rowspan="2">G3N<br/>Language Arts<br/>G3 N Teacher<br/></td>
+<td class="subject g3nscienceg3" rowspan="2">G3N<br/>Science<br/>G3 N Teacher<br/></td>
+<td class="subject g3nscienceg3" rowspan="2">G3N<br/>Science<br/>G3 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g3nfrenchfrench" rowspan="2">G3N<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g3nlanguage" rowspan="2">G3N<br/>Language Arts<br/>G3 N Teacher<br/></td>
+<td class="subject g3k" rowspan="2">G3K, G3N, G3Q, G3R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g3nlanguage" rowspan="2">G3N<br/>Language Arts<br/>G3 N Teacher<br/></td>
+<td class="subject g3nmathematicsg3" rowspan="2">G3N<br/>Mathematics<br/>G3 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g3nsocial" rowspan="2">G3N<br/>Social Studies<br/>G3 N Teacher<br/></td>
+<td class="subject g3ncreative">G3N<br/>Creative Arts<br/>G3 N Teacher<br/></td>
+<td class="subject g3nsocial" rowspan="2">G3N<br/>Social Studies<br/>G3 N Teacher<br/></td>
+<td class="subject g3nmusicg3">G3N<br/>Music<br/>G3 N Teacher<br/></td>
+<td class="subject g3ncomputer" rowspan="2">G3N<br/>Computer Studies<br/>G3 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<td class="subject g3nstudent">G3N<br/>Student Agency<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td class="subject g3ncreative">G3N<br/>Creative Arts<br/>G3 N Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g3nscienceg3" rowspan="2">G3N<br/>Science<br/>G3 N Teacher<br/></td>
+<td class="subject g3nmusicg3">G3N<br/>Music<br/>G3 N Teacher<br/></td>
+<td class="subject g3ncreative">G3N<br/>Creative Arts<br/>G3 N Teacher<br/></td>
+<td class="subject g3nmathematicsg3" rowspan="2">G3N<br/>Mathematics<br/>G3 N Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<td>---</td>
+<td class="subject g3nstudent">G3N<br/>Student Agency<br/>G3 N Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_25">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3Q Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g3qlanguage" rowspan="2">G3Q<br/>Language Arts<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qlanguage" rowspan="2">G3Q<br/>Language Arts<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qcomputer" rowspan="2">G3Q<br/>Computer Studies<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qstudent">G3Q<br/>Student Agency<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qfrenchfrench" rowspan="2">G3Q<br/>French<br/>French A Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>---</td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g3qmathematicsg3" rowspan="2">G3Q<br/>Mathematics<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qcreative">G3Q<br/>Creative Arts<br/>G3 Q Teacher<br/></td>
+<td class="subject g3k" rowspan="2">G3K, G3N, G3Q, G3R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g3qscienceg3" rowspan="2">G3Q<br/>Science<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qmathematicsg3" rowspan="2">G3Q<br/>Mathematics<br/>G3 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<td class="subject g3qscienceg3" rowspan="2">G3Q<br/>Science<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g3qscienceg3" rowspan="2">G3Q<br/>Science<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject g3qsocial" rowspan="2">G3Q<br/>Social Studies<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qcreative">G3Q<br/>Creative Arts<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qsocial" rowspan="2">G3Q<br/>Social Studies<br/>G3 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<td class="subject g3qstudent">G3Q<br/>Student Agency<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject g3qmusicg3">G3Q<br/>Music<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g3qmusicg3">G3Q<br/>Music<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qmathematicsg3" rowspan="2">G3Q<br/>Mathematics<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qlanguage" rowspan="2">G3Q<br/>Language Arts<br/>G3 Q Teacher<br/></td>
+<td class="subject g3qsocial" rowspan="2">G3Q<br/>Social Studies<br/>G3 Q Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<td class="subject g3qcreative">G3Q<br/>Creative Arts<br/>G3 Q Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_27">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3R Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g3rsocial" rowspan="2">G3R<br/>Social Studies<br/>G3 R Teacher<br/></td>
+<td>---</td>
+<td class="subject g3rscienceg3" rowspan="2">G3R<br/>Science<br/>G3 R Teacher<br/></td>
+<td class="subject g3rcomputer" rowspan="2">G3R<br/>Computer Studies<br/>G3 R Teacher<br/></td>
+<td class="subject g3rsocial" rowspan="2">G3R<br/>Social Studies<br/>G3 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<td class="subject g3rcreative">G3R<br/>Creative Arts<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g3rstudent">G3R<br/>Student Agency<br/>G3 R Teacher<br/></td>
+<td class="subject g3rmusicg3">G3R<br/>Music<br/>G3 R Teacher<br/></td>
+<td class="subject g3k" rowspan="2">G3K, G3N, G3Q, G3R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g3rlanguage" rowspan="2">G3R<br/>Language Arts<br/>G3 R Teacher<br/></td>
+<td class="subject g3rcreative">G3R<br/>Creative Arts<br/>G3 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g3rlanguage" rowspan="2">G3R<br/>Language Arts<br/>G3 R Teacher<br/></td>
+<td class="subject g3rfrenchfrench" rowspan="2">G3R<br/>French<br/>French A Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject g3rmathematicsg3" rowspan="2">G3R<br/>Mathematics<br/>G3 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g3rsocial" rowspan="2">G3R<br/>Social Studies<br/>G3 R Teacher<br/></td>
+<td class="subject g3rmathematicsg3" rowspan="2">G3R<br/>Mathematics<br/>G3 R Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject g3rcreative">G3R<br/>Creative Arts<br/>G3 R Teacher<br/></td>
+<td class="subject g3rstudent">G3R<br/>Student Agency<br/>G3 R Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject g3rmusicg3">G3R<br/>Music<br/>G3 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g3rmathematicsg3" rowspan="2">G3R<br/>Mathematics<br/>G3 R Teacher<br/></td>
+<td class="subject g3rscienceg3" rowspan="2">G3R<br/>Science<br/>G3 R Teacher<br/></td>
+<td class="subject g3rlanguage" rowspan="2">G3R<br/>Language Arts<br/>G3 R Teacher<br/></td>
+<td class="subject g3rscienceg3" rowspan="2">G3R<br/>Science<br/>G3 R Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_30">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4K Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g4klanguage" rowspan="2">G4K<br/>Language Arts<br/>G4 K Teacher<br/></td>
+<td class="subject g4ksocial" rowspan="2">G4K<br/>Social Studies<br/>G4 K Teacher<br/></td>
+<td class="subject g4ksocial" rowspan="2">G4K<br/>Social Studies<br/>G4 K Teacher<br/></td>
+<td class="subject g4kfrenchfrench" rowspan="2">G4K<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g4kmathematicsg4" rowspan="2">G4K<br/>Mathematics<br/>G4 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g4k" rowspan="2">G4K, G4N, G4Q, G4R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g4kscienceg4" rowspan="2">G4K<br/>Science<br/>G4 K Teacher<br/></td>
+<td class="subject g4kstudent">G4K<br/>Student Agency<br/>G4 K Teacher<br/></td>
+<td class="subject g4kmathematicsg4" rowspan="2">G4K<br/>Mathematics<br/>G4 K Teacher<br/></td>
+<td class="subject g4kcomputer" rowspan="2">G4K<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g4klanguage" rowspan="2">G4K<br/>Language Arts<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g4kmathematicsg4" rowspan="2">G4K<br/>Mathematics<br/>G4 K Teacher<br/></td>
+<td class="subject g4klanguage" rowspan="2">G4K<br/>Language Arts<br/>G4 K Teacher<br/></td>
+<!-- span -->
+<td class="subject g4ksocial" rowspan="2">G4K<br/>Social Studies<br/>G4 K Teacher<br/></td>
+<td class="subject g4kstudent">G4K<br/>Student Agency<br/>G4 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<td>---</td>
+<!-- span -->
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g4kcreative" rowspan="2">G4K<br/>Creative Arts<br/>Creative Arts Teacher<br/></td>
+<td class="subject g4kmusicmusic" rowspan="2">G4K<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g4kscienceg4" rowspan="2">G4K<br/>Science<br/>G4 K Teacher<br/></td>
+<td class="subject g4kscienceg4" rowspan="2">G4K<br/>Science<br/>G4 K Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_32">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4N Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g4ncomputer" rowspan="2">G4N<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject g4nlanguage" rowspan="2">G4N<br/>Language Arts<br/>G4 N Teacher<br/></td>
+<td class="subject g4nmathematicsg4" rowspan="2">G4N<br/>Mathematics<br/>G4 N Teacher<br/></td>
+<td class="subject g4nscienceg4" rowspan="2">G4N<br/>Science<br/>G4 N Teacher<br/></td>
+<td class="subject g4nsocial" rowspan="2">G4N<br/>Social Studies<br/>G4 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g4k" rowspan="2">G4K, G4N, G4Q, G4R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td>---</td>
+<td>---</td>
+<td class="subject g4nsocial" rowspan="2">G4N<br/>Social Studies<br/>G4 N Teacher<br/></td>
+<td class="subject g4nscienceg4" rowspan="2">G4N<br/>Science<br/>G4 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<td class="subject g4nscienceg4" rowspan="2">G4N<br/>Science<br/>G4 N Teacher<br/></td>
+<td class="subject g4nfrenchfrench" rowspan="2">G4N<br/>French<br/>French A Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g4ncreative" rowspan="2">G4N<br/>Creative Arts Lab<br/>Creative Arts Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject g4nlanguage" rowspan="2">G4N<br/>Language Arts<br/>G4 N Teacher<br/></td>
+<td class="subject g4nlanguage" rowspan="2">G4N<br/>Language Arts<br/>G4 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<td class="subject g4nstudent">G4N<br/>Student Agency<br/>G4 N Teacher<br/></td>
+<td class="subject g4nstudent">G4N<br/>Student Agency<br/>G4 N Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g4nsocial" rowspan="2">G4N<br/>Social Studies<br/>G4 N Teacher<br/></td>
+<td class="subject g4nmathematicsg4" rowspan="2">G4N<br/>Mathematics<br/>G4 N Teacher<br/></td>
+<td class="subject g4nmusicmusic" rowspan="2">G4N<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g4nmathematicsg4" rowspan="2">G4N<br/>Mathematics<br/>G4 N Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_34">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4Q Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g4qscienceg4" rowspan="2">G4Q<br/>Science<br/>G4 Q Teacher<br/></td>
+<td class="subject g4qmathematicsg4" rowspan="2">G4Q<br/>Mathematics<br/>G4 Q Teacher<br/></td>
+<td class="subject g4qcreative" rowspan="2">G4Q<br/>Creative Arts<br/>Creative Arts Teacher<br/></td>
+<td class="subject g4qsocial" rowspan="2">G4Q<br/>Social Studies<br/>G4 Q Teacher<br/></td>
+<td class="subject g4qlanguage" rowspan="2">G4Q<br/>Language Arts<br/>G4 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g4k" rowspan="2">G4K, G4N, G4Q, G4R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g4qcomputer" rowspan="2">G4Q<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject g4qscienceg4" rowspan="2">G4Q<br/>Science<br/>G4 Q Teacher<br/></td>
+<td>---</td>
+<td class="subject g4qmathematicsg4" rowspan="2">G4Q<br/>Mathematics<br/>G4 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g4qstudent">G4Q<br/>Student Agency<br/>G4 Q Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g4qlanguage" rowspan="2">G4Q<br/>Language Arts<br/>G4 Q Teacher<br/></td>
+<td class="subject g4qsocial" rowspan="2">G4Q<br/>Social Studies<br/>G4 Q Teacher<br/></td>
+<td class="subject g4qmusicmusic" rowspan="2">G4Q<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g4qmathematicsg4" rowspan="2">G4Q<br/>Mathematics<br/>G4 Q Teacher<br/></td>
+<td class="subject g4qfrenchfrench" rowspan="2">G4Q<br/>French<br/>French A Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g4qsocial" rowspan="2">G4Q<br/>Social Studies<br/>G4 Q Teacher<br/></td>
+<td class="subject g4qlanguage" rowspan="2">G4Q<br/>Language Arts<br/>G4 Q Teacher<br/></td>
+<td class="subject g4qstudent">G4Q<br/>Student Agency<br/>G4 Q Teacher<br/></td>
+<td class="subject g4qscienceg4" rowspan="2">G4Q<br/>Science<br/>G4 Q Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<td>---</td>
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_36">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4R Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g4rlanguage" rowspan="2">G4R<br/>Language Arts<br/>G4 R Teacher<br/></td>
+<td class="subject g4rsocial" rowspan="2">G4R<br/>Social Studies<br/>G4 R Teacher<br/></td>
+<td class="subject g4rscienceg4" rowspan="2">G4R<br/>Science<br/>G4 R Teacher<br/></td>
+<td class="subject g4rscienceg4" rowspan="2">G4R<br/>Science<br/>G4 R Teacher<br/></td>
+<td class="subject g4rscienceg4" rowspan="2">G4R<br/>Science<br/>G4 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g4k" rowspan="2">G4K, G4N, G4Q, G4R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g4rmathematicsg4" rowspan="2">G4R<br/>Mathematics<br/>G4 R Teacher<br/></td>
+<td class="subject g4rcomputer" rowspan="2">G4R<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject g4rsocial" rowspan="2">G4R<br/>Social Studies<br/>G4 R Teacher<br/></td>
+<td class="subject g4rmathematicsg4" rowspan="2">G4R<br/>Mathematics<br/>G4 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g4rmusicmusic" rowspan="2">G4R<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g4rcreative" rowspan="2">G4R<br/>Creative Arts<br/>Creative Arts Teacher<br/></td>
+<td>---</td>
+<td class="subject g4rmathematicsg4" rowspan="2">G4R<br/>Mathematics<br/>G4 R Teacher<br/></td>
+<td class="subject g4rlanguage" rowspan="2">G4R<br/>Language Arts<br/>G4 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g4rstudent">G4R<br/>Student Agency<br/>G4 R Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g4rfrenchfrench" rowspan="2">G4R<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g4rlanguage" rowspan="2">G4R<br/>Language Arts<br/>G4 R Teacher<br/></td>
+<td class="subject g4rsocial" rowspan="2">G4R<br/>Social Studies<br/>G4 R Teacher<br/></td>
+<td class="subject g4rstudent">G4R<br/>Student Agency<br/>G4 R Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_39">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5K Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g5kcreative" rowspan="2">G5K<br/>Creative Arts<br/>Creative Arts Teacher<br/></td>
+<td class="subject g5kscienceg5" rowspan="2">G5K<br/>Science<br/>G5 K Teacher<br/></td>
+<td class="subject g5kscienceg5" rowspan="2">G5K<br/>Science<br/>G5 K Teacher<br/></td>
+<td class="subject g5kscienceg5" rowspan="2">G5K<br/>Science<br/>G5 K Teacher<br/></td>
+<td class="subject g5khistory/global" rowspan="2">G5K<br/>History/Global Politics  <br/>G5 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g5kcomputer" rowspan="2">G5K<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject g5kstudent">G5K<br/>Student Agency<br/>G5 K Teacher<br/></td>
+<td class="subject g5kmathematicsg5" rowspan="2">G5K<br/>Mathematics<br/>G5 K Teacher<br/></td>
+<td class="subject g5kstudent">G5K<br/>Student Agency<br/>G5 K Teacher<br/></td>
+<td class="subject g5kmusicmusic" rowspan="2">G5K<br/>Music<br/>Music Teacher <br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<td class="subject g5kmathematicsg5" rowspan="2">G5K<br/>Mathematics<br/>G5 K Teacher<br/></td>
+<!-- span -->
+<td class="subject g5kmathematicsg5" rowspan="2">G5K<br/>Mathematics<br/>G5 K Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g5klocal">G5K<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<!-- span -->
+<td class="subject g5kcomputer">G5K<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<!-- span -->
+<td class="subject g5klanguage" rowspan="2">G5K<br/>Language Arts<br/>G5 K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject g5kfrenchfrench">G5K<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g5kfrenchfrench">G5K<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g5kfrenchfrench">G5K<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g5klocal">G5K<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g5klanguage" rowspan="2">G5K<br/>Language Arts<br/>G5 K Teacher<br/></td>
+<td class="subject g5k" rowspan="2">G5K, G5N, G5Q, G5R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g5klanguage" rowspan="2">G5K<br/>Language Arts<br/>G5 K Teacher<br/></td>
+<td class="subject g5kgeography/environmentg5" rowspan="2">G5K<br/>Geography/Environment<br/>G5 K Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_41">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5N Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g5nfrenchfrench">G5N<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g5nscienceg5" rowspan="2">G5N<br/>Science<br/>G5 N Teacher<br/></td>
+<td class="subject g5nscienceg5" rowspan="2">G5N<br/>Science<br/>G5 N Teacher<br/></td>
+<td class="subject g5nlanguage" rowspan="2">G5N<br/>Language Arts<br/>G5 N Teacher<br/></td>
+<td class="subject g5nstudent">G5N<br/>Student Agency<br/>G5 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject g5nstudent">G5N<br/>Student Agency<br/>G5 N Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g5nlocal">G5N<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g5nscienceg5" rowspan="2">G5N<br/>Science<br/>G5 N Teacher<br/></td>
+<td class="subject g5nmathematicsg5" rowspan="2">G5N<br/>Mathematics<br/>G5 N Teacher<br/></td>
+<td class="subject g5nmathematicsg5" rowspan="2">G5N<br/>Mathematics<br/>G5 N Teacher<br/></td>
+<td class="subject g5nlocal">G5N<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g5nmathematicsg5" rowspan="2">G5N<br/>Mathematics<br/>G5 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g5ncomputer">G5N<br/>Computer Studies<br/>JH ICT<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g5nlanguage" rowspan="2">G5N<br/>Language Arts<br/>G5 N Teacher<br/></td>
+<td class="subject g5ncomputer" rowspan="2">G5N<br/>Computer Studies<br/>JH ICT<br/></td>
+<td class="subject g5nhistory/global" rowspan="2">G5N<br/>History/Global Politics  <br/>G5 N Teacher<br/></td>
+<td class="subject g5ncreative" rowspan="2">G5N<br/>Creative Arts<br/>Creative Arts Teacher<br/></td>
+<td class="subject g5nlanguage" rowspan="2">G5N<br/>Language Arts<br/>G5 N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g5nmusicmusic" rowspan="2">G5N<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g5k" rowspan="2">G5K, G5N, G5Q, G5R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g5ngeography/environmentg5" rowspan="2">G5N<br/>Geography/Environment<br/>G5 N Teacher<br/></td>
+<td class="subject g5nfrenchfrench">G5N<br/>French<br/>French A Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g5nfrenchfrench">G5N<br/>French<br/>French A Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_43">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5Q Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g5qcomputer">G5Q<br/>Computer Studies<br/>JH ICT<br/></td>
+<td class="subject g5qlanguage" rowspan="2">G5Q<br/>Language Arts<br/>G5 Q Teacher<br/></td>
+<td class="subject g5qscienceg5" rowspan="2">G5Q<br/>Science<br/>G5 Q Teacher<br/></td>
+<td class="subject g5qgeography/environmentg5" rowspan="2">G5Q<br/>Geography/Environment<br/>G5 Q Teacher<br/></td>
+<td class="subject g5qscienceg5" rowspan="2">G5Q<br/>Science<br/>G5 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject g5qfrenchfrench">G5Q<br/>French<br/>French A Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g5qscienceg5" rowspan="2">G5Q<br/>Science<br/>G5 Q Teacher<br/></td>
+<td class="subject g5qmathematicsg5" rowspan="2">G5Q<br/>Mathematics<br/>G5 Q Teacher<br/></td>
+<td class="subject g5qfrenchfrench">G5Q<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g5qstudent">G5Q<br/>Student Agency<br/>G5 Q Teacher<br/></td>
+<td class="subject g5qlocal">G5Q<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g5qlocal">G5Q<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g5qlanguage" rowspan="2">G5Q<br/>Language Arts<br/>G5 Q Teacher<br/></td>
+<td class="subject g5qstudent">G5Q<br/>Student Agency<br/>G5 Q Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g5qlanguage" rowspan="2">G5Q<br/>Language Arts<br/>G5 Q Teacher<br/></td>
+<td class="subject g5qmusicmusic" rowspan="2">G5Q<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g5qmathematicsg5" rowspan="2">G5Q<br/>Mathematics<br/>G5 Q Teacher<br/></td>
+<!-- span -->
+<td class="subject g5qcreative" rowspan="2">G5Q<br/>Creative Arts<br/>Creative Arts Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g5qfrenchfrench">G5Q<br/>French<br/>French A Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g5qmathematicsg5" rowspan="2">G5Q<br/>Mathematics<br/>G5 Q Teacher<br/></td>
+<td class="subject g5k" rowspan="2">G5K, G5N, G5Q, G5R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g5qhistory/global" rowspan="2">G5Q<br/>History/Global Politics  <br/>G5 Q Teacher<br/></td>
+<td class="subject g5qcomputer" rowspan="2">G5Q<br/>Computer Studies<br/>JH ICT<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_45">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5R Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g5rstudent">G5R<br/>Student Agency<br/>G5 R Teacher<br/></td>
+<td class="subject g5rgeography/environmentg5" rowspan="2">G5R<br/>Geography/Environment<br/>G5 R Teacher<br/></td>
+<td class="subject g5rlocal">G5R<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g5rlanguage" rowspan="2">G5R<br/>Language Arts<br/>G5 R Teacher<br/></td>
+<td class="subject g5rlanguage" rowspan="2">G5R<br/>Language Arts<br/>G5 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject g5rlocal">G5R<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<!-- span -->
+<td class="subject g5rfrenchfrench">G5R<br/>French<br/>French A Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g5rcreative" rowspan="2">G5R<br/>Creative Arts<br/>Creative Arts Teacher<br/></td>
+<td class="subject g5rfrenchfrench">G5R<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g5rmathematicsg5" rowspan="2">G5R<br/>Mathematics<br/>G5 R Teacher<br/></td>
+<td class="subject g5rfrenchfrench">G5R<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g5rscienceg5" rowspan="2">G5R<br/>Science<br/>G5 R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<td class="subject g5rcomputer">G5R<br/>Computer Studies<br/>JH ICT<br/></td>
+<!-- span -->
+<td class="subject g5rstudent">G5R<br/>Student Agency<br/>G5 R Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g5rmathematicsg5" rowspan="2">G5R<br/>Mathematics<br/>G5 R Teacher<br/></td>
+<td class="subject g5rscienceg5" rowspan="2">G5R<br/>Science<br/>G5 R Teacher<br/></td>
+<td class="subject g5rlanguage" rowspan="2">G5R<br/>Language Arts<br/>G5 R Teacher<br/></td>
+<td class="subject g5rcomputer" rowspan="2">G5R<br/>Computer Studies<br/>JH ICT<br/></td>
+<td class="subject g5rmusicmusic" rowspan="2">G5R<br/>Music<br/>Music Teacher <br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g5rhistory/global" rowspan="2">G5R<br/>History/Global Politics  <br/>G5 R Teacher<br/></td>
+<td class="subject g5k" rowspan="2">G5K, G5N, G5Q, G5R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g5rscienceg5" rowspan="2">G5R<br/>Science<br/>G5 R Teacher<br/></td>
+<td class="subject g5rmathematicsg5" rowspan="2">G5R<br/>Mathematics<br/>G5 R Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_48">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G6K Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g6khistory/global">G6K<br/>History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td class="subject g6kcomputer" rowspan="2">G6K<br/>Computer Studies<br/>JH ICT<br/></td>
+<td class="subject g6kmathematicsmath" rowspan="2">G6K<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td class="subject g6ksciencescience" rowspan="2">G6K<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject g6kreligion/social">G6K<br/>Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject g6kreligion/social">G6K<br/>Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g6khistory/global">G6K<br/>History/Global Politics  <br/>Social Sc Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g6klanguage" rowspan="2">G6K<br/>Language Arts<br/>English B Teacher<br/></td>
+<td class="subject g6klanguage" rowspan="2">G6K<br/>Language Arts<br/>English B Teacher<br/></td>
+<td class="subject g6ksciencescience" rowspan="2">G6K<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject g6kcreative" rowspan="2">G6K<br/>Creative Arts Studio<br/>Creative Arts Teacher<br/></td>
+<td class="subject g6kgeography/environmentsocial">G6K<br/>Geography/Environment<br/>Social Sc Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g6kfrenchfrench">G6K<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g6kmathematicsmath" rowspan="2">G6K<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td class="subject g6klanguage" rowspan="2">G6K<br/>Language Arts<br/>English B Teacher<br/></td>
+<td class="subject g6kmusicmusic" rowspan="2">G6K<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g6kcomputer" rowspan="2">G6K<br/>Computer Studies<br/>JH ICT<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject g6kgeography/environmentsocial">G6K<br/>Geography/Environment<br/>Social Sc Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g6k" rowspan="2">G6K, G6N, G6Q, G6R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g6ksciencescience" rowspan="2">G6K<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject g6kfrenchfrench" rowspan="2">G6K<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g6kmathematicsmath" rowspan="2">G6K<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_50">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G6N Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td>---</td>
+<td class="subject g6nlanguage" rowspan="2">G6N<br/>Language Arts<br/>English B Teacher<br/></td>
+<td class="subject g6nfrenchfrench">G6N<br/>French<br/>French A Teacher<br/></td>
+<td class="subject g6nmathematicsmath" rowspan="2">G6N<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td class="subject g6nhistory/global">G6N<br/>History/Global Politics  <br/>Social Sc Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject g6ngeography/environmentsocial">G6N<br/>Geography/Environment<br/>Social Sc Teacher<br/></td>
+<!-- span -->
+<td class="subject g6nreligion/social">G6N<br/>Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<!-- span -->
+<td class="subject g6nreligion/social">G6N<br/>Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g6ncomputer" rowspan="2">G6N<br/>Computer Studies Lab<br/>JH ICT<br/></td>
+<td class="subject g6ncreative" rowspan="2">G6N<br/>Creative Arts<br/>Creative Arts Teacher<br/></td>
+<td class="subject g6nmusicmusic" rowspan="2">G6N<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g6nsciencescience" rowspan="2">G6N<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject g6nfrenchfrench" rowspan="2">G6N<br/>French<br/>French A Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g6nlanguage" rowspan="2">G6N<br/>Language Arts<br/>English B Teacher<br/></td>
+<td class="subject g6nsciencescience" rowspan="2">G6N<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject g6nsciencescience" rowspan="2">G6N<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject g6nlanguage" rowspan="2">G6N<br/>Language Arts<br/>English B Teacher<br/></td>
+<td class="subject g6nmathematicsmath" rowspan="2">G6N<br/>Mathematics<br/>Math Tutor I<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g6k" rowspan="2">G6K, G6N, G6Q, G6R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g6nmathematicsmath" rowspan="2">G6N<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td class="subject g6ncomputer" rowspan="2">G6N<br/>Computer Studies Lab<br/>JH ICT<br/></td>
+<td class="subject g6ngeography/environmentsocial">G6N<br/>Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g6nhistory/global">G6N<br/>History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_52">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G6Q Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g6qsciencescience" rowspan="2">G6Q<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject g6qsciencescience" rowspan="2">G6Q<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject g6qlanguage" rowspan="2">G6Q<br/>Language Arts<br/>English A Teacher<br/></td>
+<td class="subject g6qcomputer" rowspan="2">G6Q<br/>Computer Studies Lab<br/>JH ICT<br/></td>
+<td class="subject g6qcreative" rowspan="2">G6Q<br/>Creative Arts<br/>Creative Arts Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g6qgeography/environmentsocial">G6Q<br/>Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td class="subject g6qgeography/environmentsocial">G6Q<br/>Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td class="subject 2" rowspan="2">G6Q<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g6qmusicmusic" rowspan="2">G6Q<br/>Music<br/>Music Teacher <br/></td>
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject french">G6Q<br/>French<br/>JH French<br/></td>
+<td class="subject g6qhistory/global">G6Q<br/>History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject g6qreligion/social">G6Q<br/>Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g6qlanguage" rowspan="2">G6Q<br/>Language Arts<br/>English A Teacher<br/></td>
+<td class="subject 2" rowspan="2">G6Q<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g6qcomputer" rowspan="2">G6Q<br/>Computer Studies Lab<br/>JH ICT<br/></td>
+<td class="subject g6qsciencescience" rowspan="2">G6Q<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject 2" rowspan="2">G6Q<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g6k" rowspan="2">G6K, G6N, G6Q, G6R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject french" rowspan="2">G6Q<br/>French<br/>JH French<br/></td>
+<td class="subject g6qhistory/global">G6Q<br/>History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td class="subject g6qlanguage" rowspan="2">G6Q<br/>Language Arts<br/>English A Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g6qreligion/social">G6Q<br/>Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_54">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G6R Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject french" rowspan="2">G6R<br/>French<br/>JH French<br/></td>
+<td class="subject 2" rowspan="2">G6R<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g6rmusicmusic" rowspan="2">G6R<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g6rcreative" rowspan="2">G6R<br/>Creative Arts<br/>Creative Arts Teacher<br/></td>
+<td class="subject g6rcomputer" rowspan="2">G6R<br/>Computer Studies Lab<br/>JH ICT<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g6rlanguage" rowspan="2">G6R<br/>Language Arts<br/>English A Teacher<br/></td>
+<td class="subject g6rsciencescience" rowspan="2">G6R<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject g6rlanguage" rowspan="2">G6R<br/>Language Arts<br/>English A Teacher<br/></td>
+<td class="subject 2" rowspan="2">G6R<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g6rreligion/social">G6R<br/>Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject french">G6R<br/>French<br/>JH French<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g6rsciencescience" rowspan="2">G6R<br/>Science<br/>Science B Teacher<br/></td>
+<td class="subject g6rlanguage" rowspan="2">G6R<br/>Language Arts<br/>English A Teacher<br/></td>
+<td class="subject 2" rowspan="2">G6R<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g6rgeography/environmentsocial">G6R<br/>Geography/Environment<br/>Social Sc Teacher<br/></td>
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g6rhistory/global">G6R<br/>History/Global Politics  <br/>Social Sc Teacher<br/></td>
+<td class="subject g6rhistory/global">G6R<br/>History/Global Politics  <br/>Social Sc Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g6k" rowspan="2">G6K, G6N, G6Q, G6R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g6rcomputer" rowspan="2">G6R<br/>Computer Studies Lab<br/>JH ICT<br/></td>
+<td class="subject g6rreligion/social">G6R<br/>Religion/Social &amp; Cult Anth<br/>JH Religion<br/></td>
+<td class="subject g6rsciencescience" rowspan="2">G6R<br/>Science<br/>Science B Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g6rgeography/environmentsocial">G6R<br/>Geography/Environment<br/>Social Sc Teacher<br/></td>
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_57">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G7K Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject creative" rowspan="2">G7K<br/>Creative Arts<br/>JH Creative Art <br/></td>
+<td class="subject g7kcareer">G7K<br/>Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject french">G7K<br/>French<br/>JH French<br/></td>
+<td class="subject french">G7K<br/>French<br/>JH French<br/></td>
+<td class="subject g7kmusicmusic" rowspan="2">G7K<br/>Music<br/>Music Teacher <br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<td class="subject g7krmejh">G7K<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g7klocal">G7K<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g7krmejh">G7K<br/>RME<br/>JH Religion<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g7kmathematicsmath" rowspan="2">G7K<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td class="subject g7kmathematicsmath" rowspan="2">G7K<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td class="subject g7ksocial" rowspan="2">G7K<br/>Social Studies<br/>Social Sc Teacher<br/></td>
+<td class="subject g7ksocial" rowspan="2">G7K<br/>Social Studies<br/>Social Sc Teacher<br/></td>
+<td class="subject g7kcareer">G7K<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g7klanguage" rowspan="2">G7K<br/>Language Arts<br/>English A Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g7ksciencescience" rowspan="2">G7K<br/>Science<br/>Science A Teacher<br/></td>
+<td class="subject g7kcomputer" rowspan="2">G7K<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject g7klanguage" rowspan="2">G7K<br/>Language Arts<br/>English A Teacher<br/></td>
+<td class="subject g7kmathematicsmath" rowspan="2">G7K<br/>Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject french">G7K<br/>French<br/>JH French<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g7kcareer">G7K<br/>Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject g7klocal">G7K<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g7ksciencescience" rowspan="2">G7K<br/>Science<br/>Science A Teacher<br/></td>
+<td class="subject g7k" rowspan="2">G7K, G7N, G7R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<td class="subject g7klocal">G7K<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g7kcareer">G7K<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_59">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G7N Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g7nmusicmusic" rowspan="2">G7N<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g7nlanguage" rowspan="2">G7N<br/>Language Arts<br/>English A Teacher<br/></td>
+<td class="subject g7nsciencescience" rowspan="2">G7N<br/>Science<br/>Science A Teacher<br/></td>
+<td class="subject g7nrmejh">G7N<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g7ncareer">G7N<br/>Career Technology Skills<br/>JH Home<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g7ncareer">G7N<br/>Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject g7ncareer">G7N<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject french">G7N<br/>French<br/>JH French<br/></td>
+<td class="subject g7nlocal">G7N<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g7ncareer">G7N<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject g7nmathematicsmath" rowspan="2">G7N<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td class="subject g7nmathematicsmath" rowspan="2">G7N<br/>Mathematics<br/>Math Tutor I<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g7nsocial" rowspan="2">G7N<br/>Social Studies<br/>Social Sc Teacher<br/></td>
+<td class="subject french">G7N<br/>French<br/>JH French<br/></td>
+<td class="subject g7nmathematicsmath" rowspan="2">G7N<br/>Mathematics<br/>Math Tutor I<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<td class="subject creative" rowspan="2">G7N<br/>Creative Arts<br/>JH Creative Art <br/></td>
+<!-- span -->
+<td class="subject g7ncomputer" rowspan="2">G7N<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject g7nsciencescience" rowspan="2">G7N<br/>Science<br/>Science A Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject g7nlocal">G7N<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<!-- span -->
+<td class="subject g7nrmejh">G7N<br/>RME<br/>JH Religion<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g7nlanguage" rowspan="2">G7N<br/>Language Arts<br/>English A Teacher<br/></td>
+<td class="subject g7nsocial" rowspan="2">G7N<br/>Social Studies<br/>Social Sc Teacher<br/></td>
+<td class="subject g7nlocal">G7N<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g7k" rowspan="2">G7K, G7N, G7R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<td class="subject french">G7N<br/>French<br/>JH French<br/></td>
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_61">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G7R Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g7rmathematicsmath" rowspan="2">G7R<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td class="subject g7rmathematicsmath" rowspan="2">G7R<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td class="subject g7rsocial" rowspan="2">G7R<br/>Social Studies<br/>Social Sc Teacher<br/></td>
+<td class="subject g7rmusicmusic" rowspan="2">G7R<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject french">G7R<br/>French<br/>JH French<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g7rcareer">G7R<br/>Career Technology Skills<br/>JH Home<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g7rsciencescience" rowspan="2">G7R<br/>Science<br/>Science A Teacher<br/></td>
+<td class="subject creative" rowspan="2">G7R<br/>Creative Arts<br/>JH Creative Art <br/></td>
+<td class="subject g7rrmejh">G7R<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g7rrmejh">G7R<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g7rsciencescience" rowspan="2">G7R<br/>Science<br/>Science A Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g7rcareer">G7R<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject g7rlanguage" rowspan="2">G7R<br/>Language Arts<br/>English A Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g7rcomputer" rowspan="2">G7R<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject g7rsocial" rowspan="2">G7R<br/>Social Studies<br/>Social Sc Teacher<br/></td>
+<td class="subject g7rcareer">G7R<br/>Career Technology Skills<br/>JH Home<br/></td>
+<!-- span -->
+<td class="subject g7rcareer">G7R<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g7rlocal">G7R<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject french">G7R<br/>French<br/>JH French<br/></td>
+<td class="subject g7rlocal">G7R<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g7rlocal">G7R<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g7rlanguage" rowspan="2">G7R<br/>Language Arts<br/>English A Teacher<br/></td>
+<td class="subject g7rmathematicsmath" rowspan="2">G7R<br/>Mathematics<br/>Math Tutor I<br/></td>
+<td class="subject g7k" rowspan="2">G7K, G7N, G7R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<td class="subject french">G7R<br/>French<br/>JH French<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_64">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G8K Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g8krmejh">G8K<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g8kmusicmusic" rowspan="2">G8K<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject creative" rowspan="2">G8K<br/>Creative Arts<br/>JH Creative Art <br/></td>
+<td class="subject g8klocal">G8K<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g8klanguage" rowspan="2">G8K<br/>Language Arts<br/>English B Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject g8kcareer">G8K<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject french">G8K<br/>French<br/>JH French<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g8klocal">G8K<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject french">G8K<br/>French<br/>JH French<br/></td>
+<td class="subject g8kcomputer" rowspan="2">G8K<br/>Computer Studies<br/>JH ICT<br/></td>
+<td class="subject g8kcareer">G8K<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject 2" rowspan="2">G8K<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g8ksocial" rowspan="2">G8K<br/>Social Studies<br/>JH Social<br/></td>
+<td class="subject g8klocal">G8K<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<!-- span -->
+<td class="subject g8kcareer">G8K<br/>Career Technology Skills<br/>JH Home<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<td class="subject g8klanguage" rowspan="2">G8K<br/>Language Arts<br/>English B Teacher<br/></td>
+<td class="subject g8ksciencescience" rowspan="2">G8K<br/>Science<br/>Science A Teacher<br/></td>
+<td class="subject 2" rowspan="2">G8K<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g8krmejh">G8K<br/>RME<br/>JH Religion<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject french">G8K<br/>French<br/>JH French<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g8kcareer">G8K<br/>Career Technology Skills<br/>JH Home<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject 2" rowspan="2">G8K<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g8ksciencescience" rowspan="2">G8K<br/>Science<br/>Science A Teacher<br/></td>
+<td class="subject g8k" rowspan="2">G8K, G8N, G8R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g8ksocial" rowspan="2">G8K<br/>Social Studies<br/>JH Social<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_66">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G8N Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject 2" rowspan="2">G8N<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g8ncareer">G8N<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject 2" rowspan="2">G8N<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject 2" rowspan="2">G8N<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g8nsciencescience" rowspan="2">G8N<br/>Science<br/>Science A Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<td class="subject g8ncareer">G8N<br/>Career Technology Skills<br/>JH Home<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g8nmusicmusic" rowspan="2">G8N<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g8nrmejh">G8N<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g8nlocal">G8N<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g8nsocial" rowspan="2">G8N<br/>Social Studies<br/>JH Social<br/></td>
+<td class="subject g8nlanguage" rowspan="2">G8N<br/>Language Arts<br/>English B Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<td class="subject g8nsocial" rowspan="2">G8N<br/>Social Studies<br/>JH Social<br/></td>
+<td class="subject french">G8N<br/>French<br/>JH French<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject french">G8N<br/>French<br/>JH French<br/></td>
+<!-- span -->
+<td class="subject creative" rowspan="2">G8N<br/>Creative Arts<br/>JH Creative Art <br/></td>
+<td class="subject g8nsciencescience" rowspan="2">G8N<br/>Science<br/>Science A Teacher<br/></td>
+<td class="subject french">G8N<br/>French<br/>JH French<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject g8ncareer">G8N<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject g8nlocal">G8N<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject g8nrmejh">G8N<br/>RME<br/>JH Religion<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g8ncomputer" rowspan="2">G8N<br/>Computer Studies<br/>JH ICT<br/></td>
+<td class="subject g8nlanguage" rowspan="2">G8N<br/>Language Arts<br/>English B Teacher<br/></td>
+<td class="subject g8k" rowspan="2">G8K, G8N, G8R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g8ncareer">G8N<br/>Career Technology Skills<br/>JH Home<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g8nlocal">G8N<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_68">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G8R Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g8rlanguage" rowspan="2">G8R<br/>Language Arts<br/>English B Teacher<br/></td>
+<td class="subject g8rlocal">G8R<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td class="subject g8rcomputer" rowspan="2">G8R<br/>Computer Studies<br/>JH ICT<br/></td>
+<td class="subject g8rlanguage" rowspan="2">G8R<br/>Language Arts<br/>English B Teacher<br/></td>
+<td class="subject 2" rowspan="2">G8R<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<td class="subject french">G8R<br/>French<br/>JH French<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g8rcareer">G8R<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject g8rmusicmusic" rowspan="2">G8R<br/>Music<br/>Music Teacher <br/></td>
+<td class="subject g8rsciencescience" rowspan="2">G8R<br/>Science<br/>Science A Teacher<br/></td>
+<td class="subject creative" rowspan="2">G8R<br/>Creative Arts<br/>JH Creative Art <br/></td>
+<td class="subject g8rsocial" rowspan="2">G8R<br/>Social Studies<br/>JH Social<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g8rrmejh">G8R<br/>RME<br/>JH Religion<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject 2" rowspan="2">G8R<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g8rsciencescience" rowspan="2">G8R<br/>Science<br/>Science A Teacher<br/></td>
+<td class="subject g8rsocial" rowspan="2">G8R<br/>Social Studies<br/>JH Social<br/></td>
+<td class="subject french">G8R<br/>French<br/>JH French<br/></td>
+<td class="subject g8rlocal">G8R<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject g8rrmejh">G8R<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g8rcareer">G8R<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject french">G8R<br/>French<br/>JH French<br/></td>
+<td class="subject 2" rowspan="2">G8R<br/>Mathematics<br/>Math  Tutor 2<br/></td>
+<td class="subject g8k" rowspan="2">G8K, G8N, G8R<br/>Physical Education<br/>PE Instructor<br/></td>
+<td class="subject g8rlocal">G8R<br/>Local Language<br/>JH Twi, Ga Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<td class="subject g8rcareer">G8R<br/>Career Technology Skills<br/>JH Home<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject g8rcareer">G8R<br/>Career Technology Skills<br/>JH Home<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_71">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G9K Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g9klocal">G9K<br/>Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject g9ksocial" rowspan="2">G9K<br/>Social Studies<br/>JH Social<br/></td>
+<td class="subject g9ksciencejh" rowspan="2">G9K<br/>Science<br/>JH Science<br/></td>
+<td class="subject g9ksocial" rowspan="2">G9K<br/>Social Studies<br/>JH Social<br/></td>
+<td class="subject english" rowspan="2">G9K<br/>Language Arts<br/>JH English Language<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject g9kcareer">G9K<br/>Career Technology Skills<br/>JH Home<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g9krmejh">G9K<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g9kcareer">G9K<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject french">G9K<br/>French<br/>JH French<br/></td>
+<td class="subject french">G9K<br/>French<br/>JH French<br/></td>
+<td class="subject french">G9K<br/>French<br/>JH French<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g9kcareer">G9K<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject g9krmejh">G9K<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g9krmejh">G9K<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g9kmathematicsjh" rowspan="2">G9K<br/>Mathematics<br/>JH Math<br/></td>
+<td class="subject g9klocal">G9K<br/>Local Language<br/>VP JHS, Ga Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g9kmathematicsjh" rowspan="2">G9K<br/>Mathematics<br/>JH Math<br/></td>
+<td class="subject g9ksciencejh" rowspan="2">G9K<br/>Science<br/>JH Science<br/></td>
+<td class="subject g9klocal">G9K<br/>Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<!-- span -->
+<td class="subject g9kmathematicsjh" rowspan="2">G9K<br/>Mathematics<br/>JH Math<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g9kcomputer">G9K<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject g9kcareer">G9K<br/>Career Technology Skills<br/>JH Home<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject english" rowspan="2">G9K<br/>Language Arts<br/>JH English Language<br/></td>
+<td class="subject g9kcomputer" rowspan="2">G9K<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject english" rowspan="2">G9K<br/>Language Arts<br/>JH English Language<br/></td>
+<td class="subject creative" rowspan="2">G9K<br/>Creative Arts<br/>JH Creative Art <br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_73">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G9N Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g9nmathematicsjh" rowspan="2">G9N<br/>Mathematics<br/>JH Math<br/></td>
+<td class="subject french">G9N<br/>French<br/>JH French<br/></td>
+<td class="subject g9nrmejh">G9N<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g9nsciencejh" rowspan="2">G9N<br/>Science<br/>JH Science<br/></td>
+<td class="subject g9nmathematicsjh" rowspan="2">G9N<br/>Mathematics<br/>JH Math<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<td class="subject g9nlocal">G9N<br/>Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject french">G9N<br/>French<br/>JH French<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject english" rowspan="2">G9N<br/>Language Arts<br/>JH English Language<br/></td>
+<td class="subject english" rowspan="2">G9N<br/>Language Arts<br/>JH English Language<br/></td>
+<td class="subject g9nsocial" rowspan="2">G9N<br/>Social Studies<br/>JH Social<br/></td>
+<td class="subject g9ncareer">G9N<br/>Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject creative" rowspan="2">G9N<br/>Creative Arts<br/>JH Creative Art <br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject french">G9N<br/>French<br/>JH French<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject g9nrmejh">G9N<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g9nmathematicsjh" rowspan="2">G9N<br/>Mathematics<br/>JH Math<br/></td>
+<td class="subject g9nsciencejh" rowspan="2">G9N<br/>Science<br/>JH Science<br/></td>
+<td class="subject g9nlocal">G9N<br/>Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject english" rowspan="2">G9N<br/>Language Arts<br/>JH English Language<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject g9ncareer">G9N<br/>Career Technology Skills<br/>JH Home<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject g9ncareer">G9N<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g9ncomputer" rowspan="2">G9N<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject g9nsocial" rowspan="2">G9N<br/>Social Studies<br/>JH Social<br/></td>
+<td class="subject g9ncareer">G9N<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject g9ncomputer">G9N<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<td class="subject g9nlocal">G9N<br/>Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject g9nrmejh">G9N<br/>RME<br/>JH Religion<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_75">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G9R Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject g9rsocial" rowspan="2">G9R<br/>Social Studies<br/>JH Social<br/></td>
+<td class="subject g9rrmejh">G9R<br/>RME<br/>JH Religion<br/></td>
+<td class="subject g9rsocial" rowspan="2">G9R<br/>Social Studies<br/>JH Social<br/></td>
+<td class="subject g9rcareer">G9R<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<td class="subject g9rlocal">G9R<br/>Local Language<br/>VP JHS, Ga Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<td class="subject g9rcareer">G9R<br/>Career Technology Pre<br/>JH Pretech<br/></td>
+<!-- span -->
+<td class="subject g9rlocal">G9R<br/>Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject french">G9R<br/>French<br/>JH French<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject g9rcareer">G9R<br/>Career Technology Skills<br/>JH Home<br/></td>
+<td class="subject g9rmathematicsjh" rowspan="2">G9R<br/>Mathematics<br/>JH Math<br/></td>
+<td class="subject english" rowspan="2">G9R<br/>Language Arts<br/>JH English Language<br/></td>
+<td class="subject g9rcomputer" rowspan="2">G9R<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+<td class="subject g9rsciencejh" rowspan="2">G9R<br/>Science<br/>JH Science<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject g9rsciencejh" rowspan="2">G9R<br/>Science<br/>JH Science<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<td class="subject g9rlocal">G9R<br/>Local Language<br/>VP JHS, Ga Teacher<br/></td>
+<td class="subject g9rrmejh">G9R<br/>RME<br/>JH Religion<br/></td>
+<td class="subject english" rowspan="2">G9R<br/>Language Arts<br/>JH English Language<br/></td>
+<td class="subject g9rcareer">G9R<br/>Career Technology Skills<br/>JH Home<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject g9rrmejh">G9R<br/>RME<br/>JH Religion<br/></td>
+<td class="subject french">G9R<br/>French<br/>JH French<br/></td>
+<td class="subject french">G9R<br/>French<br/>JH French<br/></td>
+<!-- span -->
+<td class="subject g9rcomputer">G9R<br/>Computer Studies<br/>ICT  A Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject g9rmathematicsjh" rowspan="2">G9R<br/>Mathematics<br/>JH Math<br/></td>
+<td class="subject english" rowspan="2">G9R<br/>Language Arts<br/>JH English Language<br/></td>
+<td class="subject creative" rowspan="2">G9R<br/>Creative Arts<br/>JH Creative Art <br/></td>
+<td class="subject g9rmathematicsjh" rowspan="2">G9R<br/>Mathematics<br/>JH Math<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_78">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">NUR Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject nu" rowspan="2">NUR<br/>Social Development<br/>NU R Assitant, NU R Teacher<br/></td>
+<td class="subject nu" rowspan="2">NUR<br/>World Discovery<br/>NU R Assitant, NU R Teacher<br/></td>
+<td class="subject nu" rowspan="2">NUR<br/>World Discovery<br/>NU R Assitant, NU R Teacher<br/></td>
+<td class="subject nu" rowspan="2">NUR<br/>Science Inquiry<br/>NU R Assitant, NU R Teacher<br/></td>
+<td class="subject nu" rowspan="2">NUR<br/>Language Literacy<br/>NU R Assitant, NU R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject nu" rowspan="2">NUN, NUR<br/>Physical Education<br/>NU N Teacher, NU N Assitant, NU R Assitant, NU R Teacher<br/></td>
+<td class="subject nu" rowspan="2">NUR<br/>Language Literacy<br/>NU R Assitant, NU R Teacher<br/></td>
+<td>---</td>
+<td class="subject nu" rowspan="2">NUR<br/>Numeracy<br/>NU R Assitant, NU R Teacher<br/></td>
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<td class="subject nu" rowspan="2">NUR<br/>Numeracy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td class="subject nu" rowspan="2">NUR<br/>Numeracy<br/>NU R Assitant, NU R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject nu" rowspan="2">NUR<br/>Science Inquiry<br/>NU R Assitant, NU R Teacher<br/></td>
+<td class="subject nu" rowspan="2">NUR<br/>Numeracy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+<td class="subject nu" rowspan="2">NUR<br/>Language Literacy<br/>NU R Assitant, NU R Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<!-- span -->
+<td>---</td>
+<!-- span -->
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject nu" rowspan="2">NUR<br/>Creative Art &amp; Music<br/>NU R Assitant, NU R Teacher<br/></td>
+<td class="subject nu" rowspan="2">NUR<br/>Creative Art &amp; Music<br/>NU R Assitant, NU R Teacher<br/></td>
+<td class="subject nu" rowspan="2">NUR<br/>Language Literacy<br/>NU R Assitant, NU R Teacher<br/></td>
+<td class="subject nu" rowspan="2">NUR<br/>Creative Art &amp; Music<br/>NU R Assitant, NU R Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_80">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">NUN Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject nu" rowspan="2">NUN<br/>Language Literacy<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Creative Art &amp; Music<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Numeracy<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Numeracy<br/>NU N Teacher, NU N Assitant<br/></td>
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject nu" rowspan="2">NUN, NUR<br/>Physical Education<br/>NU N Teacher, NU N Assitant, NU R Assitant, NU R Teacher<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Language Literacy<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Language Literacy<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Social Development<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Language Literacy<br/>NU N Teacher, NU N Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td>---</td>
+<td class="subject nu" rowspan="2">NUN<br/>World Discovery<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Science Inquiry<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Science Inquiry<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Creative Art &amp; Music<br/>NU N Teacher, NU N Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td>---</td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject nu" rowspan="2">NUN<br/>Numeracy<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Numeracy<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>Creative Art &amp; Music<br/>NU N Teacher, NU N Assitant<br/></td>
+<td class="subject nu" rowspan="2">NUN<br/>World Discovery<br/>NU N Teacher, NU N Assitant<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_83">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">RCR Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject rc" rowspan="2">RCR<br/>Creative Art &amp; Music<br/>RC R Assitant, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR<br/>World Discovery<br/>RC R Assitant, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR<br/>Creative Art &amp; Music<br/>RC R Assitant, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR, RCN<br/>Physical Education<br/>RC R Assitant, RC N Assitant, RC N Teacher, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR<br/>Science Inquiry<br/>RC R Assitant, RC R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td>---</td>
+<td class="subject rc" rowspan="2">RCR<br/>Language Literacy<br/>RC R Assitant, RC R Teacher<br/></td>
+<td>---</td>
+<td class="subject rc" rowspan="2">RCR<br/>Numeracy<br/>RC R Assitant, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR<br/>Language Literacy<br/>RC R Assitant, RC R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject rc" rowspan="2">RCR<br/>Numeracy<br/>RC R Assitant, RC R Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<td class="subject rc" rowspan="2">RCR<br/>Numeracy<br/>RC R Assitant, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR<br/>Language Literacy<br/>RC R Assitant, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR<br/>Language Literacy<br/>RC R Assitant, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR<br/>Creative Art &amp; Music<br/>RC R Assitant, RC R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td>---</td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject rc" rowspan="2">RCR<br/>World Discovery<br/>RC R Assitant, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR<br/>Science Inquiry<br/>RC R Assitant, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR<br/>Numeracy<br/>RC R Assitant, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCR<br/>Social Development<br/>RC R Assitant, RC R Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_85">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">RCN Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject rc" rowspan="2">RCN<br/>Creative Art &amp; Music<br/>RC N Teacher, RC N Assitant<br/></td>
+<td class="subject rc" rowspan="2">RCN<br/>Language Literacy<br/>RC N Teacher, RC N Assitant<br/></td>
+<td class="subject rc" rowspan="2">RCN<br/>Numeracy<br/>RC N Teacher, RC N Assitant<br/></td>
+<td class="subject rc" rowspan="2">RCR, RCN<br/>Physical Education<br/>RC R Assitant, RC N Assitant, RC N Teacher, RC R Teacher<br/></td>
+<td class="subject rc" rowspan="2">RCN<br/>Science Inquiry<br/>RC N Teacher, RC N Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td class="subject rc" rowspan="2">RCN<br/>World Discovery<br/>RC N Teacher, RC N Assitant<br/></td>
+<td class="subject rc" rowspan="2">RCN<br/>Numeracy<br/>RC N Teacher, RC N Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject rc" rowspan="2">RCN<br/>Language Literacy<br/>RC N Teacher, RC N Assitant<br/></td>
+<td class="subject rc" rowspan="2">RCN<br/>Numeracy<br/>RC N Teacher, RC N Assitant<br/></td>
+<td class="subject rc" rowspan="2">RCN<br/>Language Literacy<br/>RC N Teacher, RC N Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject rc" rowspan="2">RCN<br/>Science Inquiry<br/>RC N Teacher, RC N Assitant<br/></td>
+<td class="subject rc" rowspan="2">RCN<br/>Language Literacy<br/>RC N Teacher, RC N Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject rc">RCN<br/>Social Development<br/>RC N Assitant, RC N Teacher<br/></td>
+<td class="subject rc">RCN<br/>Social Development<br/>RC N Assitant, RC N Teacher<br/></td>
+<td>---</td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject rc" rowspan="2">RCN<br/>Numeracy<br/>RC N Teacher, RC N Assitant<br/></td>
+<td class="subject rc" rowspan="2">RCN<br/>Creative Art &amp; Music<br/>RC N Teacher, RC N Assitant<br/></td>
+<td class="subject rc" rowspan="2">RCN<br/>World Discovery<br/>RC N Teacher, RC N Assitant<br/></td>
+<td class="subject rc" rowspan="2">RCN<br/>Creative Art &amp; Music<br/>RC N Teacher, RC N Assitant<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_88">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PKK Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject pk" rowspan="2">PKK<br/>Language Literacy<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR, PKN, PKK<br/>Physical Education<br/>PK R Assitant, PK R Teacher, PK K Teacher, PK K Assitant, PK N Teacher, PK N Assitant<br/></td>
+<td class="subject pk" rowspan="2">PKK<br/>Creative Art &amp; Music<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKK<br/>Creative Art &amp; Music<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKK<br/>Numeracy<br/>PK K Assitant, PK K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject pk">PKK<br/>World Discovery<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk">PKK<br/>Student Agency<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKK<br/>Numeracy<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk">PKK<br/>Science Inquiry<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk">PKK<br/>Science Inquiry<br/>PK K Assitant, PK K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td>---</td>
+<td class="subject pk" rowspan="2">PKK<br/>Creative Art &amp; Music<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td>---</td>
+<td class="subject pk" rowspan="2">PKK<br/>Language Literacy<br/>PK K Assitant, PK K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject pk" rowspan="2">PKK<br/>Numeracy<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td class="subject pk">PKK<br/>Student Agency<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKK<br/>Numeracy<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<td class="subject pk">PKK<br/>Science Inquiry<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk">PKK<br/>World Discovery<br/>PK K Assitant, PK K Teacher<br/></td>
+<!-- span -->
+<td class="subject pk">PKK<br/>World Discovery<br/>PK K Assitant, PK K Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject pk">PKK<br/>Science Inquiry<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKK<br/>Language Literacy<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKK<br/>Language Literacy<br/>PK K Assitant, PK K Teacher<br/></td>
+<td class="subject pk">PKK<br/>World Discovery<br/>PK K Assitant, PK K Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<td>---</td>
+<!-- span -->
+<!-- span -->
+<td>---</td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_90">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PKN Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject pk">PKN<br/>World Discovery<br/>PK N Assitant, PK N Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR, PKN, PKK<br/>Physical Education<br/>PK R Assitant, PK R Teacher, PK K Teacher, PK K Assitant, PK N Teacher, PK N Assitant<br/></td>
+<td class="subject pk" rowspan="2">PKN<br/>Language Literacy<br/>PK N Assitant, PK N Teacher<br/></td>
+<td class="subject pk">PKN<br/>Student Agency<br/>PK N Teacher, PK N Assitant<br/></td>
+<td class="subject pk" rowspan="2">PKN<br/>Numeracy<br/>PK N Teacher, PK N Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject pk">PKN<br/>Student Agency<br/>PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+<td class="subject pk">PKN<br/>Science Inquiry<br/>PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject pk">PKN<br/>Science Inquiry<br/>PK N Teacher, PK N Assitant<br/></td>
+<td class="subject pk">PKN<br/>Science Inquiry<br/>PK N Teacher, PK N Assitant<br/></td>
+<td class="subject pk">PKN<br/>World Discovery<br/>PK N Assitant, PK N Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKN<br/>Numeracy<br/>PK N Teacher, PK N Assitant<br/></td>
+<td class="subject pk" rowspan="2">PKN<br/>Creative Art &amp; Music<br/>PK N Assitant, PK N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject pk" rowspan="2">PKN<br/>Numeracy<br/>PK N Teacher, PK N Assitant<br/></td>
+<td class="subject pk" rowspan="2">PKN<br/>Creative Art &amp; Music<br/>PK N Assitant, PK N Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKN<br/>Numeracy<br/>PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject pk" rowspan="2">PKN<br/>Language Literacy<br/>PK N Assitant, PK N Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKN<br/>Language Literacy<br/>PK N Assitant, PK N Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td>---</td>
+<td>---</td>
+<td class="subject pk">PKN<br/>Science Inquiry<br/>PK N Teacher, PK N Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject pk" rowspan="2">PKN<br/>Language Literacy<br/>PK N Assitant, PK N Teacher<br/></td>
+<td class="subject pk">PKN<br/>World Discovery<br/>PK N Assitant, PK N Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKN<br/>Creative Art &amp; Music<br/>PK N Assitant, PK N Teacher<br/></td>
+<td>---</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<td>---</td>
+<!-- span -->
+<td class="subject pk">PKN<br/>World Discovery<br/>PK N Assitant, PK N Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_92">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PKR Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject pk">PKR<br/>Science Inquiry<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR, PKN, PKK<br/>Physical Education<br/>PK R Assitant, PK R Teacher, PK K Teacher, PK K Assitant, PK N Teacher, PK N Assitant<br/></td>
+<td class="subject pk" rowspan="2">PKR<br/>Creative Art &amp; Music<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR<br/>Language Literacy<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR<br/>Language Literacy<br/>PK R Assitant, PK R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td>---</td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject pk">PKR<br/>Student Agency<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk">PKR<br/>World Discovery<br/>PK R Assitant, PK R Teacher<br/></td>
+<td>---</td>
+<td class="subject pk">PKR<br/>Science Inquiry<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk">PKR<br/>Science Inquiry<br/>PK R Assitant, PK R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject pk" rowspan="2">PKR<br/>Numeracy<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR<br/>Numeracy<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR<br/>Language Literacy<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR<br/>Numeracy<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR<br/>Creative Art &amp; Music<br/>PK R Assitant, PK R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject pk">PKR<br/>World Discovery<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk">PKR<br/>Science Inquiry<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk">PKR<br/>Student Agency<br/>PK R Assitant, PK R Teacher<br/></td>
+<td>---</td>
+<td class="subject pk">PKR<br/>World Discovery<br/>PK R Assitant, PK R Teacher<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject pk" rowspan="2">PKR<br/>Language Literacy<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR<br/>Creative Art &amp; Music<br/>PK R Assitant, PK R Teacher<br/></td>
+<td class="subject pk" rowspan="2">PKR<br/>Numeracy<br/>PK R Assitant, PK R Teacher<br/></td>
+<td>---</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject pk">PKR<br/>World Discovery<br/>PK R Assitant, PK R Teacher<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_95">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KGK Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject kg">KGK<br/>Student Agency<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGK<br/>Numeracy<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGK, KGN, KGR<br/>Physical Education<br/>KG R Teacher, KG R Assitant, KG N Assitant, KG K Assitant, KG K Teacher, KG N Teacher<br/></td>
+<td class="subject kg" rowspan="2">KGK<br/>Numeracy<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGK<br/>Numeracy<br/>KG K Teacher, KG K Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject kg">KGK<br/>Science Inquiry<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject kg" rowspan="2">KGK<br/>Language Literacy<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGK<br/>Language Literacy<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg">KGK<br/>Science Inquiry<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGK<br/>Language Literacy<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGK<br/>Creative Art &amp; Music<br/>KG K Teacher, KG K Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<!-- span -->
+<td class="subject kg" rowspan="2">KGK<br/>Numeracy<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject kg">KGK<br/>World Discovery<br/>KG K Teacher, KG K Assitant<br/></td>
+<td>---</td>
+<!-- span -->
+<td class="subject kg">KGK<br/>Science Inquiry<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg">KGK<br/>World Discovery<br/>KG K Teacher, KG K Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<td class="subject kg">KGK<br/>Computer Studies<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg">KGK<br/>Computer Studies<br/>KG K Teacher, KG K Assitant<br/></td>
+<td>---</td>
+<td class="subject kg">KGK<br/>Student Agency<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg">KGK<br/>Science Inquiry<br/>KG K Teacher, KG K Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject kg" rowspan="2">KGK<br/>Creative Art &amp; Music<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg">KGK<br/>World Discovery<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGK<br/>Language Literacy<br/>KG K Teacher, KG K Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGK<br/>Creative Art &amp; Music<br/>KG K Teacher, KG K Assitant<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<td class="subject kg">KGK<br/>World Discovery<br/>KG K Teacher, KG K Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="even_table" id="table_97">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KGN Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject kg">KGN<br/>Computer Studies<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGN<br/>Language Literacy<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGK, KGN, KGR<br/>Physical Education<br/>KG R Teacher, KG R Assitant, KG N Assitant, KG K Assitant, KG K Teacher, KG N Teacher<br/></td>
+<td class="subject kg" rowspan="2">KGN<br/>Language Literacy<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg">KGN<br/>Science Inquiry<br/>KG N Teacher, KG N Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject kg">KGN<br/>World Discovery<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td class="subject kg">KGN<br/>World Discovery<br/>KG N Teacher, KG N Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject kg">KGN<br/>Student Agency<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg">KGN<br/>World Discovery<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGN<br/>Creative Art &amp; Music<br/>KG N Teacher, KG N Assitant<br/></td>
+<td>---</td>
+<td class="subject kg" rowspan="2">KGN<br/>Numeracy<br/>KG N Teacher, KG N Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<td class="subject kg">KGN<br/>Science Inquiry<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGN<br/>Numeracy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td class="subject kg" rowspan="2">KGN<br/>Numeracy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject kg" rowspan="2">KGN<br/>Language Literacy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td class="subject kg" rowspan="2">KGN<br/>Language Literacy<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td class="subject kg" rowspan="2">KGN<br/>Creative Art &amp; Music<br/>KG N Teacher, KG N Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<td class="subject kg">KGN<br/>Student Agency<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td>---</td>
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject kg" rowspan="2">KGN<br/>Creative Art &amp; Music<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg">KGN<br/>Computer Studies<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGN<br/>Numeracy<br/>KG N Teacher, KG N Assitant<br/></td>
+<td class="subject kg">KGN<br/>Science Inquiry<br/>KG N Teacher, KG N Assitant<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<!-- span -->
+<td class="subject kg">KGN<br/>Science Inquiry<br/>KG N Teacher, KG N Assitant<br/></td>
+<!-- span -->
+<td class="subject kg">KGN<br/>World Discovery<br/>KG N Teacher, KG N Assitant<br/></td>
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+<table border="1" class="odd_table" id="table_99">
+<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KGR Year Group</span></caption>
+<thead>
+<tr>
+<td></td>
+<th class="xAxis">M</th>
+<th class="xAxis">T</th>
+<th class="xAxis">W</th>
+<th class="xAxis">R</th>
+<th class="xAxis">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="yAxis">P1</th>
+<td class="subject kg">KGR<br/>Student Agency<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGR<br/>Creative Art &amp; Music<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGK, KGN, KGR<br/>Physical Education<br/>KG R Teacher, KG R Assitant, KG N Assitant, KG K Assitant, KG K Teacher, KG N Teacher<br/></td>
+<td class="subject kg">KGR<br/>World Discovery<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg">KGR<br/>Science Inquiry<br/>KG R Teacher, KG R Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P2</th>
+<td class="subject kg">KGR<br/>Computer Studies<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<th class="yAxis">Break</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P3</th>
+<td class="subject kg" rowspan="2">KGR<br/>Numeracy<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg">KGR<br/>World Discovery<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGR<br/>Creative Art &amp; Music<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg">KGR<br/>Science Inquiry<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg">KGR<br/>Student Agency<br/>KG R Teacher, KG R Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P4</th>
+<!-- span -->
+<td class="subject kg" rowspan="2">KGR<br/>Language Literacy<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="subject kg" rowspan="2">KGR<br/>Language Literacy<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGR<br/>Language Literacy<br/>KG R Teacher, KG R Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">P5</th>
+<td class="subject kg" rowspan="2">KGR<br/>Creative Art &amp; Music<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="subject kg" rowspan="2">KGR<br/>Language Literacy<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+</tr>
+<tr>
+<th class="yAxis">P6</th>
+<!-- span -->
+<td class="subject kg">KGR<br/>Science Inquiry<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<td class="subject kg">KGR<br/>Computer Studies<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg">KGR<br/>World Discovery<br/>KG R Teacher, KG R Assitant<br/></td>
+</tr>
+<tr>
+<th class="yAxis">Lunch</th>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P7</th>
+<td class="subject kg">KGR<br/>World Discovery<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGR<br/>Numeracy<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGR<br/>Numeracy<br/>KG R Teacher, KG R Assitant<br/></td>
+<td class="subject kg" rowspan="2">KGR<br/>Numeracy<br/>KG R Teacher, KG R Assitant<br/></td>
+<td>-X-</td>
+</tr>
+<tr>
+<th class="yAxis">P8</th>
+<td class="subject kg">KGR<br/>Science Inquiry<br/>KG R Teacher, KG R Assitant<br/></td>
+<!-- span -->
+<!-- span -->
+<!-- span -->
+<td>-X-</td>
+</tr>
+<tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="#top">back to the top</a></p>
+</body>
+</html>

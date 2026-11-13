@@ -1,0 +1,12 @@
+﻿Soft conflicts of Primary School.fet
+Generated with FET 7.12.0 on 11/10/26 12:20 PM
+
+Number of broken soft constraints: 2
+Total soft conflicts: 1.9
+
+Soft conflicts list (in descending order):
+
+Time constraint min days between activities broken: activity with id=572 (    1/3 - French A Teacher - French - G5N) conflicts with activity with id=571 (    1/3 - French A Teacher - French - G5N), being 1 days too close, on days R and R, conflicts factor increase=0.95. The activities are placed consecutively in the timetable, because you selected this option in case the activities are on the same day
+Time constraint min days between activities broken: activity with id=1037 (    1/4 - KG K Teacher,KG K Assitant - World Discovery - KGK) conflicts with activity with id=1034 (1/4 -     KG K Teacher,KG K Assitant - World Discovery - KGK), being 1 days too close, on days T and T, conflicts factor increase=0.95. The activities are placed consecutively in the timetable, because you selected this option in case the activities are on the same day
+
+End of file.
