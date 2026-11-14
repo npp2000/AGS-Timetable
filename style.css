@@ -1,4 +1,28 @@
 body { font-family: 'Roboto', Arial, sans-serif; background-color: #fafafa; color: #202124; margin: 0; padding: 20px; }
+a.home-link {
+  display: inline-block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 0.65em 1em;
+  border-radius: 6px;
+  background-color: #0d1b2a;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(13, 27, 42, 0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+a.home-link:hover {
+  background-color: #1b3a57;
+  color: #fff;
+  transform: translateY(-1px);
+}
+a.home-link:focus-visible {
+  outline: 3px solid #e35336;
+  outline-offset: 3px;
+}
 table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 6px; overflow: hidden; }
 th { background-color: #f1f3f4; color: #5f6368; padding: 12px; text-align: center; font-weight: 500; font-size: 0.95em; border-bottom: 1px solid #dadce0; }
 td { padding: 10px; text-align: center; border-bottom: 1px solid #e0e0e0; vertical-align: middle; }
