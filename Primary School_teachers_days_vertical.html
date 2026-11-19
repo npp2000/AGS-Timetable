@@ -1,203 +1,883 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet"/>
 
-<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<link href="custom.css" rel="stylesheet" type="text/css"/>
-<title>Accra Grammar School</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
 <style>
-      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
-      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
-      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    width: 90%;
+    background: rgb(214,109,117);
+    background: linear-gradient(87deg, rgba(214,109,117,1) 0%, rgba(226,149,135,1) 100%);; 
+}
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+input[type="text"]{
+    width: 25%;
+    padding: 10px 0 10px 15px;
+    border: none;
+    
+}
+.main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0 20px 0;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    row-gap: 20px;
+    column-gap: 30px;
+    margin-top: 50px;
+}
+.card{
+    background-color: #fff;
+    border-radius: 5px;
+    transition: transform .3s;
+}
+.card:hover{
+    transform: translateY(5px);
+    cursor: pointer;
+}
+img{
+    width: 30%;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin: 15px 0 15px 0px;
+}
+.content{
+    margin-right: 25px;    
+}
+.inside{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background : rgba(100, 100, 100, 0.4);
+}
+.overlay-card{
+    background: rgb(255,216,155);
+    background: linear-gradient(87deg, rgba(255,216,155,1) 0%, rgba(25,84,123,1) 100%);
+    width: 20%;
+    border-radius: 5px;
+    margin : 11% auto auto;
+}
+.overlay-img{
+    width: 30%;
+    margin-top: 40px;
+}
+.overlay-inside{
+    text-align: center;
+    position: relative;
+}
+button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    float: left; /* Float the buttons side by side */
+}
+.overlay-content p,.overlay-content h2{
+    margin-bottom: 10px;
+}
+.line{
+    border-bottom: 1px solid rgb(97, 92, 92);
+    margin: 20px 30px;
+}
+.overlay-content{
+    padding-bottom: 20px;
+}
+.hidden{
+    display: none;
+}
+.left-arrow, .right-arrow{
+    position: absolute;
+    width: 10%;
+    font-size: 20px;
+    font-weight: 500;
+}
+.right-arrow{
+    right: 0;
+    top: 50%;
+}
+.left-arrow{
+    top: 50%;
+}
+.right-arrow:hover, .left-arrow:hover{
+    cursor: pointer;
+	
+	 /* Base dialog styles */
+  dialog {
+    width: 90%;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-family: system-ui, sans-serif;
+  }
+  dialog::backdrop {
+    background: rgba(0,0,0,0.5);
+  }
+  dialog h2 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  dialog p {
+    margin-bottom: 16px;
+  }
+  dialog button {
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  dialog button:active {
+    transform: scale(0.98);
+  }
 
-      p.back {
-        margin-top: 4ex;
-        margin-bottom: 5ex;
-      }
+  /* Dialog 1 styles */
+  #dialog1 {
+    border-color: #4a90e2;
+  }
+  #dialog1 h2 { color: #4a90e2; }
 
-      table {
-        text-align: center;
-        page-break-inside: avoid;
-      }
+  /* Dialog 2 styles */
+  #dialog2 {
+    border-color: #e24a4a;
+  }
+  #dialog2 h2 { color: #e24a4a; }
+  
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
 
-      table.odd_table {
-        page-break-before: always;
-      }
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-      table.even_table {
-        page-break-before: always;
-      }
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
 
-      table.detailed {
-        margin-left: auto; margin-right: auto;
-        text-align: center;
-        border: 0px;
-        border-spacing: 0;
-        border-collapse: collapse;
-      }
-
-      caption {
-
-      }
-
-      span.institution {
-        font-weight: bold;
-      }
-
-      span.name {
-
-      }
-
-      span.comment {
-        /*font-style: italic;*/
-      }
-
-      span.legend_title {
-        font-weight: bold;
-      }
-
-      thead {
-
-      }
-
-      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
-
-      tr.foot {
-
-      }
-
-      tbody {
-
-      }
-
-      th {
-
-      }
-
-      td {
-
-      }
-
-      th.daySeparator {
-        background-color: silver;
-      }
-
-      tr.daySeparator {
-        background-color: silver;
-      }
-
-      td.daySeparator {
-        background-color: silver;
-      }
-
-      td.detailed {
-        border: 1px dashed silver;
-        border-bottom: 0;
-        border-top: 0;
-      }
-
-      th.xAxis {
-      /* width: 8em; */
-      }
-
-      th.yAxis {
-        height: 8ex;
-      }
-
-      /* Style the teachers' free periods */
-
-      div.DESCRIPTION {
-        text-align: left;
-        font-size: smaller;
-      }
-    </style>
-<link href="style.css" rel="stylesheet"/></head>
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+</style>
+<a class="home-link" href="Primary School_index.html" style="font-weight: bold">Back to main page</a>
+<h1 style="text-align:center" >Teaching Staff Timetables</h1>
 <body id="top">
-<p><a class="home-link" href="Primary School_index.html">Back to main page</a></p>
-<table>
-<tr align="left" valign="top">
-<th>Institution name:</th>
-<td class="subject accra">Accra Grammar School</td>
-</tr>
-</table>
-<table>
-<tr align="left" valign="top">
-<th>Comments:</th>
-<td class="subject timetables">Timetables</td>
-</tr>
-</table>
-<p><strong>Table of contents</strong></p>
-<ul>
-<li><a href="#table_1">Creative Arts Teacher</a></li>
-<li><a href="#table_2">English A Teacher</a></li>
-<li><a href="#table_3">English B Teacher</a></li>
-<li><a href="#table_4">French A Teacher</a></li>
-<li><a href="#table_5">G1 K Teacher</a></li>
-<li><a href="#table_6">G1 N Teacher</a></li>
-<li><a href="#table_7">G1 Q Teacher</a></li>
-<li><a href="#table_8">G1 R Teacher</a></li>
-<li><a href="#table_9">G2 K Teacher</a></li>
-<li><a href="#table_10">G2 N Teacher</a></li>
-<li><a href="#table_11">G2 Q Teacher</a></li>
-<li><a href="#table_12">G2 R Teacher</a></li>
-<li><a href="#table_13">G3 K Teacher</a></li>
-<li><a href="#table_14">G3 N Teacher</a></li>
-<li><a href="#table_15">G3 Q Teacher</a></li>
-<li><a href="#table_16">G3 R Teacher</a></li>
-<li><a href="#table_17">G4 K Teacher</a></li>
-<li><a href="#table_18">G4 N Teacher</a></li>
-<li><a href="#table_19">G4 Q Teacher</a></li>
-<li><a href="#table_20">G4 R Teacher</a></li>
-<li><a href="#table_21">G5 K Teacher</a></li>
-<li><a href="#table_22">G5 N Teacher</a></li>
-<li><a href="#table_23">G5 Q Teacher</a></li>
-<li><a href="#table_24">G5 R Teacher</a></li>
-<li><a href="#table_25">Ga Teacher</a></li>
-<li><a href="#table_26">ICT  A Teacher</a></li>
-<li><a href="#table_27">JH Creative Art </a></li>
-<li><a href="#table_28">JH English Language</a></li>
-<li><a href="#table_29">JH French</a></li>
-<li><a href="#table_30">JH Home</a></li>
-<li><a href="#table_31">JH ICT</a></li>
-<li><a href="#table_32">JH Math</a></li>
-<li><a href="#table_33">JH Pretech</a></li>
-<li><a href="#table_34">JH Religion</a></li>
-<li><a href="#table_35">JH Science</a></li>
-<li><a href="#table_36">JH Social</a></li>
-<li><a href="#table_37">JH Twi</a></li>
-<li><a href="#table_38">KG K Assitant</a></li>
-<li><a href="#table_39">KG K Teacher</a></li>
-<li><a href="#table_40">KG N Assitant</a></li>
-<li><a href="#table_41">KG N Teacher</a></li>
-<li><a href="#table_42">KG R Assitant</a></li>
-<li><a href="#table_43">KG R Teacher</a></li>
-<li><a href="#table_44">Math  Tutor 2</a></li>
-<li><a href="#table_45">Math Tutor I</a></li>
-<li><a href="#table_46">Music Teacher </a></li>
-<li><a href="#table_47">NU N Assitant</a></li>
-<li><a href="#table_48">NU N Teacher</a></li>
-<li><a href="#table_49">NU R Assitant</a></li>
-<li><a href="#table_50">NU R Teacher</a></li>
-<li><a href="#table_51">PE Instructor</a></li>
-<li><a href="#table_52">PK K Assitant</a></li>
-<li><a href="#table_53">PK K Teacher</a></li>
-<li><a href="#table_54">PK N Assitant</a></li>
-<li><a href="#table_55">PK N Teacher</a></li>
-<li><a href="#table_56">PK R Assitant</a></li>
-<li><a href="#table_57">PK R Teacher</a></li>
-<li><a href="#table_58">RC N Assitant</a></li>
-<li><a href="#table_59">RC N Teacher</a></li>
-<li><a href="#table_60">RC R Assitant</a></li>
-<li><a href="#table_61">RC R Teacher</a></li>
-<li><a href="#table_62">Science A Teacher</a></li>
-<li><a href="#table_63">Science B Teacher</a></li>
-<li><a href="#table_64">VP JHS</a></li>
-<li><a href="#table_65">Social Sc Teacher</a></li>
-</ul>
-<p> </p>
-<table border="1" class="odd_table" id="table_1">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Creative Arts Teacher</span></caption>
+<main class="main-container">
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Richmond Quinn-Tetteh</h4>
+<p>Creative Arts</p>
+<p><button class="button1" onclick="showDialog('dialog1')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Ebenezer Ofori </h4>
+<p>Language Arts</p>
+<p><button class="button1" onclick="showDialog('dialog2')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Abigail Owusu</h4>
+<p>Language Arts</p>
+<p><button class="button1" onclick="showDialog('dialog3')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Mokli Yawo</h4>
+<p>French</p>
+<p><button class="button1" onclick="showDialog('dialog4')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Martha Yeboah</h4>
+<p>Grade 1 Kings</p>
+<p><button class="button1" onclick="showDialog('dialog5')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Harriet Panka</h4>
+<p>Grade 1 Nobles</p>
+<p><button class="button1" onclick="showDialog('dialog6')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Unassigned</h4>
+<p>Grade 1 Queens</p>
+<p><button class="button1" onclick="showDialog('dialog7')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Esther Aboagye</h4>
+<p>Grade 1 Royals</p>
+<p><button class="button1" onclick="showDialog('dialog8')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Kate Foli</h4>
+<p>Grade 2 Kings</p>
+<p><button class="button1" onclick="showDialog('dialog9')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Priscilla Amponsah</h4>
+<p>Grade 2 Nobles</p>
+<p><button class="button1" onclick="showDialog('dialog10')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Rosemond Wiafe</h4>
+<p>Grade 2 Queens</p>
+<p><button class="button1" onclick="showDialog('dialog11')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Ivy Kafui Alormene</h4>
+<p>Grade 2 Royals</p>
+<p><button class="button1" onclick="showDialog('dialog12')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Isaac Amissah</h4>
+<p>Grade 3 Kings</p>
+<p><button class="button1" onclick="showDialog('dialog13')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Esther Tawiah</h4>
+<p>Grade 3 Nobles</p>
+<p><button class="button1" onclick="showDialog('dialog14')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Abigail Appiah</h4>
+<p>Grade 3 Queens</p>
+<p><button class="button1" onclick="showDialog('dialog15')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Henrietta A Richardson</h4>
+<p>Grade 3 Royals</p>
+<p><button class="button1" onclick="showDialog('dialog16')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Jennifer Katsoe</h4>
+<p>Grade 4 Kings</p>
+<p><button class="button1" onclick="showDialog('dialog17')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Seth Asiedu</h4>
+<p>Grade 4 Nobles</p>
+<p><button class="button1" onclick="showDialog('dialog18')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Freda Pepra</h4>
+<p>Grade 4 Queens</p>
+<p><button class="button1" onclick="showDialog('dialog19')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Benedicta Jackson</h4>
+<p>Grade 4 Royals</p>
+<p><button class="button1" onclick="showDialog('dialog20')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Daniel Osom Mattey</h4>
+<p>Grade 5 Kings</p>
+<p><button class="button1" onclick="showDialog('dialog21')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Peter Kuntu Blankson</h4>
+<p>Grade 5 Nobles</p>
+<p><button class="button1" onclick="showDialog('dialog22')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Stephen Okai</h4>
+<p>Grade 5 Queens</p>
+<p><button class="button1" onclick="showDialog('dialog23')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Eugene Botsyoe</h4>
+<p>Grade 5 Royals</p>
+<p><button class="button1" onclick="showDialog('dialog24')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Seth Nuertey</h4>
+<p>Ga Language</p>
+<p><button class="button1" onclick="showDialog('dialog25')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Evans K Asiedu</h4>
+<p>ICT Teacher</p>
+<p><button class="button1" onclick="showDialog('dialog26')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Lexis Borquaye</h4>
+<p>Creative Arts</p>
+<p><button class="button1" onclick="showDialog('dialog27')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Bright Ayikah</h4>
+<p>English Language</p>
+<p><button class="button1" onclick="showDialog('dialog28')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Eric Lodonu`</h4>
+<p>French Language</p>
+<p><button class="button1" onclick="showDialog('dialog29')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Margaret K. Tetteh</h4>
+<p>CDT Life Skills</p>
+<p><button class="button1" onclick="showDialog('dialog30')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Evans Asiedu</h4>
+<p>ICT Teacher</p>
+<p><button class="button1" onclick="showDialog('dialog31')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Daniel Oteng</h4>
+<p>Mathematics</p>
+<p><button class="button1" onclick="showDialog('dialog32')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Joseph Anum Laryea</h4>
+<p>CDT Pre-Tech</p>
+<p><button class="button1" onclick="showDialog('dialog33')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Emmanuel Freeman</h4>
+<p>Religious Studies</p>
+<p><button class="button1" onclick="showDialog('dialog34')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Joshua Avornyoh</h4>
+<p>Science Teacher</p>
+<p><button class="button1" onclick="showDialog('dialog35')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Francis Kokuvie</h4>
+<p>Social Studies</p>
+<p><button class="button1" onclick="showDialog('dialog36')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Francis Ofei</h4>
+<p>Twi Language</p>
+<p><button class="button1" onclick="showDialog('dialog37')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Linda Odoi</h4>
+<p>Kindergarten Kings</p>
+<p><button class="button1" onclick="showDialog('dialog38')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Grace Esi Aubin</h4>
+<p>Kindergarten Kings</p>
+<p><button class="button1" onclick="showDialog('dialog39')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Lois Gyedani</h4>
+<p>Kindergarten Nobles</p>
+<p><button class="button1" onclick="showDialog('dialog40')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Belinda Sena Attipoe</h4>
+<p>Kindergarten Nobles</p>
+<p><button class="button1" onclick="showDialog('dialog41')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Victoria Atiemo-Akuffo</h4>
+<p>Kindergarten Royals</p>
+<p><button class="button1" onclick="showDialog('dialog42')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Bernice Aku Hunakpa</h4>
+<p>Kindergarten Royals</p>
+<p><button class="button1" onclick="showDialog('dialog43')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Joshua Danso</h4>
+<p>Mathematics Teacher</p>
+<p><button class="button1" onclick="showDialog('dialog44')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Ernest Gadugah</h4>
+<p>Mathematics Teacher</p>
+<p><button class="button1" onclick="showDialog('dialog45')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Frank Asempa</h4>
+<p>Music Master</p>
+<p><button class="button1" onclick="showDialog('dialog46')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Comfort Ofori</h4>
+<p>Nursery Staff</p>
+<p><button class="button1" onclick="showDialog('dialog47')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Barbara Effah-Broni</h4>
+<p>Nursery Staff</p>
+<p><button class="button1" onclick="showDialog('dialog48')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Charlotte Johnson</h4>
+<p>Nursery Staff</p>
+<p><button class="button1" onclick="showDialog('dialog49')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Mary Afful</h4>
+<p>Nursery Staff</p>
+<p><button class="button1" onclick="showDialog('dialog50')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Raymond Atanga</h4>
+<p>PE Instructor</p>
+<p><button class="button1" onclick="showDialog('dialog51')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Rejoice Fiator</h4>
+<p>Pre K Staff</p>
+<p><button class="button1" onclick="showDialog('dialog52')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Bernice Dumenyo</h4>
+<p>Pre K Staff</p>
+<p><button class="button1" onclick="showDialog('dialog53')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Rachel Mensimah</h4>
+<p>Pre-K Staff</p>
+<p><button class="button1" onclick="showDialog('dialog54')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Millicent K Benimah</h4>
+<p>Pre-K Staff</p>
+<p><button class="button1" onclick="showDialog('dialog55')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Marian Gyesi</h4>
+<p>Pre-K Staff</p>
+<p><button class="button1" onclick="showDialog('dialog56')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Anita Yeboah</h4>
+<p>Pre-K Staff</p>
+<p><button class="button1" onclick="showDialog('dialog57')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Precious Acheampong</h4>
+<p>Reception Royals Staff</p>
+<p><button class="button1" onclick="showDialog('dialog58')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Evelyn Sowah</h4>
+<p>Reception Royals Staff</p>
+<p><button class="button1" onclick="showDialog('dialog59')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Rebecca Abradu</h4>
+<p>Reception Nobles Staff</p>
+<p><button class="button1" onclick="showDialog('dialog60')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Bernice A Nyantekyiwaa</h4>
+<p>Reception Nobles Staff</p>
+<p><button class="button1" onclick="showDialog('dialog61')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Francis Owusu Addo</h4>
+<p>Science Teacher</p>
+<p><button class="button1" onclick="showDialog('dialog62')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Daniel Adzor</h4>
+<p>Science Teacher</p>
+<p><button class="button1" onclick="showDialog('dialog63')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Owusu Ansah</h4>
+<p>Twi Language</p>
+<p><button class="button1" onclick="showDialog('dialog64')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h4>Zaid</h4>
+<p>Social Studies</p>
+<p><button class="button1" onclick="showDialog('dialog65')">Timetable</button></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="mockimage.jpg"/>
+<div class="content">
+<h2></h2>
+<p></p>
+<p><button class="button1" onclick="showDialog('dialog66')">Timetable</button></p>
+</div>
+</div>
+</div>
+</main>
+<div class="overlay hidden">
+<div class="overlay-card">
+<div class="overlay-inside">
+<button class="close">X</button>
+<img alt="" class="overlay-img" src="mockimage.jpg"/>
+<div class="overlay-content">
+<h2></h2>
+<p></p>
+<p></p>
+<p class="left-arrow"><i class="fas fa-arrow-left"></i></p>
+<p class="right-arrow"><i class="fas fa-arrow-right"></i></p>
+<div class="line"></div>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Dialog 1 -->
+<dialog id="dialog1">
+<h2>Richmond Quinn-Tetteh</h2>
+<p>Creative Arts Teacher</p>
+ <table border="1" class="odd_table" id="table_1">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -282,9 +962,18 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+
+<div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog2">
+ <h2>Ebenezer Ofori</h2>
+<p>Language Arts</p>
 <table border="1" class="even_table" id="table_2">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">English A Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -369,9 +1058,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="odd_table" id="table_3">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">English B Teacher</span></caption>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id=dialog3>
+<h2>Abigail Owusu</h2>
+<p>Language Arts Teacher</p>
+ <table border="1" class="odd_table" id="table_3">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -456,9 +1153,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="even_table" id="table_4">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">French A Teacher</span></caption>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog4">
+<h2>Mokli Yawo</h2>
+<p>French Teacher</p>
+ <table border="1" class="even_table" id="table_4">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -543,9 +1248,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="odd_table" id="table_5">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1 K Teacher</span></caption>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog5">
+<h2>Martha Yeboah</h2>
+<p>Grade 1 Kings Teacher</p>
+ <table border="1" class="odd_table" id="table_5">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -630,9 +1343,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="even_table" id="table_6">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1 N Teacher</span></caption>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog6">
+<h2>Harriet Panka</h2>
+<p>Grade 1 Nobles Teacher</p>
+ <table border="1" class="even_table" id="table_6">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -717,9 +1438,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="odd_table" id="table_7">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1 Q Teacher</span></caption>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog7">
+<h2>Unassigned</h2>
+<p>Grade 1 Queens Teacher</p>
+ <table border="1" class="odd_table" id="table_7">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -804,9 +1533,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="even_table" id="table_8">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1 R Teacher</span></caption>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog8">
+<h2>Esther Aboagye</h2>
+<p>Grade 1 Royals Teacher</p>
+ <table border="1" class="even_table" id="table_8">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -891,9 +1628,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog9">
+<h2>Kate Foli</h2>
+<p>Grade 2 Kings Teacher</p>
 <table border="1" class="odd_table" id="table_9">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2 K Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -978,9 +1723,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="even_table" id="table_10">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2 N Teacher</span></caption>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog10">
+<h2>Priscilla Amponsah</h2>
+<p>Grade 2 Nobles Teacher</p>
+ <table border="1" class="even_table" id="table_10">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1065,9 +1818,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog11">
+<h2>Rosemond Wiafe</h2>
+<p>Grade 2 Queens Teacher</p>
 <table border="1" class="odd_table" id="table_11">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2 Q Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1152,9 +1913,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog12">
+ <h2>Ivy Kafui Alormene</h2>
+<p>Grade 2 Royals Teacher</p>
 <table border="1" class="even_table" id="table_12">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2 R Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1239,9 +2008,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="odd_table" id="table_13">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3 K Teacher</span></caption>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog13">
+<h2>Isaac Asiamah</h2>
+<p>Grade 3 Kings Teacher</p>
+ <table border="1" class="odd_table" id="table_13">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1326,9 +2103,18 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="even_table" id="table_14">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3 N Teacher</span></caption>
+  
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog14">
+<h2>Esther Tawiah</h2>
+<p>Grade 3 Nobles Teacher</p>
+ <table border="1" class="even_table" id="table_14">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1413,9 +2199,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="odd_table" id="table_15">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3 Q Teacher</span></caption>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog15">
+<h2>Abigail Appiah</h2>
+<p>Grade 3 Queens Teacher</p>
+ <table border="1" class="odd_table" id="table_15">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1500,9 +2294,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="even_table" id="table_16">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3 R Teacher</span></caption>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog16">
+<h2>Henerietta A Richardson</h2>
+<p>Grade 3 Royals Teacher</p>
+ <table border="1" class="even_table" id="table_16">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1587,9 +2389,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
-<table border="1" class="odd_table" id="table_17">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4 K Teacher</span></caption>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog17">
+<h2>Jennifer Katsoe</h2>
+<p>Grade 4 Kings</p>
+ <table border="1" class="odd_table" id="table_17">
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1674,7 +2484,15 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog18">
+<h2>Seth Asiedu</h2>
+<p>Grade 4 Nobles</p>
 <table border="1" class="even_table" id="table_18">
 <caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4 N Teacher</span></caption>
 <thead>
@@ -1761,7 +2579,16 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog19">
+<h2>Freda Pepra</h2>
+<p>Grade 4 Queens</p>
+
 <table border="1" class="odd_table" id="table_19">
 <caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4 Q Teacher</span></caption>
 <thead>
@@ -1848,9 +2675,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog20">
+<h2>Benedicta Jackson</h2>
+<p>Grade 4 Royals</p>
 <table border="1" class="even_table" id="table_20">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4 R Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1935,9 +2770,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog21">
+<h2>Daniel Osom Mattey</h2>
+<p>Grade 5 Kings</p>
 <table border="1" class="odd_table" id="table_21">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5 K Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2022,9 +2865,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog22">
+<h2>Peter Kuntu Blankson</h2>
+<p>Grade 5 Nobles</p>
 <table border="1" class="even_table" id="table_22">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5 N Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2109,9 +2960,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog23">
+<h2>Stephen Okai</h2>
+<p>Grade 5 Queens</p>
 <table border="1" class="odd_table" id="table_23">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5 Q Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2196,9 +3055,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog24">
+<h2>Eugene Botsyoe</h2>
+<p>Grade 5 Royals</p>
 <table border="1" class="even_table" id="table_24">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5 R Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2283,9 +3150,18 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog25">
+<h2>Seth Nuertey</h2>
+<p>Ga Language</p>
+
 <table border="1" class="odd_table" id="table_25">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Ga Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2370,9 +3246,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog26">
+<h2>Evans Asiedu</h2>
+<p>ICT Teacher</p>
 <table border="1" class="even_table" id="table_26">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">ICT  A Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2457,9 +3341,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog27">
+<h2>Lexis Borquaye</h2>
+<p>Creative Arts</p>
 <table border="1" class="odd_table" id="table_27">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH Creative Art </span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2544,9 +3436,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog28">
+<h2>Bright Ayikah</h2>
+<p>English Language</p>
 <table border="1" class="even_table" id="table_28">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH English Language</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2631,9 +3531,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog29">
+<h2>Eric Lodonu</h2>
+<p>French Langauge</p>
 <table border="1" class="odd_table" id="table_29">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH French</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2718,9 +3626,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog30">
+<h2>Margaret K Tetteh</h2>
+<p>CDT Life Skills</p>
 <table border="1" class="even_table" id="table_30">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH Home</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2805,9 +3721,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog31">
+<h2>Evans Asiedu</h2>
+<p>ICT Teacher</p>
 <table border="1" class="odd_table" id="table_31">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH ICT</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2892,9 +3816,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog32">
+<h2>Daniel Oteng</h2>
+<p>Mathematics Teacher</p>
 <table border="1" class="even_table" id="table_32">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH Math</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2979,9 +3911,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog33">
+<h2>Joseph Anum Laryea</h2>
+<p>CDT Pre-Tech</p>
 <table border="1" class="odd_table" id="table_33">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH Pretech</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3066,9 +4006,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog34">
+<h2>Emmanuel Freeman</h2>
+<p>Religious Studies</p>
 <table border="1" class="even_table" id="table_34">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH Religion</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3153,9 +4101,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog35">
+<h2>Joshua Avornyoh</h2>
+<p>Science Teacher</p>
 <table border="1" class="odd_table" id="table_35">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH Science</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3240,9 +4196,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog36">
+<h2>Francis Kokuvie</h2>
+<p>Social Studies</p>
 <table border="1" class="even_table" id="table_36">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH Social</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3327,9 +4291,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog37">
+<h2>Francis Ofei</h2>
+<p>Twi Language Teacher</p>
 <table border="1" class="odd_table" id="table_37">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">JH Twi</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3414,9 +4386,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog38">
+<h2>Linda Odoi</h2>
+<p>Kindergarten Teacher</p>
 <table border="1" class="even_table" id="table_38">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KG K Assitant</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3501,9 +4481,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog39">
+<h2>Grace Esi Aubin</h2>
+<p>Kindergarten Kings</p>
 <table border="1" class="odd_table" id="table_39">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KG K Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3588,9 +4576,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog40">
+<h2>Lois Gyedani</h2>
+<p>Kindergarten Nobles</p>
 <table border="1" class="even_table" id="table_40">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KG N Assitant</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3675,7 +4671,15 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog41">
+<h2>Belinda Sena Attipoe</h2>
+<p>Kindergarten Nobles</p>
 <table border="1" class="odd_table" id="table_41">
 <caption><span class="institution">Accra Grammar School</span><br/><span class="name">KG N Teacher</span></caption>
 <thead>
@@ -3762,9 +4766,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog42">
+<h2>Victoria Atiemo-Akuffo</h2>
+<p>Kindergarten Royals</p>
 <table border="1" class="even_table" id="table_42">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KG R Assitant</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3849,9 +4861,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog43">
+<h2>Bernice Aku Hunakpa</h2>
+<p>Kindergarten Royals</p>
 <table border="1" class="odd_table" id="table_43">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KG R Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3936,9 +4956,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog44">
+<h2>Joshua Danso</h2>
+<p>Mathematics Teacher</p>
 <table border="1" class="even_table" id="table_44">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Math  Tutor 2</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4023,9 +5051,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog45">
+<h2>Ernest Gadugah</h2>
+<p>Mathematics Teacher</p>
 <table border="1" class="odd_table" id="table_45">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Math Tutor I</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4110,9 +5146,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog46">
+<h2>Frank Asempa</h2>
+<p>Music Master</p>
 <table border="1" class="even_table" id="table_46">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Music Teacher </span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4197,9 +5241,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog47">
+<h2>Comfort Ofori</h2>
+<p>Nursery Staff</p>
 <table border="1" class="odd_table" id="table_47">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">NU N Assitant</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4284,9 +5336,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog48">
+<h2>Barbara Effah-Broni</h2>
+<p>Nursery Staff</p>
 <table border="1" class="even_table" id="table_48">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">NU N Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4371,9 +5431,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog49">
+<h2>Charlotte Johnson</h2>
+<p>Nursery Staff Royals</p>
 <table border="1" class="odd_table" id="table_49">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">NU R Assitant</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4458,7 +5526,15 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog50">
+<h2>Marry Afful</h2>
+<p>Nursery Staff Royals</p>
 <table border="1" class="even_table" id="table_50">
 <caption><span class="institution">Accra Grammar School</span><br/><span class="name">NU R Teacher</span></caption>
 <thead>
@@ -4545,9 +5621,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog51">
+<h2>Raymond Atanga</h2>
+<p>Physical/Health Education</p>
 <table border="1" class="odd_table" id="table_51">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PE Instructor</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4632,9 +5716,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog52">
+<h2>rejoice Fiator</h2>
+<p>Pre-Kindergarten Kings</p>
 <table border="1" class="even_table" id="table_52">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PK K Assitant</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4719,7 +5811,15 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog53">
+<h2>Bernice Dumenyo</h2>
+<p>Pre-Kindergarten Kings</p>
 <table border="1" class="odd_table" id="table_53">
 <caption><span class="institution">Accra Grammar School</span><br/><span class="name">PK K Teacher</span></caption>
 <thead>
@@ -4806,9 +5906,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog54">
+<h2>Rachel Mensimah</h2>
+<p>Pre-Kindergarten Nobles</p>
 <table border="1" class="even_table" id="table_54">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PK N Assitant</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4893,9 +6001,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog55">
+<h2>Millicent K Benimah</h2>
+<p>Pre-Kndergerten Nobles</p>
 <table border="1" class="odd_table" id="table_55">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PK N Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4980,9 +6096,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog56">
+<h2>Marian Gyesi</h2>
+<p>Pre-Kindergarten Royals</p>
 <table border="1" class="even_table" id="table_56">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PK R Assitant</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -5067,9 +6191,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog57">
+<h2>Anita Yeboah</h2>
+<p>Pre-Kindergarten Royals</p>
 <table border="1" class="odd_table" id="table_57">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PK R Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -5154,9 +6286,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog58">
+<h2>Precious Acheampong</h2>
+<p>Reception Nobles</p>
 <table border="1" class="even_table" id="table_58">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">RC N Assitant</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -5241,9 +6381,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog59">
+<h2>Evelyn Sowah</h2>
+<p>Reception Nobles</p>
 <table border="1" class="odd_table" id="table_59">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">RC N Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -5328,9 +6476,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog60">
+<h2>Rebecca Abradu</h2>
+<p>Reception Royals</p>
 <table border="1" class="even_table" id="table_60">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">RC R Assitant</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -5415,9 +6571,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog61">
+<h2>Bernice Nyantekyiwaa</h2>
+<p>Reception Royals</p>
 <table border="1" class="odd_table" id="table_61">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">RC R Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -5502,9 +6666,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog62">
+<h2>Francis Owusu Addo</h2>
+<p>Science Teacher</p>
 <table border="1" class="even_table" id="table_62">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Science A Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -5589,9 +6761,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog63">
+<h2>Daniel Adzor</h2>
+<p>Science Teacher</p>
 <table border="1" class="odd_table" id="table_63">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Science B Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -5676,7 +6856,15 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog64">
+<h2>Owusu Ansah</h2>
+<p>Twi Language</p>
 <table border="1" class="even_table" id="table_64">
 <caption><span class="institution">Accra Grammar School</span><br/><span class="name">VP JHS</span></caption>
 <thead>
@@ -5763,9 +6951,17 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+    <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
+
+<dialog id="dialog65">
+<h2>New Hire</h2>
+<p>Social Studies</p>
 <table border="1" class="odd_table" id="table_65">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Social Sc Teacher</span></caption>
+<caption><span class="institution"></span><br/><span class="name"></span></caption>
 <thead>
 <tr>
 <td></td>
@@ -5850,6 +7046,16 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+  <div class="btn-group" style="width:100%">
+  <button style="width:25%" onclick="window.print();">Print</button>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</div>
+</dialog>
 </body>
-</html>
+<script>
+function showDialog(id) {
+  const dialog = document.getElementById(id);
+  dialog.showModal();
+}
+</script>
+
