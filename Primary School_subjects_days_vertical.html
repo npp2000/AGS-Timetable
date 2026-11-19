@@ -1,213 +1,416 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<link href="custom.css" rel="stylesheet" type="text/css"/>
-<title>Accra Grammar School</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
 <style>
-      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
-      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
-      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    width: 90%;
+    background: rgb(214,109,117);
+    background: linear-gradient(87deg, rgba(214,109,117,1) 0%, rgba(226,149,135,1) 100%);; 
+}
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+input[type="text"]{
+    width: 25%;
+    padding: 10px 0 10px 15px;
+    border: none;
+    
+}
+.main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0 20px 0;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    row-gap: 20px;
+    column-gap: 30px;
+    margin-top: 50px;
+}
+.card{
+    background-color: #fff;
+    border-radius: 5px;
+    transition: transform .3s;
+}
+.card:hover{
+    transform: translateY(5px);
+    cursor: pointer;
+}
+img{
+    width: 30%;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin: 15px 0 15px 0px;
+}
+.content{
+    margin-right: 25px;    
+}
+.inside{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background : rgba(100, 100, 100, 0.4);
+}
+.overlay-card{
+    background: rgb(255,216,155);
+    background: linear-gradient(87deg, rgba(255,216,155,1) 0%, rgba(25,84,123,1) 100%);
+    width: 20%;
+    border-radius: 5px;
+    margin : 11% auto auto;
+}
+.overlay-img{
+    width: 30%;
+    margin-top: 40px;
+}
+.overlay-inside{
+    text-align: center;
+    position: relative;
+}
+.overlay-content p,.overlay-content h2{
+    margin-bottom: 10px;
+}
+.line{
+    border-bottom: 1px solid rgb(97, 92, 92);
+    margin: 20px 30px;
+}
+.overlay-content{
+    padding-bottom: 20px;
+}
+.hidden{
+    display: none;
+}
+.left-arrow, .right-arrow{
+    position: absolute;
+    width: 10%;
+    font-size: 20px;
+    font-weight: 500;
+}
+.right-arrow{
+    right: 0;
+    top: 50%;
+}
+.left-arrow{
+    top: 50%;
+}
+.right-arrow:hover, .left-arrow:hover{
+    cursor: pointer;
+  }
+  .caption-text {
+            color: white;
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
+    text-align: center;
+        }
 
-      p.back {
-        margin-top: 4ex;
-        margin-bottom: 5ex;
-      }
 
-      table {
-        text-align: center;
-        page-break-inside: avoid;
-      }
-
-      table.odd_table {
-        page-break-before: always;
-      }
-
-      table.even_table {
-        page-break-before: always;
-      }
-
-      table.detailed {
-        margin-left: auto; margin-right: auto;
-        text-align: center;
-        border: 0px;
-        border-spacing: 0;
-        border-collapse: collapse;
-      }
-
-      caption {
-
-      }
-
-      span.institution {
-        font-weight: bold;
-      }
-
-      span.name {
-
-      }
-
-      span.comment {
-        /*font-style: italic;*/
-      }
-
-      span.legend_title {
-        font-weight: bold;
-      }
-
-      thead {
-
-      }
-
-      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
-
-      tr.foot {
-
-      }
-
-      tbody {
-
-      }
-
-      th {
-
-      }
-
-      td {
-
-      }
-
-      th.daySeparator {
-        background-color: silver;
-      }
-
-      tr.daySeparator {
-        background-color: silver;
-      }
-
-      td.daySeparator {
-        background-color: silver;
-      }
-
-      td.detailed {
-        border: 1px dashed silver;
-        border-bottom: 0;
-        border-top: 0;
-      }
-
-      th.xAxis {
-      /* width: 8em; */
-      }
-
-      th.yAxis {
-        height: 8ex;
-      }
-
-      /* Style the teachers' free periods */
-
-      div.DESCRIPTION {
-        text-align: left;
-        font-size: smaller;
-      }
-    </style>
-<link href="style.css" rel="stylesheet"/></head>
+  a.buttontop {
+    padding: 1px 6px;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    
+    border: none;
+    outline: none;
+   text-decoration: none;
+}
+}
+</style>
+<a class="home-link" href="Primary School_index.html" style="font-weight: bold">Back to main page</a>
+<h1 style="text-align:center" >Subject Timetables</h1>
 <body id="top">
-<p><a class="home-link" href="Primary School_index.html">Back to main page</a></p>
-<table>
-<tr align="left" valign="top">
-<th>Institution name:</th>
-<td class="subject accra">Accra Grammar School</td>
-</tr>
-</table>
-<table>
-<tr align="left" valign="top">
-<th>Comments:</th>
-<td class="subject timetables">Timetables</td>
-</tr>
-</table>
-<p><strong>Table of contents</strong></p>
-<ul>
-<li>
-        Subject <a href="#table_1">Career Technology Skills</a>
-</li>
-<li>
-        Subject <a href="#table_2">Career Technology Pre</a>
-</li>
-<li>
-        Subject <a href="#table_3">Club Activities</a>
-</li>
-<li>
-        Subject <a href="#table_4">Creative Arts</a>
-</li>
-<li>
-        Subject <a href="#table_5">French</a>
-</li>
-<li>
-        Subject <a href="#table_6">Geography/Environment</a>
-</li>
-<li>
-        Subject <a href="#table_7">History/Global Politics  </a>
-</li>
-<li>
-        Subject <a href="#table_8">Computer Studies</a>
-</li>
-<li>
-        Subject <a href="#table_9">Language Arts</a>
-</li>
-<li>
-        Subject <a href="#table_10">Mathematics</a>
-</li>
-<li>
-        Subject <a href="#table_11">Local Language</a>
-</li>
-<li>
-        Subject <a href="#table_12">Music</a>
-</li>
-<li>
-        Subject <a href="#table_13">Physical Education</a>
-</li>
-<li>
-        Subject <a href="#table_14">Religion/Social &amp; Cult Anth</a>
-</li>
-<li>
-        Subject <a href="#table_15">RME</a>
-</li>
-<li>
-        Subject <a href="#table_16">Science</a>
-</li>
-<li>
-        Subject <a href="#table_17">Social Studies</a>
-</li>
-<li>
-        Subject <a href="#table_18">Student Agency</a>
-</li>
-<li>
-        Subject <a href="#table_19">Numeracy</a>
-</li>
-<li>
-        Subject <a href="#table_20">Language Literacy</a>
-</li>
-<li>
-        Subject <a href="#table_21">World Discovery</a>
-</li>
-<li>
-        Subject <a href="#table_22">Fine Motor Skills</a>
-</li>
-<li>
-        Subject <a href="#table_23">Social Development</a>
-</li>
-<li>
-        Subject <a href="#table_24">Creative Art &amp; Music</a>
-</li>
-<li>
-        Subject <a href="#table_25">Science Inquiry</a>
-</li>
-</ul>
+<main class="main-container">
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Carreer Design Technology</h4>
+<p>Life Skills</p>
+<p><a href="#table_1">CDT Technology</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Carreer Design Technology</h4>
+<p>Techincal Skills</p>
+<p><a href="#table_2">CDT Life Skills</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Creative Arts</h4>
+<p>Art/Crafts/Music</p>
+<p><a href="#table_3">Creative Arts</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Club Activities</h4>
+<p>Clubs</p>
+<p><a href="#table_4">Clubs Time</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>French</h4>
+<p>French Language</p>
+<p><a href="#table_5">French Language</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Geography/Environment</h4>
+<p>Geography & Environment</p>
+<p><a href="#table_6">Geography</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>History</h4>
+<p>History/Global Politics</p>
+<p><a href="#table_7">History</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Computer Studies</h4>
+<p>ICT</p>
+<p><a href="#table_8">Computer Studies</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Language Arts</h4>
+<p>English Language</p>
+<p><a href="#table_9">Language Arts</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Mathematics</h4>
+<p>Mathematics</p>
+<p><a href="#table_10">Mathematics</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>local Languages</h4>
+<p>MTL Twi/Ga</p>
+<p><a href="#table_11">Local Language</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Music</h4>
+<p>Music</p>
+<p><a href="#table_12">Music</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Physical Education</h4>
+<p>Physical/Health Education</p>
+<p><a href="#table_13">Physical Education</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Religion/Culture/Anth</h4>
+<p>Religion/Social &amp; Cultural Anthropology</p>
+<p><a href="#table_14">Religion/Social &amp; Cult Anth</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Religion &amp; Moral Education</h4>
+<p>RME</p>
+<p><a href="#table_15">Religion &amp; Moral Education</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>General Science</h4>
+<p>Physics/Chemistry/Biology</p>
+<p><a href="#table_16">Science</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Social Studies</h4>
+<p>Social Studies</p>
+<p><a href="#table_17">Social Studies</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Student Agency</h4>
+<p>Student Projects</p>
+<p><a href="#table_18">Student Agency</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Numeracy</h4>
+<p>Lower School Math</p>
+<p><a href="#table_19">Numeracy</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Language Literacy</h4>
+<p>Lower School Language</p>
+<p><a href="#table_20">Language Literacy</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>World Discovery</h4>
+<p>Lower School Social Studies</p>
+<p><a href="#table_21">World Discovery</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Fine Motor Skills</h4>
+<p>Lower School Skills</p>
+<p><a href="#table_22">Fine Motor Skills</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Creative Art &amp; Music</h4>
+<p>Lower School Competency</p>
+<p><a href="#table_24">Creative Art &amp; Music</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Social Development</h4>
+<p>Lower School Competency</p>
+<p><a href="#table_23">Social Development</a></p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Science Inquiry</h4>
+<p>Lower School Science</p>
+<p><a href="#table_25">Science Inquiry</a></p>
+</div>
+</div>
+</div>
+</main>
+<div class="overlay hidden">
+<div class="overlay-card">
+<div class="overlay-inside">
+<button class="close">X</button>
+<img alt="" class="overlay-img" src="subjects.png"/>
+<div class="overlay-content">
+<h2></h2>
+<p></p>
+<p></p>
+<p class="left-arrow"><i class="fas fa-arrow-left"></i></p>
+<p class="right-arrow"><i class="fas fa-arrow-right"></i></p>
+<div class="line"></div>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+
 <p> </p>
+<div class="caption-text">Career Technology - Life Skills</div>
 <table border="1" class="odd_table" id="table_1">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Career Technology Skills</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -292,9 +495,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Carreer Technology - Life Skills</div>
 <table border="1" class="even_table" id="table_2">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Career Technology Pre</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -379,9 +582,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Carreer Technology - Technical Skills</div>
 <table border="1" class="odd_table" id="table_3">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Club Activities</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -466,9 +669,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Creative Arts</div>
 <table border="1" class="even_table" id="table_4">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Creative Arts</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -553,9 +756,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">French language</div>
 <table border="1" class="odd_table" id="table_5">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">French</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -640,9 +843,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Geography & Environmental Science</div>
 <table border="1" class="even_table" id="table_6">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Geography/Environment</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -727,9 +930,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">History & Global Politics</div>
 <table border="1" class="odd_table" id="table_7">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">History/Global Politics  </span></caption>
 <thead>
 <tr>
 <td></td>
@@ -814,9 +1017,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Computer Studies</div>
 <table border="1" class="even_table" id="table_8">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Computer Studies</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -901,9 +1104,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Language Arts</div>
 <table border="1" class="odd_table" id="table_9">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Language Arts</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -988,9 +1191,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Mathematics</div>
 <table border="1" class="even_table" id="table_10">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Mathematics</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1075,9 +1278,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Local Language</div>
 <table border="1" class="odd_table" id="table_11">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Local Language</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1162,9 +1365,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Music</div>
 <table border="1" class="even_table" id="table_12">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Music</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1249,9 +1452,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Physical & Health Education</div>
 <table border="1" class="odd_table" id="table_13">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Physical Education</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1336,9 +1539,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Religion Social & Cultural Anthropology</div>
 <table border="1" class="even_table" id="table_14">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Religion/Social &amp; Cult Anth</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1423,9 +1626,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Religion & Moral Education</div>
 <table border="1" class="odd_table" id="table_15">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">RME</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1510,9 +1713,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Science</div>
 <table border="1" class="even_table" id="table_16">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Science</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1597,9 +1800,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Social Science</div>
 <table border="1" class="odd_table" id="table_17">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Social Studies</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1684,9 +1887,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Student Agency & Projects</div>
 <table border="1" class="even_table" id="table_18">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Student Agency</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1771,9 +1974,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Numeracy - Lower School</div>
 <table border="1" class="odd_table" id="table_19">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Numeracy</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1858,9 +2061,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Language literacy - Lower School</div>
 <table border="1" class="even_table" id="table_20">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Language Literacy</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1945,9 +2148,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">World Discovery - Lower School</div>
 <table border="1" class="odd_table" id="table_21">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">World Discovery</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2032,9 +2235,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Fine Motor Skills - Lower School</div>
 <table border="1" class="even_table" id="table_22">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Fine Motor Skills</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2119,9 +2322,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Social Development - Lower School</div>
 <table border="1" class="odd_table" id="table_23">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Social Development</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2206,9 +2409,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Creative Art & Music - Lower School</div>
 <table border="1" class="even_table" id="table_24">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Creative Art &amp; Music</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2293,9 +2496,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
+<div class="caption-text">Science Inquiry - Lower School</div>
 <table border="1" class="odd_table" id="table_25">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Science Inquiry</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2380,6 +2583,5 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 </body>
-</html>

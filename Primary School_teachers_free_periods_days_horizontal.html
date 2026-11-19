@@ -1,146 +1,139 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<link href="custom.css" rel="stylesheet" type="text/css"/>
-<title>Accra Grammar School</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
 <style>
-      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
-      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
-      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    width: 90%;
+    background: rgb(214,109,117);
+    background: linear-gradient(87deg, rgba(214,109,117,1) 0%, rgba(226,149,135,1) 100%);; 
+}
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+input[type="text"]{
+    width: 25%;
+    padding: 10px 0 10px 15px;
+    border: none;
+    
+}
+.main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0 20px 0;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    row-gap: 20px;
+    column-gap: 30px;
+    margin-top: 50px;
+}
+.card{
+    background-color: #fff;
+    border-radius: 5px;
+    transition: transform .3s;
+}
+.card:hover{
+    transform: translateY(5px);
+    cursor: pointer;
+}
+img{
+    width: 30%;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin: 15px 0 15px 0px;
+}
+.content{
+    margin-right: 25px;    
+}
+.inside{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background : rgba(100, 100, 100, 0.4);
+}
+.overlay-card{
+    background: rgb(255,216,155);
+    background: linear-gradient(87deg, rgba(255,216,155,1) 0%, rgba(25,84,123,1) 100%);
+    width: 20%;
+    border-radius: 5px;
+    margin : 11% auto auto;
+}
+.overlay-img{
+    width: 30%;
+    margin-top: 40px;
+}
+.overlay-inside{
+    text-align: center;
+    position: relative;
+}
+.overlay-content p,.overlay-content h2{
+    margin-bottom: 10px;
+}
+.line{
+    border-bottom: 1px solid rgb(97, 92, 92);
+    margin: 20px 30px;
+}
+.overlay-content{
+    padding-bottom: 20px;
+}
+.hidden{
+    display: none;
+}
+.left-arrow, .right-arrow{
+    position: absolute;
+    width: 10%;
+    font-size: 20px;
+    font-weight: 500;
+}
+.right-arrow{
+    right: 0;
+    top: 50%;
+}
+.left-arrow{
+    top: 50%;
+}
+.right-arrow:hover, .left-arrow:hover{
+    cursor: pointer;
+  }
+  .caption-text {
+            color: white;
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
+    text-align: center;
+        }
 
-      p.back {
-        margin-top: 4ex;
-        margin-bottom: 5ex;
-      }
-
-      table {
-        text-align: center;
-        page-break-inside: avoid;
-      }
-
-      table.odd_table {
-        page-break-before: always;
-      }
-
-      table.even_table {
-        page-break-before: always;
-      }
-
-      table.detailed {
-        margin-left: auto; margin-right: auto;
-        text-align: center;
-        border: 0px;
-        border-spacing: 0;
-        border-collapse: collapse;
-      }
-
-      caption {
-
-      }
-
-      span.institution {
-        font-weight: bold;
-      }
-
-      span.name {
-
-      }
-
-      span.comment {
-        /*font-style: italic;*/
-      }
-
-      span.legend_title {
-        font-weight: bold;
-      }
-
-      thead {
-
-      }
-
-      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
-
-      tr.foot {
-
-      }
-
-      tbody {
-
-      }
-
-      th {
-
-      }
-
-      td {
-
-      }
-
-      th.daySeparator {
-        background-color: silver;
-      }
-
-      tr.daySeparator {
-        background-color: silver;
-      }
-
-      td.daySeparator {
-        background-color: silver;
-      }
-
-      td.detailed {
-        border: 1px dashed silver;
-        border-bottom: 0;
-        border-top: 0;
-      }
-
-      th.xAxis {
-      /* width: 8em; */
-      }
-
-      th.yAxis {
-        height: 8ex;
-      }
-
-      /* Style the teachers' free periods */
-
-      div.DESCRIPTION {
+ div.DESCRIPTION {
         text-align: left;
         font-size: smaller;
+         color: white;
       }
-    </style>
-<link href="style.css" rel="stylesheet"/></head>
-<body id="top">
-<p><a class="home-link" href="Primary School_index.html">Back to main page</a></p>
-<table>
-<tr align="left" valign="top">
-<th>Institution name:</th>
-<td class="subject accra">Accra Grammar School</td>
-</tr>
-</table>
-<table>
-<tr align="left" valign="top">
-<th>Comments:</th>
-<td class="subject timetables">Timetables</td>
-</tr>
-</table>
-<div class="TEACHER_HAS_SINGLE_GAP">Teacher has a single gap</div>
-<div class="TEACHER_HAS_BORDER_GAP">Teacher has a border gap</div>
-<div class="TEACHER_HAS_BIG_GAP">Teacher has a big gap</div>
-<div class="TEACHER_MUST_COME_EARLIER">Teacher must come earlier</div>
-<div class="TEACHER_MUST_COME_MUCH_EARLIER">Teacher must come much earlier</div>
-<div class="TEACHER_MUST_STAY_LONGER">Teacher must stay longer</div>
-<div class="TEACHER_MUST_STAY_MUCH_LONGER">Teacher must stay much longer</div>
-<div class="TEACHER_HAS_A_FREE_DAY">Teacher has a free day</div>
-<div class="TEACHER_IS_NOT_AVAILABLE">Teacher is not available</div>
+}
+</style>
 <p> </p>
+<body id="top">
+<a class="home-link" href="Primary School_index.html" style="font-weight: bold">Back to main page</a>
+<h1 style="text-align:center" >Teachers' Free Periods</h1>
+
 <table border="1" id="table">
-<caption>Accra Grammar School</caption>
 <thead>
-<tr><td rowspan="2"></td><th colspan="5">Teachers' Free Periods</th></tr>
+<tr><td rowspan="2"></td><th colspan="5"></th></tr>
 <tr>
 <!-- span -->
 <th class="xAxis">M</th>
@@ -234,5 +227,15 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="5">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
+
+<div class="TEACHER_HAS_SINGLE_GAP">Teacher has a single gap</div>
+<div class="TEACHER_HAS_BORDER_GAP">Teacher has a border gap</div>
+<div class="TEACHER_HAS_BIG_GAP">Teacher has a big gap</div>
+<div class="TEACHER_MUST_COME_EARLIER">Teacher must come earlier</div>
+<div class="TEACHER_MUST_COME_MUCH_EARLIER">Teacher must come much earlier</div>
+<div class="TEACHER_MUST_STAY_LONGER">Teacher must stay longer</div>
+<div class="TEACHER_MUST_STAY_MUCH_LONGER">Teacher must stay much longer</div>
+<div class="TEACHER_HAS_A_FREE_DAY">Teacher has a free day</div>
+<div class="TEACHER_IS_NOT_AVAILABLE">Teacher is not available</div>
 </body>
-</html>
+
