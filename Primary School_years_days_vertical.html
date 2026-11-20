@@ -1,177 +1,312 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<link href="custom.css" rel="stylesheet" type="text/css"/>
-<title>Accra Grammar School</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
 <style>
-      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
-      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
-      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
-
-      p.back {
-        margin-top: 4ex;
-        margin-bottom: 5ex;
-      }
-
-      table {
-        text-align: center;
-        page-break-inside: avoid;
-      }
-
-      table.odd_table {
-        page-break-before: always;
-      }
-
-      table.even_table {
-        page-break-before: always;
-      }
-
-      table.detailed {
-        margin-left: auto; margin-right: auto;
-        text-align: center;
-        border: 0px;
-        border-spacing: 0;
-        border-collapse: collapse;
-      }
-
-      caption {
-
-      }
-
-      span.institution {
-        font-weight: bold;
-      }
-
-      span.name {
-
-      }
-
-      span.comment {
-        /*font-style: italic;*/
-      }
-
-      span.legend_title {
-        font-weight: bold;
-      }
-
-      thead {
-
-      }
-
-      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
-
-      tr.foot {
-
-      }
-
-      tbody {
-
-      }
-
-      th {
-
-      }
-
-      td {
-
-      }
-
-      th.daySeparator {
-        background-color: silver;
-      }
-
-      tr.daySeparator {
-        background-color: silver;
-      }
-
-      td.daySeparator {
-        background-color: silver;
-      }
-
-      td.detailed {
-        border: 1px dashed silver;
-        border-bottom: 0;
-        border-top: 0;
-      }
-
-      th.xAxis {
-      /* width: 8em; */
-      }
-
-      th.yAxis {
-        height: 8ex;
-      }
-
-      /* Style the teachers' free periods */
-
-      div.DESCRIPTION {
-        text-align: left;
-        font-size: smaller;
-      }
-    </style>
-<link href="style.css" rel="stylesheet"/></head>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    width: 90%;
+    background: rgb(214,109,117);
+    background: linear-gradient(87deg, rgba(214,109,117,1) 0%, rgba(226,149,135,1) 100%);; 
+}
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+input[type="text"]{
+    width: 25%;
+    padding: 10px 0 10px 15px;
+    border: none;
+    
+}
+.main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0 20px 0;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 20px;
+    column-gap: 30px;
+    margin-top: 50px;
+}
+.card{
+    background-color: #fff;
+    border-radius: 5px;
+    transition: transform .3s;
+}
+.card:hover{
+    transform: translateY(5px);
+    cursor: pointer;
+}
+img{
+    width: 30%;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin: 15px 0 15px 0px;
+}
+.content{
+    margin-right: 25px;    
+}
+.inside{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background : rgba(100, 100, 100, 0.4);
+}
+.overlay-card{
+    background: rgb(255,216,155);
+    background: linear-gradient(87deg, rgba(255,216,155,1) 0%, rgba(25,84,123,1) 100%);
+    width: 20%;
+    border-radius: 5px;
+    margin : 11% auto auto;
+}
+.overlay-img{
+    width: 30%;
+    margin-top: 40px;
+}
+.overlay-inside{
+    text-align: center;
+    position: relative;
+}
+.overlay-content p,.overlay-content h2{
+    margin-bottom: 10px;
+}
+.line{
+    border-bottom: 1px solid rgb(97, 92, 92);
+    margin: 20px 30px;
+}
+.overlay-content{
+    padding-bottom: 20px;
+}
+.hidden{
+    display: none;
+}
+.left-arrow, .right-arrow{
+    position: absolute;
+    width: 10%;
+    font-size: 20px;
+    font-weight: 500;
+}
+.right-arrow{
+    right: 0;
+    top: 50%;
+}
+.left-arrow{
+    top: 50%;
+}
+.right-arrow:hover, .left-arrow:hover{
+    cursor: pointer;
+  }
+  
+}
+</style>
 <body id="top">
-<p><a class="home-link" href="Primary School_index.html">Back to main page</a></p>
-<table>
-<tr align="left" valign="top">
-<th>Institution name:</th>
-<td class="subject accra">Accra Grammar School</td>
-</tr>
-</table>
-<table>
-<tr align="left" valign="top">
-<th>Comments:</th>
-<td class="subject timetables">Timetables</td>
-</tr>
-</table>
-<p><strong>Table of contents</strong></p>
-<ul>
-<li>
-        Year <a href="#table_1">Grade 1</a>
-</li>
-<li>
-        Year <a href="#table_10">Grade 2</a>
-</li>
-<li>
-        Year <a href="#table_19">Grade 3</a>
-</li>
-<li>
-        Year <a href="#table_28">Grade 4</a>
-</li>
-<li>
-        Year <a href="#table_37">Grade 5</a>
-</li>
-<li>
-        Year <a href="#table_46">Grade 6</a>
-</li>
-<li>
-        Year <a href="#table_55">Grade 7</a>
-</li>
-<li>
-        Year <a href="#table_62">Grade 8</a>
-</li>
-<li>
-        Year <a href="#table_69">Grade 9</a>
-</li>
-<li>
-        Year <a href="#table_76">Nursery</a>
-</li>
-<li>
-        Year <a href="#table_81">Reception</a>
-</li>
-<li>
-        Year <a href="#table_86">Pre-Kindergarten</a>
-</li>
-<li>
-        Year <a href="#table_93">Kindergarten</a>
-</li>
-</ul>
+<a class="home-link" href="Primary School_index.html" style="font-weight: bold">Back to main page</a>
+<h1 style="text-align:center" >Year Grades</h1>
+<h3 style="text-align:center" >Days on Vertical Axis</h3>  
+<main class="main-container">
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Grade 1</h4>
+<p>Year</p>
+<p><a href="#table_1">Grade 1</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Grade 2</h4>
+<p>Year</p>
+<p><a href="#table_10">Grade 2</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Grade 3</h4>
+<p>Year</p>
+<p><a href="#table_19">Grade 3</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Grade 4</h4>
+<p>Year</p>
+<p><a href="#table_28">Grade 4</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Grade 5</h4>
+<p>Year</p>
+<p><a href="#table_37">Grade 5</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Grade 6</h4>
+<p>Year</p>
+<p><a href="#table_46">Grade 6</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Grade 7</h4>
+<p>Year</p>
+<p><a href="#table_55">Grade 7</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Grade 8</h4>
+<p>Year</p>
+<p><a href="#table_62">Grade 8</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Grade 9</h4>
+<p>Year</p>
+<p><a href="#table_69">Grade 9</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Kindergarten</h4>
+<p>Year</p>
+<p><a href="#table_93">Kindergarten</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Pre-Kindergarten</h4>
+<p>Year</p>
+<p><a href="#table_86">Pre-Kindergarten</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Reception</h4>
+<p>Year(Nursery 2)</p>
+<p><a href="#table_81">Reception</a></p>
+</div>
+</div>
+</div>
+  
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>Nursery</h4>
+<p>Year(Nursery 1)</p>
+<p><a href="#table_76">Nursery</a></p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>-------</h4>
+<p>--------</p>
+<p><a href="#table_76"></a></p>
+</div>
+</div>
+</div>
+
+  <div class="card">
+<div class="inside">
+<img alt="" src="subjects.png"/>
+<div class="content">
+<h4>-------</h4>
+<p>--------</p>
+<p><a href="#table_76"></a></p>
+</div>
+</div>
+</div>
+</main>
+<div class="overlay hidden">
+<div class="overlay-card">
+<div class="overlay-inside">
+<button class="close">X</button>
+<img alt="" class="overlay-img" src="subjects.png"/>
+<div class="overlay-content">
+<h2></h2>
+<p></p>
+<p></p>
+<p class="left-arrow"><i class="fas fa-arrow-left"></i></p>
+<p class="right-arrow"><i class="fas fa-arrow-right"></i></p>
+<div class="line"></div>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
 <p> </p>
 <table border="1" class="odd_table" id="table_1">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Grade 1</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Grade 1</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -256,9 +391,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="even_table" id="table_10">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Grade 2</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Grade 2</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -343,9 +478,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="odd_table" id="table_19">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Grade 3</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Grade 3</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -430,9 +565,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="even_table" id="table_28">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Grade 4</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Grade 4</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -517,9 +652,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="odd_table" id="table_37">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Grade 5</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Grade 5</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -604,9 +739,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="even_table" id="table_46">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Grade 6</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Grade 6</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -691,9 +826,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="odd_table" id="table_55">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Grade 7</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Grade 7</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -778,9 +913,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="even_table" id="table_62">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Grade 8</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Grade 8</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -865,9 +1000,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="odd_table" id="table_69">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Grade 9</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Grade 9</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -952,9 +1087,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="even_table" id="table_76">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Nursery</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Nursery</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1039,9 +1174,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="odd_table" id="table_81">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Reception</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Reception</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1126,9 +1261,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="even_table" id="table_86">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Pre-Kindergarten</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Pre-Kindergarten</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1213,9 +1348,9 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 <table border="1" class="odd_table" id="table_93">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">Kindergarten</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-text">Kindergarten</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1300,6 +1435,6 @@
 <tr class="foot"><td></td><td class="subject 0" colspan="10">Timetable generated with FET 7.12.0 on 11/10/26 12:20 PM</td></tr>
 </tbody>
 </table>
-<p class="back"><a href="#top">back to the top</a></p>
+<p><a href="#top" class="buttontop">back to the top</a></p>
 </body>
-</html>
+

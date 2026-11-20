@@ -1,330 +1,583 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
 <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<link href="custom.css" rel="stylesheet" type="text/css"/>
-<title>Accra Grammar School</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<style>
-      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
-      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
-      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
-
-      p.back {
-        margin-top: 4ex;
-        margin-bottom: 5ex;
+  <head>
+    <link href="custom.css" rel="stylesheet" type="text/css" />
+    <title>Accra Grammar School</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <style>
+      /* Box Sizing */
+      html {
+        box-sizing: border-box;
       }
 
-      table {
-        text-align: center;
-        page-break-inside: avoid;
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
       }
 
-      table.odd_table {
-        page-break-before: always;
+      /* Typography */
+      html {
+        font:
+          14px/1.5 system-ui,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
       }
 
-      table.even_table {
-        page-break-before: always;
+      body,
+      form,
+      input,
+      textarea,
+      option {
+        font: inherit;
       }
 
-      table.detailed {
-        margin-left: auto; margin-right: auto;
-        text-align: center;
-        border: 0px;
-        border-spacing: 0;
-        border-collapse: collapse;
-      }
-
-      caption {
-
-      }
-
-      span.institution {
+      :is(h1, h2, h3, h4, h5, h6) {
         font-weight: bold;
+        margin-bottom: 0.5em;
       }
 
-      span.name {
-
+      p,
+      ul,
+      ol {
+        margin-bottom: 1.5em;
       }
 
-      span.comment {
-        /*font-style: italic;*/
+      /* Layout */
+      body {
+        padding: 2em;
+        background: rgb(214, 109, 117);
+        background: linear-gradient(87deg, rgba(214, 109, 117, 1) 0%, rgba(226, 149, 135, 1) 100%);
       }
 
-      span.legend_title {
-        font-weight: bold;
+      .panel {
+        padding: 2em;
       }
 
-      thead {
+      /* Tree */
+      .tree {
+        --border-size: 4px;
+        --border-color: #ddd;
 
+        --spacing-line-vertical: 0.2em;
+
+        --radius: 8px;
+
+        &,
+        ul {
+          padding: 0;
+          margin: 0;
+        }
+
+        li,
+        summary {
+          line-height: 1.2;
+          display: flex;
+          flex: 1 1 auto;
+        }
+
+        li {
+          padding: var(--spacing-line-vertical) 0;
+        }
+
+        ul {
+          padding-top: var(--spacing-line-vertical);
+          padding-left: 0;
+
+          li {
+            border-left: var(--border-size) solid var(--border-color);
+            display: flex;
+            align-items: center;
+            margin-left: 0.25em;
+
+            &:last-child {
+              border-color: transparent;
+            }
+
+            &:before {
+              content: "";
+              order: -2;
+              display: block;
+              align-self: flex-start;
+              flex: 0 0 1.4em;
+              width: 1.4em;
+              height: 1.1em;
+              border: solid var(--border-color);
+              border-width: 0 0 var(--border-size) var(--border-size);
+              position: relative;
+              top: -0.5em;
+              left: calc(var(--border-size) * -0.91);
+            }
+          }
+
+          li:last-child:before {
+            border-bottom-left-radius: 0.5em;
+          }
+        }
+
+        summary {
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+
+          &::marker,
+          &::-webkit-details-marker {
+            display: none;
+          }
+
+          &:focus {
+            outline: none;
+          }
+
+          &:focus-visible {
+            outline: 1px dotted #000;
+          }
+        }
+
+        li:not(:has(summary))::after,
+        summary::before {
+          content: "";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          order: -1;
+          flex: 0 0 1.4em;
+          width: 1.4em;
+          height: 1.4em;
+          font-size: 1rem;
+          line-height: 1;
+          border-radius: 50%;
+          background: #ddd;
+          margin-right: 0.4em;
+          background-size: 50% 50%;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-left: -0.3em;
+        }
+
+        summary::before {
+          content: "";
+          background-color: #696;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 448 512'%3E%3Cpath d='M240 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H176V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H240V80z' /%3E%3C/svg%3E");
+          z-index: 1;
+          color: #fff;
+          line-height: calc(2 * var(--radius) - 2px);
+          text-align: center;
+        }
+
+        details {
+          flex: 1 1 auto;
+        }
+
+        details[open] > summary::before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 448 512'%3E%3Cpath d='M416 256c0 17.7-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z' /%3E%3C/svg%3E");
+        }
       }
 
-      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
-
-      tr.foot {
-
-      }
-
-      tbody {
-
-      }
-
+      table,
+      td,
       th {
-
+        border: 1px solid black;
       }
 
-      td {
-
-      }
-
-      th.daySeparator {
-        background-color: silver;
-      }
-
-      tr.daySeparator {
-        background-color: silver;
-      }
-
-      td.daySeparator {
-        background-color: silver;
-      }
-
-      td.detailed {
-        border: 1px dashed silver;
-        border-bottom: 0;
-        border-top: 0;
-      }
-
-      th.xAxis {
-      /* width: 8em; */
-      }
-
-      th.yAxis {
-        height: 8ex;
-      }
-
-      /* Style the teachers' free periods */
-
-      div.DESCRIPTION {
-        text-align: left;
-        font-size: smaller;
+      #table1 {
+        border-collapse: separate;
+        border-spacing: 15px;
+        table-layout: fixed;
+        width: 100%;
       }
     </style>
-<link href="style.css" rel="stylesheet"/></head>
-<body id="top">
-<p><a class="home-link" href="Primary School_index.html">Back to main page</a></p>
-<table>
-<tr align="left" valign="top">
-<th>Institution name:</th>
-<td class="subject accra">Accra Grammar School</td>
-</tr>
-</table>
-<table>
-<tr align="left" valign="top">
-<th>Comments:</th>
-<td class="subject timetables">Timetables</td>
-</tr>
-</table>
-<p><strong>Table of contents</strong></p>
-<ul>
-<li>
-        Year Grade 1
-        <ul>
-<li>
-            Group <a href="#table_2">G1K</a>
-</li>
-<li>
-            Group <a href="#table_4">G1N</a>
-</li>
-<li>
-            Group <a href="#table_6">G1Q</a>
-</li>
-<li>
-            Group <a href="#table_8">G1R</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 2
-        <ul>
-<li>
-            Group <a href="#table_11">G2K</a>
-</li>
-<li>
-            Group <a href="#table_13">G2N</a>
-</li>
-<li>
-            Group <a href="#table_15">G2Q</a>
-</li>
-<li>
-            Group <a href="#table_17">G2R</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 3
-        <ul>
-<li>
-            Group <a href="#table_20">G3K</a>
-</li>
-<li>
-            Group <a href="#table_22">G3N</a>
-</li>
-<li>
-            Group <a href="#table_24">G3Q</a>
-</li>
-<li>
-            Group <a href="#table_26">G3R</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 4
-        <ul>
-<li>
-            Group <a href="#table_29">G4K</a>
-</li>
-<li>
-            Group <a href="#table_31">G4N</a>
-</li>
-<li>
-            Group <a href="#table_33">G4Q</a>
-</li>
-<li>
-            Group <a href="#table_35">G4R</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 5
-        <ul>
-<li>
-            Group <a href="#table_38">G5K</a>
-</li>
-<li>
-            Group <a href="#table_40">G5N</a>
-</li>
-<li>
-            Group <a href="#table_42">G5Q</a>
-</li>
-<li>
-            Group <a href="#table_44">G5R</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 6
-        <ul>
-<li>
-            Group <a href="#table_47">G6K</a>
-</li>
-<li>
-            Group <a href="#table_49">G6N</a>
-</li>
-<li>
-            Group <a href="#table_51">G6Q</a>
-</li>
-<li>
-            Group <a href="#table_53">G6R</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 7
-        <ul>
-<li>
-            Group <a href="#table_56">G7K</a>
-</li>
-<li>
-            Group <a href="#table_58">G7N</a>
-</li>
-<li>
-            Group <a href="#table_60">G7R</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 8
-        <ul>
-<li>
-            Group <a href="#table_63">G8K</a>
-</li>
-<li>
-            Group <a href="#table_65">G8N</a>
-</li>
-<li>
-            Group <a href="#table_67">G8R</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 9
-        <ul>
-<li>
-            Group <a href="#table_70">G9K</a>
-</li>
-<li>
-            Group <a href="#table_72">G9N</a>
-</li>
-<li>
-            Group <a href="#table_74">G9R</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Nursery
-        <ul>
-<li>
-            Group <a href="#table_77">NUR</a>
-</li>
-<li>
-            Group <a href="#table_79">NUN</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Reception
-        <ul>
-<li>
-            Group <a href="#table_82">RCR</a>
-</li>
-<li>
-            Group <a href="#table_84">RCN</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Pre-Kindergarten
-        <ul>
-<li>
-            Group <a href="#table_87">PKK</a>
-</li>
-<li>
-            Group <a href="#table_89">PKN</a>
-</li>
-<li>
-            Group <a href="#table_91">PKR</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Kindergarten
-        <ul>
-<li>
-            Group <a href="#table_94">KGK</a>
-</li>
-<li>
-            Group <a href="#table_96">KGN</a>
-</li>
-<li>
-            Group <a href="#table_98">KGR</a>
-</li>
-</ul>
-</li>
-</ul>
-<p> </p>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body id="top">
+    <table>
+      <tr align="left" valign="top">
+        <th><a class="home-link" href="Primary School_index.html" style="font-weight: bold">Back to main page</a></th>
+        <td class="subject days" data-label="Comments:"><h3>Days on horizontal axis</h3></td>
+      </tr>
+    </table>
+    <p></p>
+    <table id="table1">
+      <tr>
+        <td style="background-color: rgba(75, 139, 244, 0)">
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 1</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_2">Grade 1 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_4">Grade 1 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_6">Grade 1 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_8">Grade 1 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 2</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_11">Grade 2 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_13">Grade 2 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_15">Grade 2 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_17">Grade 2 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 3</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_20">Grade 3 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_22">Grade 3 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_24">Grade 3 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_26">Grade 3 Royals`</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 4</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_29">Grade 4 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_31">Grade 4 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_33">Grade 4 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_35">Grade 4 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 5</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_38">Grade 5 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_40">Grade 5 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_42">Grade 5 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_44">Grade 5 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 6</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_47">Grade 6 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_49">Grade 6 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_51">Grade 6 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_53">Grade 6 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+      </tr>
+    </table>
+
+    <p></p>
+    <table id="table1">
+      <tr>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 7</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_56">Grade 7 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_58">Grade 7 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_60">Grade 7 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 8</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_63">Grade 8 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_65">Grade 8 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_67">Grade 8 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 9</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_70">Grade 9 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_72">Grade 9 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_74">Grade 9 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>---- ----- -</summary>
+                  <ul></ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>---- ----- -</summary>
+                  <ul></ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>---- ----- -</summary>
+                  <ul></ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+      </tr>
+    </table>
+
+    <p></p>
+    <table id="table1">
+      <tr>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Nursery</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_77">Nursery Royals</a>
+                    </li>
+                    <li>
+                      <a href="#table_79">Nursery Nobles</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Reception</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_82">Reception Royals</a>
+                    </li>
+                    <li>
+                      <a href="#table_84">Reception Nobles</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Pre-Kindergarten</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_87">Pre-K Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_89">Pre-K Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_91">Pre-K Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Kindergarten</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_94">KG Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_96">KG Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_98">KG Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>---- ----- -</summary>
+                  <ul></ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>---- ----- -</summary>
+                  <ul></ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+      </tr>
+    </table>
+    <hr />
+<p></p>
 <table border="1" class="odd_table" id="table_2">
 <caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1K</span></caption>
 <thead>

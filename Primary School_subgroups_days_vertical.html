@@ -1,375 +1,584 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
 <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<link href="custom.css" rel="stylesheet" type="text/css"/>
-<title>Accra Grammar School</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<style>
-      /* To do a page-break only after every second timetable, delete "page-break-before: always;" in "table.even_table". */
-      /* Delete "page-break-before: always;" in "table.even_table" and in "table.odd_table" to skip page-breaks. */
-      /* To hide an element just write the following phrase into the element: "display: none;" (without quotes). */
-
-      p.back {
-        margin-top: 4ex;
-        margin-bottom: 5ex;
+  <head>
+    <link href="custom.css" rel="stylesheet" type="text/css" />
+    <title>Accra Grammar School</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <style>
+      /* Box Sizing */
+      html {
+        box-sizing: border-box;
       }
 
-      table {
-        text-align: center;
-        page-break-inside: avoid;
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
       }
 
-      table.odd_table {
-        page-break-before: always;
+      /* Typography */
+      html {
+        font:
+          14px/1.5 system-ui,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
       }
 
-      table.even_table {
-        page-break-before: always;
+      body,
+      form,
+      input,
+      textarea,
+      option {
+        font: inherit;
       }
 
-      table.detailed {
-        margin-left: auto; margin-right: auto;
-        text-align: center;
-        border: 0px;
-        border-spacing: 0;
-        border-collapse: collapse;
-      }
-
-      caption {
-
-      }
-
-      span.institution {
+      :is(h1, h2, h3, h4, h5, h6) {
         font-weight: bold;
+        margin-bottom: 0.5em;
       }
 
-      span.name {
-
+      p,
+      ul,
+      ol {
+        margin-bottom: 1.5em;
       }
 
-      span.comment {
-        /*font-style: italic;*/
+      /* Layout */
+      body {
+        padding: 2em;
+        background: rgb(214, 109, 117);
+        background: linear-gradient(87deg, rgba(214, 109, 117, 1) 0%, rgba(226, 149, 135, 1) 100%);
       }
 
-      span.legend_title {
-        font-weight: bold;
+      .panel {
+        padding: 2em;
       }
 
-      thead {
+      /* Tree */
+      .tree {
+        --border-size: 4px;
+        --border-color: #ddd;
 
+        --spacing-line-vertical: 0.2em;
+
+        --radius: 8px;
+
+        &,
+        ul {
+          padding: 0;
+          margin: 0;
+        }
+
+        li,
+        summary {
+          line-height: 1.2;
+          display: flex;
+          flex: 1 1 auto;
+        }
+
+        li {
+          padding: var(--spacing-line-vertical) 0;
+        }
+
+        ul {
+          padding-top: var(--spacing-line-vertical);
+          padding-left: 0;
+
+          li {
+            border-left: var(--border-size) solid var(--border-color);
+            display: flex;
+            align-items: center;
+            margin-left: 0.25em;
+
+            &:last-child {
+              border-color: transparent;
+            }
+
+            &:before {
+              content: "";
+              order: -2;
+              display: block;
+              align-self: flex-start;
+              flex: 0 0 1.4em;
+              width: 1.4em;
+              height: 1.1em;
+              border: solid var(--border-color);
+              border-width: 0 0 var(--border-size) var(--border-size);
+              position: relative;
+              top: -0.5em;
+              left: calc(var(--border-size) * -0.91);
+            }
+          }
+
+          li:last-child:before {
+            border-bottom-left-radius: 0.5em;
+          }
+        }
+
+        summary {
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+
+          &::marker,
+          &::-webkit-details-marker {
+            display: none;
+          }
+
+          &:focus {
+            outline: none;
+          }
+
+          &:focus-visible {
+            outline: 1px dotted #000;
+          }
+        }
+
+        li:not(:has(summary))::after,
+        summary::before {
+          content: "";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          order: -1;
+          flex: 0 0 1.4em;
+          width: 1.4em;
+          height: 1.4em;
+          font-size: 1rem;
+          line-height: 1;
+          border-radius: 50%;
+          background: #ddd;
+          margin-right: 0.4em;
+          background-size: 50% 50%;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-left: -0.3em;
+        }
+
+        summary::before {
+          content: "";
+          background-color: #696;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 448 512'%3E%3Cpath d='M240 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H176V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H240V80z' /%3E%3C/svg%3E");
+          z-index: 1;
+          color: #fff;
+          line-height: calc(2 * var(--radius) - 2px);
+          text-align: center;
+        }
+
+        details {
+          flex: 1 1 auto;
+        }
+
+        details[open] > summary::before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 448 512'%3E%3Cpath d='M416 256c0 17.7-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z' /%3E%3C/svg%3E");
+        }
       }
 
-      /* Some programs import "tfoot" incorrectly. So we use "tr.foot" instead of "tfoot". */
-
-      tr.foot {
-
-      }
-
-      tbody {
-
-      }
-
+      table,
+      td,
       th {
-
+        border: 1px solid black;
       }
 
-      td {
-
-      }
-
-      th.daySeparator {
-        background-color: silver;
-      }
-
-      tr.daySeparator {
-        background-color: silver;
-      }
-
-      td.daySeparator {
-        background-color: silver;
-      }
-
-      td.detailed {
-        border: 1px dashed silver;
-        border-bottom: 0;
-        border-top: 0;
-      }
-
-      th.xAxis {
-      /* width: 8em; */
-      }
-
-      th.yAxis {
-        height: 8ex;
-      }
-
-      /* Style the teachers' free periods */
-
-      div.DESCRIPTION {
-        text-align: left;
-        font-size: smaller;
+      #table1 {
+        border-collapse: separate;
+        border-spacing: 15px;
+        table-layout: fixed;
+        width: 100%;
       }
     </style>
-<link href="style.css" rel="stylesheet"/></head>
+    <link href="style.css" rel="stylesheet" />
+  </head>
 <body id="top">
-<p><a class="home-link" href="Primary School_index.html">Back to main page</a></p>
 <table>
-<tr align="left" valign="top">
-<th>Institution name:</th>
-<td class="subject accra">Accra Grammar School</td>
-</tr>
+      <tr align="left" valign="top">
+        <th><a class="home-link" href="Primary School_index.html" style="font-weight: bold">Back to main page</a></th>
+        <td class="subject days" data-label="Comments:"><h3>Days on vertical axis</h3></td>
+      </tr>
 </table>
-<table>
-<tr align="left" valign="top">
-<th>Comments:</th>
-<td class="subject timetables">Timetables</td>
-</tr>
-</table>
-<p><strong>Table of contents</strong></p>
-<ul>
-<li>
-        Year Grade 1
-        <ul>
-<li>
-            Group G1K:
-              <a href="#table_3">G1K Automatic Subgroup</a>
-</li>
-<li>
-            Group G1N:
-              <a href="#table_5">G1N Automatic Subgroup</a>
-</li>
-<li>
-            Group G1Q:
-              <a href="#table_7">G1Q Automatic Subgroup</a>
-</li>
-<li>
-            Group G1R:
-              <a href="#table_9">G1R Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 2
-        <ul>
-<li>
-            Group G2K:
-              <a href="#table_12">G2K Automatic Subgroup</a>
-</li>
-<li>
-            Group G2N:
-              <a href="#table_14">G2N Automatic Subgroup</a>
-</li>
-<li>
-            Group G2Q:
-              <a href="#table_16">G2Q Automatic Subgroup</a>
-</li>
-<li>
-            Group G2R:
-              <a href="#table_18">G2R Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 3
-        <ul>
-<li>
-            Group G3K:
-              <a href="#table_21">G3K Automatic Subgroup</a>
-</li>
-<li>
-            Group G3N:
-              <a href="#table_23">G3N Automatic Subgroup</a>
-</li>
-<li>
-            Group G3Q:
-              <a href="#table_25">G3Q Automatic Subgroup</a>
-</li>
-<li>
-            Group G3R:
-              <a href="#table_27">G3R Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 4
-        <ul>
-<li>
-            Group G4K:
-              <a href="#table_30">G4K Automatic Subgroup</a>
-</li>
-<li>
-            Group G4N:
-              <a href="#table_32">G4N Automatic Subgroup</a>
-</li>
-<li>
-            Group G4Q:
-              <a href="#table_34">G4Q Automatic Subgroup</a>
-</li>
-<li>
-            Group G4R:
-              <a href="#table_36">G4R Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 5
-        <ul>
-<li>
-            Group G5K:
-              <a href="#table_39">G5K Automatic Subgroup</a>
-</li>
-<li>
-            Group G5N:
-              <a href="#table_41">G5N Automatic Subgroup</a>
-</li>
-<li>
-            Group G5Q:
-              <a href="#table_43">G5Q Automatic Subgroup</a>
-</li>
-<li>
-            Group G5R:
-              <a href="#table_45">G5R Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 6
-        <ul>
-<li>
-            Group G6K:
-              <a href="#table_48">G6K Automatic Subgroup</a>
-</li>
-<li>
-            Group G6N:
-              <a href="#table_50">G6N Automatic Subgroup</a>
-</li>
-<li>
-            Group G6Q:
-              <a href="#table_52">G6Q Automatic Subgroup</a>
-</li>
-<li>
-            Group G6R:
-              <a href="#table_54">G6R Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 7
-        <ul>
-<li>
-            Group G7K:
-              <a href="#table_57">G7K Automatic Subgroup</a>
-</li>
-<li>
-            Group G7N:
-              <a href="#table_59">G7N Automatic Subgroup</a>
-</li>
-<li>
-            Group G7R:
-              <a href="#table_61">G7R Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 8
-        <ul>
-<li>
-            Group G8K:
-              <a href="#table_64">G8K Automatic Subgroup</a>
-</li>
-<li>
-            Group G8N:
-              <a href="#table_66">G8N Automatic Subgroup</a>
-</li>
-<li>
-            Group G8R:
-              <a href="#table_68">G8R Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Grade 9
-        <ul>
-<li>
-            Group G9K:
-              <a href="#table_71">G9K Automatic Subgroup</a>
-</li>
-<li>
-            Group G9N:
-              <a href="#table_73">G9N Automatic Subgroup</a>
-</li>
-<li>
-            Group G9R:
-              <a href="#table_75">G9R Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Nursery
-        <ul>
-<li>
-            Group NUR:
-              <a href="#table_78">NUR Automatic Subgroup</a>
-</li>
-<li>
-            Group NUN:
-              <a href="#table_80">NUN Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Reception
-        <ul>
-<li>
-            Group RCR:
-              <a href="#table_83">RCR Automatic Subgroup</a>
-</li>
-<li>
-            Group RCN:
-              <a href="#table_85">RCN Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Pre-Kindergarten
-        <ul>
-<li>
-            Group PKK:
-              <a href="#table_88">PKK Automatic Subgroup</a>
-</li>
-<li>
-            Group PKN:
-              <a href="#table_90">PKN Automatic Subgroup</a>
-</li>
-<li>
-            Group PKR:
-              <a href="#table_92">PKR Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-<li>
-        Year Kindergarten
-        <ul>
-<li>
-            Group KGK:
-              <a href="#table_95">KGK Automatic Subgroup</a>
-</li>
-<li>
-            Group KGN:
-              <a href="#table_97">KGN Automatic Subgroup</a>
-</li>
-<li>
-            Group KGR:
-              <a href="#table_99">KGR Automatic Subgroup</a>
-</li>
-</ul>
-</li>
-</ul>
+<table id="table1">
+      <tr>
+        <td style="background-color: rgba(75, 139, 244, 0)">
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 1</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_3">Grade 1 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_5">Grade 1 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_7">Grade 1 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_9">Grade 1 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 2</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_12">Grade 2 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_14">Grade 2 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_16">Grade 2 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_18">Grade 2 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 3</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_21">Grade 3 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_23">Grade 3 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_25">Grade 3 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_27">Grade 3 Royals`</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 4</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_30">Grade 4 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_32">Grade 4 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_34">Grade 4 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_36">Grade 4 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 5</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_39">Grade 5 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_41">Grade 5 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_43">Grade 5 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_45">Grade 5 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 6</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_48">Grade 6 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_50">Grade 6 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_52">Grade 6 Queens</a>
+                    </li>
+                    <li>
+                      <a href="#table_54">Grade 6 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+      </tr>
+    </table>
+
+    <p></p>
+    <table id="table1">
+      <tr>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 7</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_57">Grade 7 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_59">Grade 7 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_61">Grade 7 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 8</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_64">Grade 8 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_66">Grade 8 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_68">Grade 8 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Year Grade 9</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_71">Grade 9 Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_73">Grade 9 Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_75">Grade 9 Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>---- ----- -</summary>
+                  <ul></ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>---- ----- -</summary>
+                  <ul></ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>---- ----- -</summary>
+                  <ul></ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+      </tr>
+    </table>
+
+    <p></p>
+    <table id="table1">
+      <tr>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Nursery</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_78">Nursery Royals</a>
+                    </li>
+                    <li>
+                      <a href="#table_80">Nursery Nobles</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Reception</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_83">Reception Royals</a>
+                    </li>
+                    <li>
+                      <a href="#table_85">Reception Nobles</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Pre-Kindergarten</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_88">Pre-K Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_90">Pre-K Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_92">Pre-K Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>Kindergarten</summary>
+                  <ul>
+                    <li>
+                      <a href="#table_95">KG Kings</a>
+                    </li>
+                    <li>
+                      <a href="#table_97">KG Nobles</a>
+                    </li>
+                    <li>
+                      <a href="#table_99">KG Royals</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>---- ----- -</summary>
+                  <ul></ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+        <td>
+          <section class="panel">
+            <ul class="tree">
+              <li>
+                <details close>
+                  <summary>---- ----- -</summary>
+                  <ul></ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </td>
+      </tr>
+    </table>
+    <hr />
 <p> </p>
 <table border="1" class="odd_table" id="table_3">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1K Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G1K Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -456,7 +665,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_5">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1N Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G1N Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -543,7 +752,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_7">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1Q Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G1Q Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -630,7 +839,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_9">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G1R Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G1R Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -717,7 +926,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_12">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2K Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G2K Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -804,7 +1013,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_14">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2N Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G2N Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -891,7 +1100,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_16">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2Q Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G2Q Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -978,7 +1187,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_18">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G2R Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G2R Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1065,7 +1274,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_21">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3K Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G3K Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1152,7 +1361,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_23">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3N Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G3N Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1239,7 +1448,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_25">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3Q Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G3Q Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1326,7 +1535,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_27">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G3R Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G3R Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1413,7 +1622,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_30">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4K Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G4K Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1500,7 +1709,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_32">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4N Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G4N Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1587,7 +1796,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_34">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4Q Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G4Q Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1674,7 +1883,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_36">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G4R Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G4R Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1761,7 +1970,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_39">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5K Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G5K Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1848,7 +2057,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_41">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5N Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G5N Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -1935,7 +2144,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_43">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5Q Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G5Q Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2022,7 +2231,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_45">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G5R Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G5R Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2109,7 +2318,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_48">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G6K Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G6K Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2196,7 +2405,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_50">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G6N Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G6N Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2283,7 +2492,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_52">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G6Q Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G6Q Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2370,7 +2579,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_54">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G6R Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G6R Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2457,7 +2666,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_57">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G7K Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G7K Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2544,7 +2753,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_59">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G7N Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G7N Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2631,7 +2840,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_61">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G7R Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G7R Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2718,7 +2927,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_64">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G8K Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G8K Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2805,7 +3014,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_66">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G8N Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G8N Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2892,7 +3101,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_68">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G8R Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G8R Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -2979,7 +3188,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_71">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G9K Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G9K Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3066,7 +3275,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_73">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G9N Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G9N Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3153,7 +3362,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_75">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">G9R Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">G9R Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3240,7 +3449,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_78">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">NUR Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">NUR Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3327,7 +3536,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_80">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">NUN Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">NUN Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3414,7 +3623,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_83">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">RCR Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">RCR Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3501,7 +3710,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_85">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">RCN Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">RCN Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3588,7 +3797,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_88">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PKK Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">PKK Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3675,7 +3884,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_90">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PKN Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">PKN Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3762,7 +3971,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_92">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">PKR Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">PKR Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3849,7 +4058,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_95">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KGK Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">KGK Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -3936,7 +4145,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="even_table" id="table_97">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KGN Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">KGN Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
@@ -4023,7 +4232,7 @@
 </table>
 <p class="back"><a href="#top">back to the top</a></p>
 <table border="1" class="odd_table" id="table_99">
-<caption><span class="institution">Accra Grammar School</span><br/><span class="name">KGR Automatic Subgroup</span></caption>
+<caption><span class="institution">Accra Grammar School</span><br/><span class="caption-name">KGR Automatic Subgroup</span></caption>
 <thead>
 <tr>
 <td></td>
